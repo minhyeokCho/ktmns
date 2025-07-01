@@ -1,0 +1,182 @@
+@charset "utf-8";
+
+/* ************************************************************************************************************************************************************
+                        《 setting.css 》
+************************************************************************************************************************************************************ */
+
+/* ------------------------------ [ Font ] ------------------------------------------------------------------------------------------ */
+/* NotoSans */
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 700;
+    font-display: swap;
+    src:url('../font/Pretendard-Bold.eot') format('embedded-opentype'),
+        url('../font/Pretendard-Bold.woff2') format('woff2'),
+        url('../font/Pretendard-Bold.woff') format('woff'),
+}
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 600;
+    font-display: swap;
+    src:url('../font/Pretendard-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('../font/Pretendard-SemiBold.woff2') format('woff2'),
+        url('../font/Pretendard-SemiBold.woff') format('woff'),
+}
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 500;
+    font-display: swap;
+    src:url('../font/Pretendard-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../font/Pretendard-Medium.woff2') format('woff2'),
+        url('../font/Pretendard-Medium.woff') format('woff'),
+}
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 400;
+    font-display: swap;
+    src:url('../font/Pretendard-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../font/Pretendard-Regular.woff2') format('woff2'),
+        url('../font/Pretendard-Regular.woff') format('woff'),
+}
+
+/* ------------------------------ [ Layout Reset ] ------------------------------------------------------------------------------------------ */
+/* Reset */
+html,body,div,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,
+abbr,address,big,cite,code,del,dfn,font,figure,figcaption,img,ins,q,s,samp,small,strike,sub,sup,tt,var,
+b,u,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td {
+    color:#221E1F;
+    margin:0;
+    padding:0;
+}
+button,input,textarea {
+    -webkit-text-size-adjust:none;
+    -webkit-border-radius:0;
+    border:none;
+    border-radius:0;
+    margin:0;
+    padding:0;
+}
+button {
+    background:none;
+    border:none;
+    color:inherit;
+    cursor:pointer;
+}
+button:disabled {
+    cursor:default;
+}
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+    table-layout:fixed;
+    width:100%;
+}
+select {
+    background-color:transparent;
+    border:none;
+    letter-spacing:inherit;
+    appearance:none;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    -webkit-font-smoothing:antialiased;
+    border:none;
+    border-radius:0;
+    margin:0;
+    padding:0;
+}
+select::-ms-expand {
+    display:none; /* 화살표 없애기 for IE10, 11 */
+}
+address,caption,cite,code,dfn,em,strong,th,var {
+    font-style:normal;
+}
+ul,li,ol {
+    list-style-type:none;
+}
+hr {
+    display:none;
+}
+legend,caption {
+    overflow:hidden;
+    visibility:hidden;
+    position:absolute;
+    font-size:0;
+    line-height:0;
+    height:0;
+    z-index:-1;
+}
+a,a:active,input:active,button:active,select:active,label:active,
+a:focus,input:focus,button:focus,select:focus,label:focus {
+    text-decoration:none;
+    outline:none;
+}
+a,span,em {
+    color:inherit;
+    font:inherit;
+    border:0;
+    margin:0;
+    padding:0;
+    -webkit-font-smoothing:antialiased;
+}
+strong {
+    color:inherit;
+    border:0;
+    margin:0;
+    padding:0;
+    -webkit-font-smoothing:antialiased;
+}
+a,input,button,select,label {
+    -webkit-tap-highlight-color:transparent;
+}
+::-webkit-input-placeholder {
+    color:#AAAAAA;
+    font:inherit;
+    line-height:inherit;
+}
+input:disabled::-webkit-input-placeholder {
+    color:#AAAAAA;
+}
+:-moz-placeholder {
+    color:#AAAAAA;
+    font:inherit;
+    line-height:inherit;
+}
+input:disabled:-moz-placeholder {
+    color:#AAAAAA;
+}
+::-moz-placeholder {
+    color:#AAAAAA;
+    font:inherit;
+    line-height:inherit;
+}
+input:disabled::-moz-placeholder {
+    color:#AAAAAA;
+}
+:-ms-input-placeholder {
+    color:#AAAAAA;
+    font:inherit;
+    line-height:inherit;
+}
+input:disabled:-ms-input-placeholder {
+    color:#AAAAAA;
+}
+textarea::placeholder {
+    color:#AAAAAA;
+}
+textarea::-webkit-placeholder {
+    color:#AAAAAA;
+}
+textarea::-moz-placeholder {
+    color:#AAAAAA;
+}
+textarea::-ms-placeholder {
+    color:#AAAAAA;
+}
+.blind {
+    overflow:hidden !important;
+    font-size:0 !important;
+    line-height:0 !important;
+    position:absolute !important;
+    height:0 !important;
+    width:0 !important;
+}
