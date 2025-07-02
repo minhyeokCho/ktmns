@@ -26,5 +26,52 @@ body.dim:before {background-color:rgba(0, 0, 0, 0.5); content:""; position:fixed
 .inner {max-width: 1640px; width: 100%; padding: 0 20px; margin: 0 auto;}
 
 /* ============================== [ #header ] ========================================================================================== */
+#header {position: fixed; left: 0; top: 0; width: 100%;  z-index: 100;}
+.h_top {background-color: #EBFBFB;}
+.h_top div {padding-top:8px; padding-bottom: 8px; display: flex; align-items: center; justify-content:flex-end;}
+.h_top ul {display: flex;}
+.h_top ul li ~ li {margin-left: 16px; padding-left: 16px; position: relative;}
+.h_top ul li ~ li::after {display: block; content: ''; width: 1px; height: 10px; position: absolute; left: 0; top: 5px; background-color: rgba(0, 0, 0, 0.3);}
+.h_top ul li a {font-weight: 500; font-size: 14px; color: #000;}
+
+.h_btm {display: flex; align-items: center; justify-content: space-between;  background-color: #fff; padding:12px 60px; position: relative;}
+.h_btm .menu_bg {display: none; position: absolute; left: 0; top: 100%; background-color: #fff; width: 100%; height: 450px; z-index: 1;}
+.h_btm h1 a {background: url(../images/common/logo.svg) no-repeat 0 0; width: 103px; height: 30px; display: block;}
+.h_btm nav .dept_01 {display: flex;}
+.h_btm nav .dept_01 > li {width: 177px; position: relative;}
+.h_btm nav .dept_01 > li > a {width: 100%; height: 80px; font-weight: 600; font-size: 22px; display: flex; align-items: center; justify-content: center;}
+.h_btm nav .dept_01 .dept_02 {display: none; position: absolute; left: 0; top: 100%; width: 100%; padding: 35px 0 50px; z-index: 2;}
+.h_btm nav .dept_01 .dept_02 li ~ li {margin-top: 20px;}
+.h_btm nav .dept_01 .dept_02 li a {font-size: 20px; font-weight: 500; color: #000; text-align: center;}
+.h_btm .btn_all_menu {width: 56px; height: 56px; background: url(../images/common/icon_all_menu.svg) no-repeat 0 0; background-size: 100% auto;}
+
+/* 헤더 투명 */
+#header.h_wh .h_top {background-color: #313131;}
+#header.h_wh .h_top ul li a {color: #fff;}
+#header.h_wh .h_top ul li ~ li::after {background-color: rgba(255, 255, 255, .3);}
+#header.h_wh .h_btm {background-color: transparent; border-bottom: 1px solid rgba(255, 255, 255, .2);}
+#header.h_wh .h_btm nav .dept_01 > li > a {color: #fff;}
+#header.h_wh .h_btm h1 a {background-image: url(../images/common/logo_wh.svg);}
+#header.h_wh .h_btm .btn_all_menu {background-image: url(../images/common/icon_all_menu_wh.svg);}
+
+
+
 /* ============================== [ 탭바 ] ========================================================================================== */
 /* 모바일 상단 / 탭바 노치확인 */
+
+/* ============================== [ #footer ] ========================================================================================== */
+footer {padding: 60px 0; background: url(../images/common/bg_footer.png) no-repeat center; background-size: cover; position: relative;}
+footer::after {display: block; content: ''; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); position: absolute; left: 0; top: 0;}
+footer * {color: #fff;}
+footer .inner {position: relative; z-index: 1;}
+footer .f_top {display: flex; align-items: flex-end; justify-content: space-between;}
+footer .f_top .img {width: 138px;}
+footer .f_top p {margin-top: 10px; font-size: 20px; }
+
+footer .f_link {margin-top: 80px; display: flex; align-items: center; justify-content: space-between;}
+footer .f_link .link {display: flex; gap: 60px;}
+footer .f_link .link li a {font-size: 18px;}
+
+footer .f_btm {padding-top: 30px; margin-top: 30px; border-top:1px solid rgba(192, 192, 192, 0.2);}
+footer .f_btm ul {display: flex; flex-wrap:wrap; gap:12px 60px;}
+
