@@ -27,15 +27,14 @@ body.dim:before {background-color:rgba(0, 0, 0, 0.5); content:""; position:fixed
 
 /* ============================== [ #header ] ========================================================================================== */
 #header {position: fixed; left: 0; top: 0; width: 100%;  z-index: 100;}
-.h_top {background-color: #EBFBFB;}
-.h_top div {padding-top:8px; padding-bottom: 8px; display: flex; align-items: center; justify-content:flex-end;}
-.h_top ul {display: flex;}
+.h_top {background-color: #EBFBFB; padding: 8px 70px;}
+.h_top ul {display: flex; align-items: center; justify-content:flex-end;}
 .h_top ul li ~ li {margin-left: 16px; padding-left: 16px; position: relative;}
 .h_top ul li ~ li::after {display: block; content: ''; width: 1px; height: 10px; position: absolute; left: 0; top: 5px; background-color: rgba(0, 0, 0, 0.3);}
 .h_top ul li a {font-weight: 500; font-size: 14px; color: #000;}
 
-.h_btm {display: flex; align-items: center; justify-content: space-between;  background-color: #fff; padding:12px 60px; position: relative;}
-.h_btm .menu_bg {display: none; position: absolute; left: 0; top: 100%; background-color: #fff; width: 100%; height: 450px; z-index: 1;}
+.h_btm {display: flex; align-items: center; justify-content: space-between;  background-color: #fff; border-bottom: 1px solid rgba(0, 0, 0, .15); padding:0 60px; position: relative;}
+.h_btm .menu_bg {display: none; position: absolute; left: 0; top: calc(100% + 1px); background-color: #fff; width: 100%; height: 450px; z-index: 1;}
 .h_btm h1 a {background: url(../images/common/logo.svg) no-repeat 0 0; width: 103px; height: 30px; display: block;}
 .h_btm nav .dept_01 {display: flex;}
 .h_btm nav .dept_01 > li {width: 177px; position: relative;}
@@ -54,10 +53,46 @@ body.dim:before {background-color:rgba(0, 0, 0, 0.5); content:""; position:fixed
 #header.h_wh .h_btm h1 a {background-image: url(../images/common/logo_wh.svg);}
 #header.h_wh .h_btm .btn_all_menu {background-image: url(../images/common/icon_all_menu_wh.svg);}
 
+@media screen and (max-width: 1400px) {
+	.h_top {padding: 8px 20px;}
+	.h_btm {padding: 0 20px;}
+	.h_btm nav {width: 70%;}
+	.h_btm nav .dept_01 > li {width:auto; flex:1;}
+	.h_btm nav .dept_01 > li > a {font-size: 20px;}
+	.h_btm nav .dept_01 .dept_02 li a {font-size: 16px;}
+}
 
 
 /* ============================== [ 탭바 ] ========================================================================================== */
 /* 모바일 상단 / 탭바 노치확인 */
+.tab_Bar {display: none; position: fixed; left: 0; bottom: 0; width: 100%; border-top: 1px solid #00000033; background-color: #fff; z-index: 100;}
+.tab_Bar ul {display: flex;}
+.tab_Bar ul li {flex:1;}
+.tab_Bar ul li a {width: 100%; height: 64px; display: flex; align-items: center; justify-content: center;}
+.tab_Bar ul li a span {display: block; width: 42px; padding-top: 40px; font-size: 12px; font-weight: 500; color: #000; transition: .3s; background-position: top center; background-repeat: no-repeat; background-size: 40px; text-align: center;}
+.tab_Bar ul li a:hover span {color: #EC1B23;}
+.tab_Bar ul li a.home span {background-image: url(../images/common/tab_home.svg);}
+.tab_Bar ul li a.chat span {background-image: url(../images/common/tab_chat.svg);}
+.tab_Bar ul li a.map span {background-image: url(../images/common/tab_map.svg);}
+.tab_Bar ul li a.tab_menu span {background-image: url(../images/common/tab_menu.svg);}
+
+.tab_Bar ul li a.home:hover span {background-image: url(../images/common/tab_home_on.svg);}
+.tab_Bar ul li a.chat:hover span {background-image: url(../images/common/tab_chat_on.svg);}
+.tab_Bar ul li a.map:hover span {background-image: url(../images/common/tab_map_on.svg);}
+.tab_Bar ul li a.tab_menu:hover span {background-image: url(../images/common/tab_menu_on.svg);}
+.tab_Bar ul li a.home:active span {background-image: url(../images/common/tab_home_on.svg);}
+.tab_Bar ul li a.chat:active span {background-image: url(../images/common/tab_chat_on.svg);}
+.tab_Bar ul li a.map:active span {background-image: url(../images/common/tab_map_on.svg);}
+.tab_Bar ul li a.tab_menu:active span {background-image: url(../images/common/tab_menu_on.svg);}
+
+@media screen and (max-width: 1024px) {
+	.h_top,
+	.h_btm nav ,
+	.h_btm .btn_all_menu {display: none;}
+	.h_btm {padding: 20px;}
+
+	.tab_Bar {display: block;}
+}
 
 /* ============================== [ #footer ] ========================================================================================== */
 footer {padding: 60px 0; background: url(../images/common/bg_footer.png) no-repeat center; background-size: cover; position: relative;}
@@ -67,11 +102,60 @@ footer .inner {position: relative; z-index: 1;}
 footer .f_top {display: flex; align-items: flex-end; justify-content: space-between;}
 footer .f_top .img {width: 138px;}
 footer .f_top p {margin-top: 10px; font-size: 20px; }
+footer .f_top .family {position: relative; width: 260px;}
+footer .f_top .family button {padding: 0 20px; text-align: left; backdrop-filter: blur(16px); background-color: rgba(40, 40, 40, 0.85); border-radius: 2px; width: 100%; height: 50px; position: relative;}
+footer .f_top .family button::after {display: block; content: ''; background: url(../images/common/arr_family.svg) no-repeat 0 0; width: 15px; height: 18px; background-size: 100% auto; position: absolute; right: 20px; top: calc(50% - 9px); transition: .3s;}
+footer .f_top .family.active button {background-color: rgba(40, 40, 40, 0.55); backdrop-filter: blur(5px);}
+footer .f_top .family.active button::after {transform: rotate(180deg);}
+footer .f_top .family ul {display: none; background-color: rgba(40, 40, 40, 0.65); backdrop-filter: blur(16px); position: absolute; left: 0; top: 100%; width: 100%; border-radius:0 0 2px 2px;}
+footer .f_top .family ul li a {height: 50px; display: flex; align-items: center; margin: 0 20px; transition: .3s;}
+footer .f_top .family ul li a:hover {color: #40EFEC;}
+footer .f_top .family ul li:first-child a {border-top: 1px solid #FFFFFF66}
+
 
 footer .f_link {margin-top: 80px; display: flex; align-items: center; justify-content: space-between;}
 footer .f_link .link {display: flex; gap: 60px;}
 footer .f_link .link li a {font-size: 18px;}
+footer .f_link .link li a.cs {font-weight: 600;}
+footer .f_link .sns {display: flex; gap:10px;}
+footer .f_link .sns a {width: 40px; height: 40px; border-radius: 50%; border:1px solid rgba(255, 255, 255, .5); transition: .3s; background-position: center center; background-repeat: no-repeat;}
+footer .f_link .sns a.insta {background-image: url(../images/common/sns_insta.svg);}
+footer .f_link .sns a.kakao {background-image: url(../images/common/sns_kakao.svg);}
+footer .f_link .sns a.ytb {background-image: url(../images/common/sns_ytb.svg); background-size: 22px auto;}
+footer .f_link .sns a.blog {background-image: url(../images/common/sns_blog.svg); background-size: 22px auto;}
+footer .f_link .sns a:hover {border-color: rgba(0, 0, 0, .7); background-color: rgba(0, 0, 0, .7);}
 
-footer .f_btm {padding-top: 30px; margin-top: 30px; border-top:1px solid rgba(192, 192, 192, 0.2);}
-footer .f_btm ul {display: flex; flex-wrap:wrap; gap:12px 60px;}
+footer .f_btm {display: flex; align-items: flex-end; justify-content: space-between; padding-top: 30px; margin-top: 30px; border-top:1px solid rgba(192, 192, 192, 0.2);}
+footer .f_btm ul {display: flex; flex-wrap:wrap; gap:12px 60px; max-width: 968px;}
+footer .f_btm ul li strong {font-weight: 500; }
+footer .f_btm ul li span {margin-left: 16px; color: #ccc;}
+footer .f_btm .copy {color: #ccc;}
 
+@media screen and (max-width: 1400px) {
+	footer .f_btm ul {max-width: 615px;}
+}
+@media screen and (max-width: 1024px) {
+	footer {padding: 50px 0;}
+	footer .f_top {display: block;}
+	footer .f_top .img {width: 83px;}
+	footer .f_top p {font-size: 16px; margin-top: 8px;}
+	footer .f_top .family {margin-top: 20px; width: 240px;}
+	footer .f_link {margin-top: 20px; flex-direction: column-reverse; align-items: flex-start;}
+	footer .f_link .link {margin-top: 40px; gap:12px 30px; max-width: 211px; flex-wrap: wrap;}
+	footer .f_link .link li a {font-size: 16px;}
+	footer .f_link .link li:nth-child(1) {order: 0;}
+	footer .f_link .link li:nth-child(3) {order: 1;}
+	footer .f_link .link li:nth-child(4) {order: 2;}
+	footer .f_link .link li:nth-child(2) {order: 3;}
+
+	footer .f_btm {display: block;}
+	footer .f_btm ul {gap:20px 60px; max-width: 360px;}
+	footer .f_btm ul li:nth-child(1) {display: none;}
+	footer .f_btm ul li:nth-child(6) {order: 0;}
+	footer .f_btm ul li:nth-child(4) {order: 1;}
+	footer .f_btm ul li:nth-child(5) {order: 2;}
+	footer .f_btm ul li:nth-child(2) {order: 3;}
+	footer .f_btm ul li:nth-child(3) {order: 4;}
+	footer .f_btm ul li span {display: block; margin: 8px 0 0 0;}
+	footer .f_btm .copy {margin-top: 20px;}
+}
