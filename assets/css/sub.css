@@ -1,14 +1,62 @@
 @charset "utf-8";
 
-/* 매장상담예약 */
-.store_step {}
+.all_menu {display: none;}
 
+/* sub tab */
+.sub_tab ul {display: flex;}
+.sub_tab ul li {background-color: #F6F6F6;}
+.sub_tab ul li a {padding: 20px 50px; font-size: 24px; font-weight: 600; color: #363636; position: relative;}
+.sub_tab ul li a.active::after {display: block; content: ''; width: 100%; height: 100%;}
 
+/* Why kt m&s */
+.select_map {display: flex; align-items: center; justify-content: center; gap:120px;}
+.select_map .cont_l {flex:1;}
+.select_map .cont_l strong {display: flex; font-weight: 600; font-size: 28px;}
+.select_map .cont_l strong img {width: 91px; height: 34px;}
+.select_map .cont_l h3 {margin-top: 4px; font-size: 40px; font-weight: 600;}
+.select_map .cont_l p {margin-top: 20px; font-size: 24px;}
+.select_map .cont_l .btn_map {margin-top: 60px; gap:20px; display: flex; flex-wrap: wrap; max-width: 562px; width: 100%;}
+.select_map .cont_l .btn_map li {width: calc(33.33% - 14px);}
+.select_map .cont_l .btn_map li button {width: 100%; border:1.5px solid #000; border-radius: 25px; font-size: 18px; font-weight: 600; height: 49px; transition: .3s; background-image: url(../images/sub/btn_arr.svg); background-repeat: no-repeat; background-size: 12px auto; background-position: right 36px center; text-align: left; padding-left: 36px;}
+.select_map .cont_l .btn_map li.active button,
+.select_map .cont_l .btn_map li button:hover {background-color: #000; color: #fff;}
 
+.select_map .cont_r {width: 410px; height: 547px; background: url(../images/sub/map_0.png) no-repeat 0 0; background-size: 100% auto; position: relative;}
+.select_map .cont_r .img_list li {position: absolute; left: 0; top: 0;}
 
+.res_map {margin-top: 50px;}
+.res_map table th {border-top:2px solid #000; border-bottom: 1px solid #b9b9b9; height: 80px; font-size: 20px; font-weight: 500; color: #363636;}
+.res_map table td {border-bottom: 1px solid #cbcbcb; text-align: center; height: 108px; font-size: 22px; font-weight: 500; transition: .3s;}
+.res_map table tr:hover td {background-color: #F6F6F6;}
 
+/* paging */
+.paging {display: flex; justify-content: center; margin-top: 60px;}
+.paging a {width: 40px; height: 40px; border-radius: 10px; background-position: center; background-repeat: no-repeat; background-size: 100% auto; display: flex; align-items: center; justify-content: center;}
+.paging a.first {background-image: url(../images/sub/paging_01.svg);}
+.paging a.prev {background-image: url(../images/sub/paging_02.svg);}
+.paging a.next {background-image: url(../images/sub/paging_03.svg);}
+.paging a.last {background-image: url(../images/sub/paging_04.svg);}
+.paging ol {display: flex; gap:8px; padding: 0 16px;}
+.paging ol a {font-size: 18px; font-weight: 500; color: #636363;}
+.paging ol a.active {background-color: #000; color: #fff;}
 
+/* 고객문의 */
+.cs_order {display: flex;}
+.cs_order li ~ li {margin-left: 56px; position: relative;}
+.cs_order li ~ li::before {display: block; content: ''; background: url(../images/sub/icon_cs_arr.svg) no-repeat 0 0; background-size: 100% auto; width: 40px; height: 40px; position: absolute; left: -48px; top: calc(50% - 20px);}
+.cs_order li {border:1px solid #CCCCCC; border-radius: 10px; flex:1; padding: 26px 20px 26px 126px; background-position: left 26px center; background-repeat: no-repeat; background-size: 100px auto;}
+.cs_order li:nth-child(1) {background-image: url(../images/sub/icon_cs_01.svg);}
+.cs_order li:nth-child(2) {background-image: url(../images/sub/icon_cs_02.svg);}
+.cs_order li:nth-child(3) {background-image: url(../images/sub/icon_cs_03.svg);}
+.cs_order li h3 {font-size: 24px; font-weight: 700;}
+.cs_order li h3 span {color: #B9B9B9; margin-right: 8px;}
+.cs_order li p {margin-top: 6px; font-size: 18px; font-weight: 500;}
+.cs_wrap .policy_box {margin-top: 30px; border-radius: 10px; background-color: #f6f6f6; padding: 40px;}
+.cs_wrap .policy_box h3 {font-weight: 500; color: #636363; margin-bottom: 14px;}
+.cs_wrap .policy_box ol li {font-weight: 500; color: #636363;}
+.cs_wrap .policy_box > p {font-weight: 500; color: #636363; margin-top: 14px;}
 
-
-
-
+.chk_wrap {display: flex; align-items: center; gap:6px; cursor: pointer;}
+.chk_wrap i {width: 20px; height: 20px; border:1px solid #ccc; transition: .3s; background-repeat: no-repeat; background-position: center; background-size: 12px auto;}
+.chk_wrap input:checked ~ i {background-image:  url(../images/sub/icon_chk.svg); background-color: #EC1B23; border-color: #EC1B23;}
+.chk_wrap p {font-size: 18px; font-weight: 500; color: #363636;}
