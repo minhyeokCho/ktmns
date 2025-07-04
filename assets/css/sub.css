@@ -60,3 +60,21 @@
 .chk_wrap i {width: 20px; height: 20px; border:1px solid #ccc; transition: .3s; background-repeat: no-repeat; background-position: center; background-size: 12px auto;}
 .chk_wrap input:checked ~ i {background-image:  url(../images/sub/icon_chk.svg); background-color: #EC1B23; border-color: #EC1B23;}
 .chk_wrap p {font-size: 18px; font-weight: 500; color: #363636;}
+
+/* 주요연혁 */
+.history_wrap .row {display: flex;}
+.history_wrap .row .year_col {width: 33.33%;}
+.history_wrap .row .year_col .history_title_area strong {font-weight: 700; font-size: 56px;}
+.history_wrap .row .year_col .history_title_area p {font-weight: 500; font-size: 20px; color: #EC1B23;}
+.history_wrap .row .list_col {flex:1;}
+.history_wrap .row .list_col .history_detail_area li {position: relative; display: flex;}
+.history_wrap .row .list_col .history_detail_area li ~ li {margin-top: 50px;}
+.history_wrap .row .list_col .history_detail_area .line {}
+.history_wrap .row .list_col .history_detail_area .dot {width: 114px; font-size: 30px; font-weight: 500;}
+.history_wrap .row .list_col .history_detail_area .dt_txt .txt {overflow: hidden;}
+.history_wrap .row .list_col .history_detail_area .dt_txt .txt ~ .txt {margin-top: 20px;}
+.history_wrap .row .list_col .history_detail_area .dt_txt .txt span {float: left; font-size: 22px; width: 42px; height: 31px; display: block;}
+.history_wrap .row .list_col .history_detail_area .dt_txt .txt p {float: left; font-size: 22px;}
+
+.history_wrap .row:not(:last-child) .list_col {padding-bottom: 120px;}
+
