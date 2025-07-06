@@ -180,3 +180,35 @@ textarea::-ms-placeholder {
     height:0 !important;
     width:0 !important;
 }
+
+/* 전체 스크롤바 */
+.sidebar .res_li::-webkit-scrollbar,
+.mem_pop_wrap .txt_area::-webkit-scrollbar {
+	width: 18px; 
+	height: 18px;
+}
+
+/* 트랙 (스크롤 배경) */
+.sidebar .res_li::-webkit-scrollbar-track,
+.mem_pop_wrap .txt_area::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 16px;
+}
+
+/* 핸들 (움직이는 부분) */
+.sidebar .res_li::-webkit-scrollbar-thumb,
+.mem_pop_wrap .txt_area::-webkit-scrollbar-thumb {
+  background: #B9B9B9;
+  border-radius: 16px;
+  border: 7px solid #fff;
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}

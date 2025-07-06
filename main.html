@@ -22,7 +22,7 @@
 <!-- #WRAP -->
 <div id="wrap">
 	<!-- #header -->
-	<header id="header">
+	<header id="header" class="main h_wh">
 		<div class="h_top">
 			<ul>
 				<li>
@@ -108,7 +108,7 @@
 			<figure class="logo">
 				<img src="./assets/images/common/logo_wh.svg">
 			</figure>
-			<button type="button">
+			<button type="button" class="close">
 				<span class="blind">전체메뉴 닫기</span>
 			</button>
 		</div>
@@ -130,6 +130,7 @@
 							</li>
 						</ul>
 					</li>
+					<li><a href="#">매장상담예약</a></li>
 					<li>
 						<a href="#">세일즈 전설</a>
 						<ul class="dept_03">
@@ -374,7 +375,7 @@
 		<section class="sec_01">
 			<div class="main_visual swiper">
 				<div class="swiper-wrapper">
-					<div class="swiper-slide">
+					<div class="swiper-slide item">
 						<figure class="img">
 							<img src="./assets/images/main/main_visual_01.jpg">
 						</figure>
@@ -382,7 +383,7 @@
 							디지털 혁신으로<br/>더 나은 미래를 연결합니다
 						</p>
 					</div>
-					<div class="swiper-slide">
+					<div class="swiper-slide item">
 						<figure class="img">
 							<img src="./assets/images/main/main_visual_02.jpg">
 						</figure>
@@ -390,7 +391,7 @@
 							통신 그 이상의 연결로<br/>고객의 일상에 더 가까이 갑니다
 						</p>
 					</div>
-					<div class="swiper-slide">
+					<div class="swiper-slide item">
 						<figure class="img">
 							<img src="./assets/images/main/main_visual_03.jpg">
 						</figure>
@@ -399,7 +400,7 @@
 						</p>
 					</div>
 				</div>
-				<div class="video_bullet"></div>
+				<div class="main_bullet"></div>
 			</div>
 			<div class="menu_box">
 				<div class="prd_box">
@@ -443,204 +444,284 @@
 			</div>
 		</section>
 		<section class="sec_02">
-			<div class="sec_tit">
-				<h2>이벤트 안내</h2>
-				<p>kt m&s가 제공하는<br/> 특별한 이벤트 혜택을 만나보세요.</p>
-			</div>
-			<ul class="evt_li">
-				<li>
-					<a href="#">
-						<span>소상공인</span>
-						<p>비용은 줄이고 매출은 올리는</p>
-						<strong>소상공인 맞춤형 결합상품</strong>
-					</a>
-				</li>
-				<li>
-					<a href="#">
-						<span>인터넷</span>
-						<p>KT와 함께하는 스마트한 생활!</p>
-						<strong>인터넷 & TV 결합할인</strong>
-					</a>
-				</li>
-				<li>
-					<a href="#">
-						<span>모바일</span>
-						<p>오직 KT에서만 만날 수 있는</p>
-						<strong>나만의 애플 SET</strong>
-					</a>
-				</li>
-			</ul>
-		</section>
-		<section class="sec_03">
-			<div class="sec_tit">
-				<h2>매장찾기</h2>
-				<p>근처의 매장을 쉽고 빠르게 찾아보세요.</p>
-			</div>
-			<div class="search_box">
-				<div class="item">
-					<p>시/도 선택</p>
-					<select>
-						<option>시/도 선택</option>
-					</select>
+			<div class="inner">
+				<div class="sec_tit">
+					<h2>이벤트 안내</h2>
+					<p>kt m&s가 제공하는<br/> 특별한 이벤트 혜택을 만나보세요.</p>
 				</div>
-				<div class="item">
-					<p>시/군/구 선택</p>
-					<select>
-						<option>시/군/구 선택</option>
-					</select>
-				</div>
-				<div class="item">
-					<p>매장 검색</p>
-					<div class="srch">
-						<input type="text" placeholder="매장명 또는 지역을 입력해 주세요.">
-						<button type="submit" title="검색"></button>
-					</div>
-				</div>
-			</div>
-			<a href="#" class="more_btn"><span>전체 매장 보기</span></a>
-		</section>
-		<section class="sec_04">
-			<div class="sec_tit">
-				<h2>고객후기</h2>
-				<p>kt m&s와 함께한 고객들의 소중한 후기를 확인해 보세요.</p>
-			</div>
-			<div class="rv_li">
-				<ul>
+				<ul class="evt_li">
 					<li>
 						<a href="#">
 							<figure class="img">
-								<img src="" alt="">
+								<img src="./assets/images/main/main_event_banner_01.png">
 							</figure>
-							<h3>KT플라자 당곡역점</h3>
-							<p>부모님 두분 폰이랑 인터넷 TV 전화도 가입하고 왔네요~ㅎㅎ</p>
-							<span>icastorpo*****</span>
+							<div class="txt_wrap">
+								<span>소상공인</span>
+								<p>비용은 줄이고 매출은 올리는</p>
+								<strong>소상공인 맞춤형 결합상품</strong>
+							</div>
 						</a>
 					</li>
 					<li>
 						<a href="#">
 							<figure class="img">
-								<img src="" alt="">
+								<img src="./assets/images/main/main_event_banner_02.png">
 							</figure>
-							<h3>KT플라자 광화문본점</h3>
-							<p>장시간동안 꼼꼼하게 알려주셨습니다 😌</p>
-							<span>종로*****</span>
+							<div class="txt_wrap">
+								<span>인터넷</span>
+								<p>KT와 함께하는 스마트한 생활!</p>
+								<strong>인터넷 & TV 결합할인</strong>
+							</div>
 						</a>
 					</li>
 					<li>
 						<a href="#">
 							<figure class="img">
-								<img src="" alt="">
+								<img src="./assets/images/main/main_event_banner_03.png">
 							</figure>
-							<h3>KT플라자 한성대점</h3>
-							<p>필름교체도하고 간단한 상담도 받아볼 겸 방문하였는데 서비스 대만족 ㅎㅎ</p>
-							<span>ghd*****</span>
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							<figure class="img">
-								<img src="" alt="">
-							</figure>
-							<h3>KT플라자 교대역점</h3>
-							<p>여러가지 고민해야 할 부분에 대해 친절히 설명해 주셨습니다.</p>
-							<span>dam*****</span>
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							<figure class="img">
-								<img src="" alt="">
-							</figure>
-							<h3>KT플라자 옥정신도시점</h3>
-							<p>앞으로도 휴대폰 변경할 일이 있으면 꼭 다시 방문하고 싶네요!</p>
-							<span>du*****</span>
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							<figure class="img">
-								<img src="" alt="">
-							</figure>
-							<h3>KT플라자 수원매탄점</h3>
-							<p>제가 이해를 잘 못했는데도 불구하고 오랜시간 친절히 설명해 주셔서 감사했습니다.</p>
-							<span>02*****</span>
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							<figure class="img">
-								<img src="" alt="">
-							</figure>
-							<h3>KT플라자 당산점</h3>
-							<p>휴대폰 요금이나 궁금한 것들을 이것저것 여쭤봤는데 자세히 이야기해주셔서 좋았습니다!</p>
-							<span>오늘*****</span>
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							<figure class="img">
-								<img src="" alt="">
-							</figure>
-							<h3>KT플라자 강남대로점</h3>
-							<p>매장도 넘 쾌적하고 상담도 베테랑처럼 신속하게 빠르셨어요!!</p>
-							<span>우*****</span>
+							<div class="txt_wrap">
+								<span>모바일</span>
+								<p>오직 KT에서만 만날 수 있는</p>
+								<strong>나만의 애플 SET</strong>
+							</div>
 						</a>
 					</li>
 				</ul>
+			</div>
+		</section>
+		<section class="sec_03">
+			<div class="inner">
+				<div class="sec_tit wh">
+					<h2>매장찾기</h2>
+					<p>근처의 매장을 쉽고 빠르게 찾아보세요.</p>
+				</div>
+				<div class="search_box">
+					<div class="item">
+						<p>시/도 선택</p>
+						<select>
+							<option>시/도 선택</option>
+						</select>
+					</div>
+					<div class="item">
+						<p>시/군/구 선택</p>
+						<select>
+							<option>시/군/구 선택</option>
+						</select>
+					</div>
+					<div class="item inpt">
+						<p>매장 검색</p>
+						<div class="srch">
+							<input type="text" placeholder="매장명 또는 지역을 입력해 주세요.">
+							<button type="submit" title="검색"></button>
+						</div>
+					</div>
+				</div>
+				<a href="#" class="more_btn"><span>전체 매장 보기</span></a>
+			</div>
+		</section>
+		<section class="sec_04">
+			<div class="inner">
+				<div class="sec_tit">
+					<h2>고객후기</h2>
+					<p>kt m&s와 함께한 고객들의<br/> 소중한 후기를 확인해 보세요.</p>
+				</div>
+				<div class="rv_li">
+					<ul>
+						<li>
+							<a href="#">
+								<figure class="img">
+									<img src="./assets/images/main/rv_01.jpg">
+								</figure>
+								<h3>KT플라자 당곡역점</h3>
+								<p>부모님 두분 폰이랑 인터넷 TV 전화도 가입하고 왔네요~ㅎㅎ</p>
+								<span>icastorpo*****</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<figure class="img">
+									<img src="./assets/images/main/rv_02.jpg">
+								</figure>
+								<h3>KT플라자 광화문본점</h3>
+								<p>장시간동안 꼼꼼하게 알려주셨습니다 😌</p>
+								<span>종로*****</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<figure class="img">
+									<img src="./assets/images/main/rv_03.jpg">
+								</figure>
+								<h3>KT플라자 한성대점</h3>
+								<p>필름교체도하고 간단한 상담도 받아볼 겸 방문하였는데 서비스 대만족 ㅎㅎ</p>
+								<span>ghd*****</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<figure class="img">
+									<img src="./assets/images/main/rv_04.jpg">
+								</figure>
+								<h3>KT플라자 교대역점</h3>
+								<p>여러가지 고민해야 할 부분에 대해 친절히 설명해 주셨습니다.</p>
+								<span>dam*****</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<figure class="img">
+									<img src="./assets/images/main/rv_05.jpg">
+								</figure>
+								<h3>KT플라자 옥정신도시점</h3>
+								<p>앞으로도 휴대폰 변경할 일이 있으면 꼭 다시 방문하고 싶네요!</p>
+								<span>du*****</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<figure class="img">
+									<img src="./assets/images/main/rv_06.jpg">
+								</figure>
+								<h3>KT플라자 수원매탄점</h3>
+								<p>제가 이해를 잘 못했는데도 불구하고 오랜시간 친절히 설명해 주셔서 감사했습니다.</p>
+								<span>02*****</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<figure class="img">
+									<img src="./assets/images/main/rv_07.jpg">
+								</figure>
+								<h3>KT플라자 당산점</h3>
+								<p>휴대폰 요금이나 궁금한 것들을 이것저것 여쭤봤는데 자세히 이야기해주셔서 좋았습니다!</p>
+								<span>오늘*****</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<figure class="img">
+									<img src="./assets/images/main/rv_08.jpg">
+								</figure>
+								<h3>KT플라자 강남대로점</h3>
+								<p>매장도 넘 쾌적하고 상담도 베테랑처럼 신속하게 빠르셨어요!!</p>
+								<span>우*****</span>
+							</a>
+						</li>
+					</ul>
+				</div>
 			</div>
 		</section>
 		<section class="sec_05">
-			<div class="sec_tit">
-				<h2>인재채용</h2>
-				<p>kt m&s가 만들어가는 여정에 함께하세요.</p>
-			</div>
-			<div class="emp_sec">
-				<ul>
-					<li>
-						<a href="#">
-							<strong>인재상</strong>
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							<strong>채용공고</strong>
-							<span>7건</span>
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							<strong>복리후생</strong>
-						</a>
-					</li>
-				</ul>
+			<div class="inner">
+				<div class="sec_tit wh tl">
+					<h2>인재채용</h2>
+					<p>kt m&s가 만들어가는 여정에 함께하세요.</p>
+				</div>
+				<div class="emp_sec">
+					<ul>
+						<li>
+							<a href="#">
+								<strong>인재상</strong>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<strong>채용공고</strong>
+								<span>7건</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<strong>복리후생</strong>
+							</a>
+						</li>
+					</ul>
+				</div>
 			</div>
 		</section>
 		<section class="sec_06">
-			<div class="sec_tit">
-				<h2>파트너십</h2>
-				<p>현장에서 전해지는 kt m&s의 생생한 이야기와 도전의 기회를 만나보세요.</p>
-			</div>
-			<div class="prt_sec">
-				<ul>
-					<li>
-						<h3>세일즈 전설</h3>
-						<p>고객의 마음을 움직이는<br/>세일즈 전설들의 이야기를 만나보세요.</p>
-						<a href="#"><span>자세히 보기</span></a>
-					</li>
-					<li>
-						<h3>판매점 개설문의</h3>
-						<p>미래의 통신 시장을 이끌어 갈<br/>경쟁력 있는 성공 파트너로 함께하겠습니다.</p>
-						<a href="#"><span>자세히 보기</span></a>
-					</li>
-				</ul>
+			<div class="inner">
+				<div class="sec_tit">
+					<h2>파트너십</h2>
+					<p>현장에서 전해지는 kt m&s의 생생한 이야기와 도전의 기회를 만나보세요.</p>
+				</div>
+				<div class="prt_sec">
+					<ul>
+						<li>
+							<h3>세일즈 전설</h3>
+							<p>고객의 마음을 움직이는<br/>세일즈 전설들의 이야기를 만나보세요.</p>
+							<a href="#"><span>자세히 보기</span></a>
+						</li>
+						<li>
+							<h3>판매점 개설문의</h3>
+							<p>미래의 통신 시장을 이끌어 갈<br/>경쟁력 있는 성공 파트너로 함께하겠습니다.</p>
+							<a href="#"><span>자세히 보기</span></a>
+						</li>
+					</ul>
+				</div>
 			</div>
 		</section>
 		<section class="sec_07">
-			<div class="sec_tit">
-				<h2>지속가능성과 사회공헌</h2>
-				<p>kt m&s가 펼치는 따뜻한 연결, 함께 만드는 가치의 순간을 확인해보세요.</p>
+			<div class="inner">
+				<div class="sec_tit">
+					<h2>지속가능성과 사회공헌</h2>
+					<p>kt m&s가 펼치는 따뜻한 연결, 함께 만드는 가치의 순간을 확인해보세요.</p>
+				</div>
+				<div class="work_slide swiper">
+					<div class="swiper-wrapper">
+						<div class="item swiper-slide">
+							<a href="#">
+								<figure class="img">
+									<img src="./assets/images/main/work_01.jpg">
+								</figure>
+								<div class="txt_wrap">
+									<h3>중고폰 안심거래 사업자 인증 신청</h3>
+									<p>세일즈 전설 26명의 명장 탄생 중고폰 시장 전반의 신뢰도를 높이고 유통 시장의 건전한 성장을 위한 ‘중고폰 안심거래 사업자 인증제’를 신청했습니다.</p>
+									<span>2025. 05</span>
+								</div>
+							</a>
+						</div>
+						<div class="item swiper-slide">
+							<a href="#">
+								<figure class="img">
+									<img src="./assets/images/main/work_02.jpg">
+								</figure>
+								<div class="txt_wrap">
+									<h3>네팔 트리부반대학교 노트북 100대 기증</h3>
+									<p>네팔 학생들의 교육 환경 개선을 위해 노트북 100대를 기부하여 의미있는 해외 연계 사회공헌 활동의 시작을 열었습니다.</p>
+									<span>2025. 05</span>
+								</div>
+							</a>
+						</div>
+						<div class="item swiper-slide">
+							<a href="#">
+								<figure class="img">
+									<img src="./assets/images/main/work_03.png">
+								</figure>
+								<div class="txt_wrap">
+									<h3>소상공인 상생협력 바른치킨 x 동행플러스 협약</h3>
+									<p>치킨 프랜차이즈 ‘바른치킨’과 손잡고 소상공인 디지털 상생 프로젝트 ‘동행 플러스’를 본격 확대한다고 밝혔습니다.</p>
+									<span>2025. 05</span>
+								</div>
+							</a>
+						</div>
+						<div class="item swiper-slide">
+							<a href="#">
+								<figure class="img">
+									<img src="./assets/images/main/work_04.png">
+								</figure>
+								<div class="txt_wrap">
+									<h3>세일즈 전설 26명의 명장 탄생</h3>
+									<p>고객 신뢰를 높이기 위한 ‘세일즈 전설’ 프로그램을 도입하여 초대 세일즈 26명을 약 3개월에 걸쳐 공식 선발했습니다.</p>
+									<span>2025. 05</span>
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="work_bullet"></div>
+				</div>
+				<a href="#" class="more_btn"><span>더보기</span></a>
 			</div>
-			<a href="#" class="more_btn"><span>더보기</span></a>
 		</section>
 	</div>
 	<!--// content --> 
