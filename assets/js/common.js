@@ -7,18 +7,24 @@ $(document).ready(function(){
 	$('.btn_map').length && imgMap() 
 	$('.main_visual').length && mainVisual() 
 	$('.work_slide').length && workSlide()
+	$('.rv_slide').length && rvSlide()
+	$('.m_menu').length && initMobileMenu()
 	$('.select_box').niceSelect()
 
 	$(window).resize(function () {
 		$('.work_slide').length && workSlide();
 	});
+
+	$(window).resize(function () {
+		$('.rv_slide').length && rvSlide();
+	});
 });
 
 function dimShow(){ /* 딤드 show */
-    $('body').addClass('dim');
+	$('body').addClass('dim');
 }
 function dimHide(){ /* 딤드 hide */
-    $('body').removeClass('dim');
+	$('body').removeClass('dim');
 }
 
 function menu() {
@@ -147,36 +153,36 @@ function sidebar() {
 		// 콘텐츠 활성화
 		$('.map_page .tab_content .srch_opt').removeClass('active');
 		$('.map_page .tab_content .srch_opt').eq(index).addClass('active');
-    });
+	});
 }
 
 function imgMap() {
 $('.btn_map li').on('click', function () {
-      const index = $(this).index();
+		const index = $(this).index();
 
-      // 버튼 active 처리
-      $('.btn_map li').removeClass('active');
-      $(this).addClass('active');
+		// 버튼 active 처리
+		$('.btn_map li').removeClass('active');
+		$(this).addClass('active');
 
-      // 이미지 active 처리
-      $('.img_list li').removeClass('active');
-      $('.img_list li').eq(index).addClass('active');
-    });
+		// 이미지 active 처리
+		$('.img_list li').removeClass('active');
+		$('.img_list li').eq(index).addClass('active');
+	});
 
-    // 이미지맵 영역 클릭 시
-    $('.img_map area').on('click', function (e) {
-      e.preventDefault(); // 페이지 이동 방지
+	// 이미지맵 영역 클릭 시
+	$('.img_map area').on('click', function (e) {
+		e.preventDefault(); // 페이지 이동 방지
 
-      const index = parseInt($(this).attr('href')) - 1; // href="1" → index 0
+		const index = parseInt($(this).attr('href')) - 1; // href="1" → index 0
 
-      // 버튼 active 처리
-      $('.btn_map li').removeClass('active');
-      $('.btn_map li').eq(index).addClass('active');
+		// 버튼 active 처리
+		$('.btn_map li').removeClass('active');
+		$('.btn_map li').eq(index).addClass('active');
 
-      // 이미지 active 처리
-      $('.img_list li').removeClass('active');
-      $('.img_list li').eq(index).addClass('active');
-    });
+		// 이미지 active 처리
+		$('.img_list li').removeClass('active');
+		$('.img_list li').eq(index).addClass('active');
+	});
 }
 
 function mainVisual() {
@@ -220,3 +226,143 @@ function workSlide() {
 		window.workSwiper = undefined;
 	}
 }
+
+function rvSlide() {
+	var windowWidth = $(window).width();
+
+	if (windowWidth <= 1024 && !window.rvSwiper) {
+		window.rvSwiper = new Swiper('.rv_slide', {
+			slidesPerView: '2',
+			grid : {
+				rows:2,
+				fill:'row'
+			},
+			loop: true,
+			loopAdditionalSlides: 1,
+			spaceBetween : 20,
+			centeredSlides: true,
+			autoplay: {
+				delay: 5000,
+				disableOnInteraction: false
+			},
+			pagination: {
+				el: '.rv_bullet',
+				type: 'bullets',
+				clickable: true
+			}
+		});
+	} else if (windowWidth > 1024 && window.rvSwiper) {
+		window.rvSwiper.destroy(true, true);
+		window.rvSwiper = undefined;
+	}
+}
+
+function initPopupSwiper(triggerSelector, popupSelector, swiperSelector) {
+	let popupSwiper;
+	
+	document.querySelectorAll(`${triggerSelector} .swiper-slide a`).forEach((el, index) => {
+		el.addEventListener('click', e => {
+			e.preventDefault();
+		
+			const popup = document.querySelector(popupSelector);
+			const wrapper = popup.querySelector('.swiper-wrapper');
+			const slides = document.querySelectorAll(`${triggerSelector} .swiper-slide`);
+			wrapper.innerHTML = '';
+		
+			slides.forEach(slide => {
+				wrapper.innerHTML += `
+				<div class="swiper-slide">
+					${slide.querySelector('.img')?.outerHTML || ''}
+					<div class="txt_wrap">
+						<div class="rv_tit">
+							<h4>${slide.querySelector('h3')?.textContent || ''}</h4>
+							<p>
+								<span>${slide.querySelector('span')?.textContent || ''}</span>
+								<span>${slide.dataset.date || ''}</span>
+							</p>
+						</div>
+						<div class="rv">${slide.querySelector('p')?.textContent || ''}</div>
+					</div>
+				</div>`;
+			});
+		
+			if (popupSwiper) popupSwiper.destroy(true, true);
+			popupSwiper = new Swiper(swiperSelector, {
+				slidesPerView: 1,
+				loop: true,
+				initialSlide: index,
+				navigation: {
+					nextEl: `${swiperSelector}`,
+					prevEl: `${swiperSelector}`
+				},
+				pagination: {
+					el: `${swiperSelector} .swiper-pagination`,
+					type: 'fraction'
+				}
+			});
+	
+			popup.style.display = 'block';
+			dimShow();
+		});
+	});
+	
+	document.querySelector(`${popupSelector} .popup_close`)?.addEventListener('click', () => {
+		document.querySelector(popupSelector).style.display = 'none';
+		dimHide();
+	});
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+	initPopupSwiper('.rv_slide', '.rv_popup', '.rv_popup_swiper');
+});
+
+function initMobileMenu() {
+	// 메뉴 버튼 클릭 → 메뉴 열기
+	$('.tab_Bar .tab_menu').on('click', function () {
+	  $('.m_menu').addClass('active');
+	  $(this).addClass('active')
+	  $('body').css('overflow','hidden')
+	});
+  
+	// 뒤로가기 버튼 클릭 → 메뉴 닫기
+	$('.m_menu .head button').on('click', function () {
+	  $('.m_menu').removeClass('active');
+	  $('.tab_Bar .tab_menu').removeClass('active')
+	  $('body').css('overflow','')
+	});
+
+	$(window).on('resize', function () {
+	// 창 크기가 변경되면 body overflow 속성 초기화
+		if ($('.m_menu').hasClass('active')) {
+			$('.m_menu').removeClass('active');
+			$('.tab_Bar .tab_menu').removeClass('active')
+			$('body').css('overflow', '');
+		}
+	});
+
+	// 좌측 1depth 클릭 시
+	$('.menuL_list li a').on('click', function (e) {
+	  e.preventDefault();
+  
+	  const index = $(this).parent().index();
+  
+	  // 좌측 active 처리
+	  $('.menuL_list li').removeClass('active');
+	  $(this).parent().addClass('active');
+  
+	  // 우측 같은 순서 메뉴 열기
+	  $('.menuR_list > li').removeClass('active').eq(index).addClass('active');
+	});
+  
+	// 2depth 클릭 시 → 하위 3depth 슬라이드 토글
+	$('.dept_02 > li > a').on('click', function (e) {
+	  const $li = $(this).parent();
+	  const $depth = $li.children('.dept_03');
+  
+	  if ($depth.length) {
+		e.preventDefault(); // 링크 방지
+		$li.toggleClass('active').siblings().removeClass('active').find('.dept_03').slideUp(200);
+		$depth.stop(true, true).slideToggle(200);
+	  }
+	});
+  }

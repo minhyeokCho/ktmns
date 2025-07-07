@@ -620,7 +620,39 @@
 	.recruit_prs .prs_item:nth-child(2n+1){margin-left: 0;}
 }
 
+/* 기업개요 */
+.company .highlight {display: inline-block; position: relative; font-weight: 600; font-size: 32px;}
+.company .highlight::before {display: block; content: ''; background-color: #d0f8f7; height: 22px; width: calc(100% + 14px); position: absolute; left: -7px; bottom: 0; z-index: -1;}
+.company_txt {padding: 100px 0;}
+.company_txt p {font-size: 32px; font-weight: 600; color: #181818; display: flex; align-items: center; flex: wrap;}
+.company_txt p ~ p {margin-top: 4px;}
+.company_txt p img {width: 120px; height: 44px; margin-left: 12px; display: inline-block;}
+.company .info {display: flex; gap:30px 120px;}
+.company .info .img {width: 700px; border-radius: 10px; overflow: hidden;}
+.company .info .txt_wrap {flex:1;}
+.company .info .txt_wrap dl:nth-of-type(1) {margin-top: 30px; border-top:1px solid #eee;}
+.company .info .txt_wrap dl {border-bottom: 1px solid #eee;padding: 28px 0; display: flex; align-items: center;}
+.company .info .txt_wrap dl dt {width: 180px; font-size: 24px; font-weight: 600; color: #222;}
+.company .info .txt_wrap dl dd {font-size: 18px; color: #363636; flex:1;}
 
+.bsi {margin-top: 100px;}
+.bsi ul {display: flex; gap:30px; margin-top: 30px;}
+.bsi ul > li {width: calc(50% - 15px); background-color: #f6f6f6; padding: 50px 60px; border-radius: 20px;}
+.bsi ul li h3 {color: #181818; font-size: 24px;font-weight: 600;}
+.bsi .txt_wrap {padding-top: 25px; margin-top: 25px; border-top:1px solid #ccc;}
+.bsi .txt_wrap strong {color: #00A9A7; font-size: 20px; font-weight: 500;}
+.bsi .txt_wrap p {margin-top: 2px;font-size: 18px; font-weight: 500; color: #363636;}
+.bsi .txt_wrap ol {margin-top: 14px;}
+.bsi .txt_wrap ol li {font-size: 18px; color: #363636;}
+.bsi .txt_wrap ol li ~ li {margin-top: 2px;}
 
-
-
+.bsi_li {margin-top: 100px;}
+.bsi_li ul {display: flex; transition: .3s; margin-top: 30px;}
+.bsi_li ul li {width: calc(100% / 6); transition: .3s; height: 540px; padding: 30px; overflow: hidden; display: flex; flex-direction: column; justify-content: flex-end;}
+.bsi_li ul:hover li {width: calc(100% - 640px) / 6;}
+.bsi_li ul li:hover {width: 640px;}
+.bsi_li ul li h3 {font-size: 32px; color: #fff; font-weight: 600;}
+.bsi_li ul li p {margin-top: 12px; font-size: 18px; font-weight: 500; color: #fff; opacity: 0; visibility: hidden; transition: .3s; width: 500px; overflow: hidden;}
+.bsi_li ul li span {display: block; margin-top: 6px; font-size: 12px; color: #fff; opacity: 0; visibility: hidden; transition: .3s; width: 500px; overflow: hidden;}
+.bsi_li ul li:hover p,
+.bsi_li ul li:hover span {opacity: 1; visibility: visible;}

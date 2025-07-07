@@ -67,25 +67,27 @@ body.dim:before {background-color:rgba(0, 0, 0, 0.5); content:""; position:fixed
 	.h_btm nav .dept_01 .dept_02 li a {font-size: 16px;}
 }
 /* ============================== [ 전체메뉴 - Mobile ] ========================================================================================== */
-.m_menu {display: none; position: fixed; left: 0; top: 0; width: 100%; height: 100vh; background-color: #fff; z-index: 1000;}
+.m_menu {display: none; position: fixed; left: 0; top: 0; width: 100%; height: calc(100vh - 65px); background-color: #fff; z-index: 1000;}
 .m_menu .head {padding: 16px 20px; display: flex; align-items: center; justify-content: space-between;}
 .m_menu .head button {width: 28px; height: 28px; background: url(../images/common/icon_all_menu_back.svg) no-repeat left center;}
 .m_menu .head a {font-size: 14px; font-weight: 500; padding: 4px 14px; background-color: #EFF2F6; border-radius: 5px; display: inline-block;}
-.m_menu .cont {display: flex; background-color: #EFF2F6;} 
-.m_menu .cont .menuL_wrap {width: 33.33%; padding-top: 10px;}
+.m_menu .cont {display: flex; background-color: #EFF2F6; height: calc(100% - 60px);} 
+.m_menu .cont .menuL_wrap {width: 33.33%; padding-top: 10px; height: 100%; overflow-y: auto;}
 .m_menu .cont .menuL_wrap li.active a {background-color: #EC1B23; color: #fff; font-weight: 600;}
 .m_menu .cont .menuL_wrap li a {padding: 14px 20px; font-size: 18px; color: #222; transition: .3s;}
-.m_menu .cont .menuR_wrap {flex:1; background-color: #fff; padding-top: 10px;}
+.m_menu .cont .menuR_wrap {flex:1; background-color: #fff; margin-top: 10px; height: calc(100% - 10px); overflow-y: auto;}
 .m_menu .cont .menuR_wrap .menuR_list > li {display: none;}
 .m_menu .cont .menuR_wrap .menuR_list > li.active {display: block;}
 .m_menu .cont .menuR_wrap .dept_02 > li > a {padding: 16px 20px; font-weight: 600; position: relative;}
-.m_menu .cont .menuR_wrap .dept_02 > li > a::after {display: block; content: ''; background: url(../images/common/icon_all_menu_dropdown.svg) no-repeat; position: absolute; right: 20px; top: calc(50% - 5px); width: 17px; height: 10px; transition: .3s;}
+.m_menu .cont .menuR_wrap .dept_02 > li:has(> ul.dept_03) > a::after {display: block; content: ''; background: url(../images/common/icon_all_menu_dropdown.svg) no-repeat; position: absolute; right: 20px; top: calc(50% - 5px); width: 17px; height: 10px; transition: .3s;}
 .m_menu .cont .menuR_wrap .dept_02 > li.active > a::after {transform: rotate(180deg);}
 .m_menu .cont .menuR_wrap .dept_03 {background-color: #F9F9F9; display: none;}
 .m_menu .cont .menuR_wrap .dept_03 > li > a {padding: 10px 40px; font-weight: 500; font-size: 15px; color: #363636;}
 .m_menu .cont .menuR_wrap .dept_04 > li > a {padding: 8px 10px 8px 60px; font-weight: 500; font-size: 15px; color: #636363;}
 .m_menu .cont .menuR_wrap .dept_04 > li > a::before {content: ' · ';}
-
+@media screen and (max-width: 1024px) {
+	.m_menu.active {display: block;}
+}
 /* ============================== [ 전체메뉴 - PC ] ========================================================================================== */
 .all_menu {opacity: 0; visibility: hidden; position: fixed; left: 0; top: 0; width: 100%; height: 100vh; overflow-y: auto; backdrop-filter: blur(16px);background: #000000CC; z-index: 1000; transition: .3s;}
 .all_menu.on {opacity: 1; visibility: visible;}
@@ -122,7 +124,8 @@ body.dim:before {background-color:rgba(0, 0, 0, 0.5); content:""; position:fixed
 .tab_Bar ul li {flex:1;}
 .tab_Bar ul li a {width: 100%; height: 64px; display: flex; align-items: center; justify-content: center;}
 .tab_Bar ul li a span {display: block; width: 42px; padding-top: 40px; font-size: 12px; font-weight: 500; transition: .3s; background-position: top center; background-repeat: no-repeat; background-size: 40px; text-align: center;}
-.tab_Bar ul li a:hover span {color: #EC1B23;}
+.tab_Bar ul li a:hover span ,
+.tab_Bar ul li a.active span {color: #EC1B23;}
 .tab_Bar ul li a.home span {background-image: url(../images/common/tab_home.svg);}
 .tab_Bar ul li a.chat span {background-image: url(../images/common/tab_chat.svg);}
 .tab_Bar ul li a.map span {background-image: url(../images/common/tab_map.svg);}
@@ -135,6 +138,7 @@ body.dim:before {background-color:rgba(0, 0, 0, 0.5); content:""; position:fixed
 .tab_Bar ul li a.home:active span {background-image: url(../images/common/tab_home_on.svg);}
 .tab_Bar ul li a.chat:active span {background-image: url(../images/common/tab_chat_on.svg);}
 .tab_Bar ul li a.map:active span {background-image: url(../images/common/tab_map_on.svg);}
+.tab_Bar ul li a.tab_menu.active span,
 .tab_Bar ul li a.tab_menu:active span {background-image: url(../images/common/tab_menu_on.svg);}
 /* ============================== [ 탭바 ] ========================================================================================== */
 .go_top {position: fixed; right: 50px; bottom: 60px; width: 60px; height: 60px; background: url(../images/common/icon_top_on.svg) no-repeat 0 0; background-size: 100% auto; transition: .3s; z-index: 10;}

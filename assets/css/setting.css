@@ -182,6 +182,7 @@ textarea::-ms-placeholder {
 }
 
 /* 전체 스크롤바 */
+.rv_popup_inner .txt_wrap .rv::-webkit-scrollbar,
 .sidebar .res_li::-webkit-scrollbar,
 .mem_pop_wrap .txt_area::-webkit-scrollbar {
 	width: 18px; 
@@ -189,6 +190,7 @@ textarea::-ms-placeholder {
 }
 
 /* 트랙 (스크롤 배경) */
+.rv_popup_inner .txt_wrap .rv::-webkit-scrollbar-track,
 .sidebar .res_li::-webkit-scrollbar-track,
 .mem_pop_wrap .txt_area::-webkit-scrollbar-track {
   background: transparent;
@@ -196,6 +198,7 @@ textarea::-ms-placeholder {
 }
 
 /* 핸들 (움직이는 부분) */
+.rv_popup_inner .txt_wrap .rv::-webkit-scrollbar-thumb,
 .sidebar .res_li::-webkit-scrollbar-thumb,
 .mem_pop_wrap .txt_area::-webkit-scrollbar-thumb {
   background: #B9B9B9;
