@@ -402,6 +402,23 @@
 				</li>
 			</ul>
 		</div>
+		<div class="sub_tab_mo">
+			<a href="#" class="current">
+				<strong>거래문의</strong>
+			</a>
+			<ul>
+				<li>
+					<a href="#">
+						<strong>인사말/혜택</strong>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<strong>거래문의</strong>
+					</a>
+				</li>
+			</ul>
+		</div>
 		<!-- Why kt m&s -->
 		<div class="inner">
 			<div class="map_list">
@@ -628,4 +645,38 @@
 </div>
 <!-- // WRAP -->
 </body>
+<script>
+	document.addEventListener('DOMContentLoaded', function() {
+		const img = document.querySelector('.img_map img')
+		const map = document.querySelector('map[name="image-map"]')
+		const originalWidth = 410;
+		const originalHeight = 547;
+
+		function resizeMap() {
+			const currentWidth = img.clientWidth;
+			const currentHeight = img.clientHeight;
+			const widthRatio =currentWidth / originalWidth;
+			const heightRatio = currentHeight /originalHeight;
+
+			map.querySelectorAll('area').forEach(area => {
+				const originalCoords = area.dataset.originalCoords;
+				if (!originalCoords) {
+					area.dataset.originalCoords = area.coords
+				}
+				const coords = area.dataset.originalCoords.split(',').map((coord, index) => {
+					const ratio =index % 2 === 0 ? widthRatio : heightRatio;
+					return Math.round(coord * ratio)
+				});
+				area.coords = coords.join(',')
+			})
+		}
+		if(img.complete) {
+			resizeMap();
+		}else {
+			img.onload = resizeMap;
+		}
+
+		window.addEventListener('resize', resizeMap);
+	})
+</script>
 </html>

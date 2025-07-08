@@ -9,6 +9,8 @@ $(document).ready(function(){
 	$('.work_slide').length && workSlide()
 	$('.rv_slide').length && rvSlide()
 	$('.m_menu').length && initMobileMenu()
+	$('.recruit_prs').length && recruit()
+	$('.sub_tab_mo').length && subTab()
 	$('.select_box').niceSelect()
 
 	$(window).resize(function () {
@@ -237,14 +239,7 @@ function rvSlide() {
 				rows:2,
 				fill:'row'
 			},
-			loop: true,
-			loopAdditionalSlides: 1,
 			spaceBetween : 20,
-			centeredSlides: true,
-			autoplay: {
-				delay: 5000,
-				disableOnInteraction: false
-			},
 			pagination: {
 				el: '.rv_bullet',
 				type: 'bullets',
@@ -292,11 +287,11 @@ function initPopupSwiper(triggerSelector, popupSelector, swiperSelector) {
 				loop: true,
 				initialSlide: index,
 				navigation: {
-					nextEl: `${swiperSelector}`,
-					prevEl: `${swiperSelector}`
+					nextEl: `.rv_popup_inner .next`,
+					prevEl: `.rv_popup_inner .prev`
 				},
 				pagination: {
-					el: `${swiperSelector} .swiper-pagination`,
+					el: `.rv_popup_inner .rv_paging`,
 					type: 'fraction'
 				}
 			});
@@ -366,3 +361,22 @@ function initMobileMenu() {
 	  }
 	});
   }
+
+
+function recruit() {
+	let $items = $('.prs_item')
+	let idx = 0;
+
+	setInterval(function() {
+		$items.removeClass('active');
+		idx = (idx + 1) % $items.length;
+		$items.eq(idx).addClass('active')
+	}, 3000)
+}
+
+function subTab() {
+	$('.sub_tab_mo .current').on('click', function(e) {
+		e.preventDefault()
+		$('.sub_tab_mo ul').slideToggle();
+	})
+}

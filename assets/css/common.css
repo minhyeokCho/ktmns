@@ -157,8 +157,7 @@ body.dim:before {background-color:rgba(0, 0, 0, 0.5); content:""; position:fixed
 
 
 /* ============================== [ #footer ] ========================================================================================== */
-footer {padding: 60px 0; background: url(../images/common/bg_footer.png) no-repeat center; background-size: cover; position: relative;}
-footer::after {display: block; content: ''; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); position: absolute; left: 0; top: 0;}
+footer {padding: 60px 0; background: url(../images/common/bg_footer.jpg) no-repeat center; background-size: cover; position: relative;}
 footer * {color: #fff;}
 footer .inner {position: relative; z-index: 1;}
 footer .f_top {display: flex; align-items: flex-end; justify-content: space-between; position: relative;z-index: 2;}
@@ -169,7 +168,7 @@ footer .f_top .family button {padding: 0 20px; text-align: left; backdrop-filter
 footer .f_top .family button::after {display: block; content: ''; background: url(../images/common/arr_family.svg) no-repeat 0 0; width: 15px; height: 18px; background-size: 100% auto; position: absolute; right: 20px; top: calc(50% - 9px); transition: .3s;}
 footer .f_top .family.active button {background-color: rgba(40, 40, 40, 0.55); backdrop-filter: blur(5px);}
 footer .f_top .family.active button::after {transform: rotate(180deg);}
-footer .f_top .family ul {display: none; background-color: rgba(40, 40, 40, 0.65); backdrop-filter: blur(16px); position: absolute; left: 0; top: 100%; width: 100%; border-radius:0 0 2px 2px;}
+footer .f_top .family ul {display: none; background-color: rgba(40, 40, 40, 0.65); backdrop-filter: blur(8px); position: absolute; left: 0; top: 100%; width: 100%; border-radius:0 0 2px 2px;}
 footer .f_top .family ul li a {height: 50px; display: flex; align-items: center; margin: 0 20px; transition: .3s;}
 footer .f_top .family ul li a:hover {color: #40EFEC;}
 footer .f_top .family ul li:first-child a {border-top: 1px solid #FFFFFF66}
