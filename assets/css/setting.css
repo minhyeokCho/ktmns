@@ -142,48 +142,48 @@ a,input,button,select,label {
     -webkit-tap-highlight-color:transparent;
 }
 ::-webkit-input-placeholder {
-    color:#AAAAAA;
+    color:#888888;
     font:inherit;
     line-height:inherit;
 }
 input:disabled::-webkit-input-placeholder {
-    color:#AAAAAA;
+    color:#888888;
 }
 :-moz-placeholder {
-    color:#AAAAAA;
+    color:#888888;
     font:inherit;
     line-height:inherit;
 }
 input:disabled:-moz-placeholder {
-    color:#AAAAAA;
+    color:#888888;
 }
 ::-moz-placeholder {
-    color:#AAAAAA;
+    color:#888888;
     font:inherit;
     line-height:inherit;
 }
 input:disabled::-moz-placeholder {
-    color:#AAAAAA;
+    color:#888888;
 }
 :-ms-input-placeholder {
-    color:#AAAAAA;
+    color:#888888;
     font:inherit;
     line-height:inherit;
 }
 input:disabled:-ms-input-placeholder {
-    color:#AAAAAA;
+    color:#888888;
 }
 textarea::placeholder {
-    color:#AAAAAA;
+    color:#888888;
 }
 textarea::-webkit-placeholder {
-    color:#AAAAAA;
+    color:#888888;
 }
 textarea::-moz-placeholder {
-    color:#AAAAAA;
+    color:#888888;
 }
 textarea::-ms-placeholder {
-    color:#AAAAAA;
+    color:#888888;
 }
 .blind {
     overflow:hidden !important;
