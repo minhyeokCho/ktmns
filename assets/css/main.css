@@ -266,7 +266,7 @@ section {padding: 90px 0;}
 	.prt_sec ul li ~ li {margin-top: 20px;}
 	.prt_sec ul li h3 {font-size: 22px;}
 	.prt_sec ul li p {margin-top: 6px; font-size: 16px; width: 70%;}
-	.prt_sec ul li a {margin-top: 40px; width: 147px; height: 42px; font-size: 16px; padding-left: 20px; background-position:  right 20px center;}
+	.prt_sec ul li a {margin-top: 40px; width: 147px; height: 42px; font-size: 16px; padding-left: 20px; background-position: right 20px center;}
 	.prt_sec ul li:first-child {background-position: right -40px bottom; background-size: 200px auto;}
 	.prt_sec ul li:last-child {background-position: right -40px bottom; background-size: 250px auto;}
 }

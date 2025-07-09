@@ -14,7 +14,6 @@ $(document).ready(function(){
 	$('.history_wrap').length && history()
 	$('.bsi_li').length && bsi()
 	$('.js-sub_tab').length && initSubTabMo();
-	$('.select_box').niceSelect()
 
 	$(window).resize(function () {
 		$('.work_slide').length && workSlide();
@@ -116,7 +115,6 @@ function menu() {
 		$('body').css('overflow','')
 	})
 	$(window).on('resize', function () {
-	// 창 크기가 변경되면 body overflow 속성 초기화
 		if ($('.all_menu').hasClass('on')) {
 			$('body').css('overflow', '');
 		}
@@ -198,11 +196,9 @@ function sidebar() {
 
 		const index = $(this).index();
 
-		// 탭 활성화
 		$('.map_page .line_tab li').removeClass('active');
 		$(this).addClass('active');
 
-		// 콘텐츠 활성화
 		$('.map_page .tab_content .srch_opt').removeClass('active');
 		$('.map_page .tab_content .srch_opt').eq(index).addClass('active');
 	});
@@ -212,26 +208,22 @@ function imgMap() {
 $('.btn_map li').on('click', function () {
 		const index = $(this).index();
 
-		// 버튼 active 처리
 		$('.btn_map li').removeClass('active');
 		$(this).addClass('active');
 
-		// 이미지 active 처리
 		$('.img_list li').removeClass('active');
 		$('.img_list li').eq(index).addClass('active');
 	});
 
-	// 이미지맵 영역 클릭 시
 	$('.img_map area').on('click', function (e) {
 		e.preventDefault(); // 페이지 이동 방지
 
-		const index = parseInt($(this).attr('href')) - 1; // href="1" → index 0
+		const index = parseInt($(this).attr('href')) - 1; 
 
-		// 버튼 active 처리
 		$('.btn_map li').removeClass('active');
 		$('.btn_map li').eq(index).addClass('active');
 
-		// 이미지 active 처리
+		// 이미지 active 
 		$('.img_list li').removeClass('active');
 		$('.img_list li').eq(index).addClass('active');
 	});
@@ -362,22 +354,20 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function initMobileMenu() {
-	// 메뉴 버튼 클릭 → 메뉴 열기
-	$('.tab_Bar .tab_menu').on('click', function () {
-	  $('.m_menu').addClass('active');
-	  $(this).addClass('active')
-	  $('body').css('overflow','hidden')
+	$('.tab_Bar .tab_menu').on('click', function (e) {
+		e.preventDefault()
+		$('.m_menu').addClass('active');
+		$(this).addClass('active')
+		$('body').css('overflow','hidden')
 	});
-  
-	// 뒤로가기 버튼 클릭 → 메뉴 닫기
+	
 	$('.m_menu .head button').on('click', function () {
-	  $('.m_menu').removeClass('active');
-	  $('.tab_Bar .tab_menu').removeClass('active')
-	  $('body').css('overflow','')
+		$('.m_menu').removeClass('active');
+		$('.tab_Bar .tab_menu').removeClass('active')
+		$('body').css('overflow','')
 	});
 
 	$(window).on('resize', function () {
-	// 창 크기가 변경되면 body overflow 속성 초기화
 		if ($('.m_menu').hasClass('active')) {
 			$('.m_menu').removeClass('active');
 			$('.tab_Bar .tab_menu').removeClass('active')
@@ -385,32 +375,28 @@ function initMobileMenu() {
 		}
 	});
 
-	// 좌측 1depth 클릭 시
 	$('.menuL_list li a').on('click', function (e) {
-	  e.preventDefault();
-  
-	  const index = $(this).parent().index();
-  
-	  // 좌측 active 처리
-	  $('.menuL_list li').removeClass('active');
-	  $(this).parent().addClass('active');
-  
-	  // 우측 같은 순서 메뉴 열기
-	  $('.menuR_list > li').removeClass('active').eq(index).addClass('active');
+		e.preventDefault();
+	
+		const index = $(this).parent().index();
+	
+		$('.menuL_list li').removeClass('active');
+		$(this).parent().addClass('active');
+	
+		$('.menuR_list > li').removeClass('active').eq(index).addClass('active');
 	});
-  
-	// 2depth 클릭 시 → 하위 3depth 슬라이드 토글
+	
 	$('.m_menu .dept_02 > li > a').on('click', function (e) {
-	  const $li = $(this).parent();
-	  const $depth = $li.children('.dept_03');
-  
-	  if ($depth.length) {
+		const $li = $(this).parent();
+		const $depth = $li.children('.dept_03');
+	
+		if ($depth.length) {
 		e.preventDefault(); // 링크 방지
 		$li.toggleClass('active').siblings().removeClass('active').find('.dept_03').slideUp(200);
 		$depth.stop(true, true).slideToggle(200);
-	  }
+		}
 	});
-  }
+	}
 
 
 function recruit() {
@@ -434,60 +420,57 @@ function subTab() {
 }
 
 function bsi() {
-  const $items = $('.bsi_li ul li');
-  const $container = $('.bsi_li ul');
+	const $items = $('.bsi_li ul li');
+	const $container = $('.bsi_li ul');
 
-  function applyHoverEffect() {
-    const winWidth = $(window).width();
-    let hoveredWidth;
+	function applyHoverEffect() {
+	const winWidth = $(window).width();
+	let hoveredWidth;
 
-    if (winWidth >= 1301) {
-      hoveredWidth = 640;
-    } else if (winWidth >= 1025 && winWidth <= 1300) {
-      hoveredWidth = 450;
-    } else {
-      return; // 1024px 이하에서는 동작 중지
-    }
+	if (winWidth >= 1301) {
+		hoveredWidth = 640;
+	} else if (winWidth >= 1025 && winWidth <= 1300) {
+		hoveredWidth = 450;
+	} else {
+		return; 
+	}
 
-    const totalWidth = $container.width();
-    const othersWidth = (totalWidth - hoveredWidth) / ($items.length - 1);
+	const totalWidth = $container.width();
+	const othersWidth = (totalWidth - hoveredWidth) / ($items.length - 1);
 
-    $items.on('mouseenter.hoverEffect', function () {
-      const $hovered = $(this);
-      $items.each(function () {
-        if (this === $hovered[0]) {
-          $(this).css('width', hoveredWidth + 'px');
-        } else {
-          $(this).css('width', othersWidth + 'px');
-        }
-      });
-    });
+	$items.on('mouseenter.hoverEffect', function () {
+		const $hovered = $(this);
+		$items.each(function () {
+		if (this === $hovered[0]) {
+			$(this).css('width', hoveredWidth + 'px');
+		} else {
+			$(this).css('width', othersWidth + 'px');
+		}
+		});
+	});
 
-    $items.on('mouseleave.hoverEffect', function () {
-      $items.css('width', 'calc(100% / 6)');
-    });
-  }
+	$items.on('mouseleave.hoverEffect', function () {
+		$items.css('width', 'calc(100% / 6)');
+	});
+	}
 
-  function removeHoverEffect() {
-    $items.off('.hoverEffect'); // 네임스페이스로 안전하게 제거
-    $items.css('width', 'calc(100% / 6)');
-  }
+	function removeHoverEffect() {
+	$items.off('.hoverEffect'); 
+	$items.css('width', 'calc(100% / 6)');
+	}
 
-  // 초기 및 리사이즈 시 적용
-  function handleResize() {
-    removeHoverEffect(); // 먼저 기존 이벤트 제거
-    if ($(window).width() >= 1025) {
-      applyHoverEffect();
-    }
-  }
+	function handleResize() {
+	removeHoverEffect(); 
+	if ($(window).width() >= 1025) {
+		applyHoverEffect();
+	}
+	}
 
-  // 최초 실행
-  handleResize();
+	handleResize();
 
-  // 리사이즈 대응
-  $(window).on('resize', function () {
-    handleResize();
-  });
+	$(window).on('resize', function () {
+	handleResize();
+	});
 }
 
 function initSubTabMo() {
@@ -499,17 +482,14 @@ function initSubTabMo() {
 
 	let isClicking = false;
 
-	// 1. current 클릭 시 메뉴 토글
 	$current.on('click', function (e) {
 		e.preventDefault();
 		isClicking = true;
 		$menu.stop(true, true).slideToggle(200, () => {
-			// 클릭 후 300ms 뒤 isClicking 해제 (scroll 이벤트 방지용)
 			setTimeout(() => { isClicking = false; }, 300);
 		});
 	});
 
-	// 2. li 클릭 시 스크롤 이동 + current 갱신 + 닫기
 	$items.on('click', function (e) {
 		e.preventDefault();
 
@@ -530,7 +510,6 @@ function initSubTabMo() {
 		$menu.slideUp();
 	});
 
-	// 3. 스크롤 시 current 텍스트 및 active 자동 변경
 	$(window).on('scroll', function () {
 		if (isClicking) return; // 클릭 직후 스크롤 트리거 차단
 
