@@ -47,7 +47,7 @@
 .sub_tab ul li a span::after {display: block; content: ''; width: 1px; height: 16px; background-color: rgba(0, 0, 0, .15); position: absolute; left: 10px; top: 8px;}
 .sub_tab ul li.active a span::after {background-color: rgba(255, 255, 255, .5);}
 @media screen and (max-width: 1024px) {
-	.sub_tab {margin: 30px 0; top: 60px;}
+	.sub_tab {margin: 30px 0; top: 90px;}
 	.sub_tab ul li a {padding: 20px 35px; font-size: 20px;}
 }
 
