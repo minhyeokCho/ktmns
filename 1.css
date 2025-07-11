@@ -1,0 +1,91 @@
+.sidebar {}
+.sidebar .inner_wrap {}
+.sidebar .head {}
+.sidebar .head .head_top {}
+.sidebar .head .head_top h1 {}
+.sidebar .head .head_top h1 img {}
+.sidebar .head .search_wrap {}
+.sidebar .head .search_wrap input {}
+.sidebar .head .search_wrap button {}
+.sidebar .head .tab {}
+.sidebar .head .tab ul {}
+.sidebar .head .tab ul {}
+.sidebar .head .tab ul li a {}
+
+.sidebar .content {}
+.sidebar .content .sub_content {}
+.sidebar .content .sub_content li {}
+
+/* 주요사건 */
+.sort_wrap {}
+.sort_wrap select {}
+.sort_wrap button {}
+.evt_li {}
+.evt_li li {}
+.evt_li li ~ li {}
+.evt_li h3 {}
+.evt_li .cont {}
+.evt_li .cont .img {}
+.evt_li .cont .txt {}
+
+/* search */
+.res_wrap {}
+.res_wrap .back {}
+.res_wrap .group {}
+.res_wrap .group ~ .group {}
+.res_wrap .group .tit_area {}
+.res_wrap .group .tit_area h3 {}
+.res_wrap .group .tit_area a {}
+.res_wrap .group .space {}
+.res_wrap .group .space li {}
+.res_wrap .group .space li ~ li {}
+.res_wrap .group .space .tit {}
+.res_wrap .group .space .name {}
+.res_wrap .group .space .txt {}
+
+.detail_wrap {}
+.detail_wrap .dt_inner {}
+.detail_wrap .dt_info {}
+.detail_wrap .dt_info .group {}
+.detail_wrap .dt_info .group h4 {}
+.detail_wrap .dt_info .tit_area {}
+.detail_wrap .dt_info .tit_area h3 {}
+.detail_wrap .dt_info .tit_area .name {}
+.detail_wrap .dt_info .desc {}
+.detail_wrap .dt_info .img_li {}
+.detail_wrap .dt_info .img_li li {}
+.detail_wrap .dt_info .img_li li .img {}
+.detail_wrap .dt_info .img_li li p {}
+
+.detail_wrap .dt_img {}
+.detail_wrap .dt_img li {}
+.detail_wrap .dt_img li ~ li {}
+.detail_wrap .dt_img .img {}
+.detail_wrap .dt_img .img .btn_wrap {}
+.detail_wrap .dt_img .img .btn_wrap .map {}
+.detail_wrap .dt_img .img .btn_wrap .more_img {}
+.detail_wrap .dt_img .tit {}
+.detail_wrap .his_li {}
+.detail_wrap .his_li li {}
+.detail_wrap .his_li li ~ li {}
+.detail_wrap .his_li a {}
+
+/* 슬라이드 팝업 */
+.detail_slide {}
+.detail_slide .img {}
+.detail_slide h4 {}
+.detail_slide .txt {}
+.detail_slide .info {}
+.detail_slide .info .ref {}
+.detail_slide .info a {}
+.detail_slide .arr_wrap {}
+.detail_slide .arr_wrap button {}
+.detail_slide .detail_bullet {}
+.detail_slide .close {}
+
+
+
+
+
+
+

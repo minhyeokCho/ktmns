@@ -73,9 +73,32 @@ function history () {
 }
 function dimShow(){ /* 딤드 show */
 	$('body').addClass('dim');
+	lock()
 }
 function dimHide(){ /* 딤드 hide */
 	$('body').removeClass('dim');
+	unlock()
+}
+
+function lock() {
+	const scrollTop = window.scrollY || document.documentElement.scrollTop;
+	$('body').addClass('scroll-locked')
+
+	document.body.style.position = 'fixed';
+	document.body.style.top = `-${scrollTop}px`;
+	document.body.style.width = '100%'
+	document.body.style.overflowY = 'scroll'
+}
+
+function unlock() {
+	const scrollTop = parseInt(document.body.style.top || '0')*-1;
+	$('body').removeClass('scroll-locked')
+	document.body.style.position = '';
+	document.body.style.top = ``;
+	document.body.style.width = ''
+	document.body.style.overflowY = ''
+
+	window.scrollTo(0, scrollTop)
 }
 
 function menu() {
@@ -83,11 +106,14 @@ function menu() {
 	const hadHwh = $header.hasClass('h_wh');
 	const $dept2 = $('.h_btm .dept_02');
 	const $menuBg = $('.menu_bg');
-
+	
 	$(window).on('scroll', () => {
+		const isLocked = $('body').hasClass('scroll-locked')
+	
+		if(isLocked) return;
 		if ($(window).scrollTop() > 0) {
 			$header.removeClass('h_wh');
-		} else if (hadHwh && !$dept2.is(':visible')) {
+		} else if ($(window).scrollTop() === 0 && hadHwh && !$dept2.is(':visible')) {
 			$header.addClass('h_wh');
 		}
 	});
@@ -231,10 +257,11 @@ $('.btn_map li').on('click', function () {
 
 function mainVisual() {
 	var mainVisual = new Swiper ('.main_visual', {
+		slidesPerView: 1,
 		loop:true,
-		loopAdditionalSlides : 1,
+		loopAdditionalSlides : 0,
 		autoplay:{
-			delay:5000,
+			delay:3000,
 			disableOnInteraction:false
 		},
 		pagination: {
@@ -242,6 +269,7 @@ function mainVisual() {
 			type : 'bullets',
 			clickable: true,
 		},
+		speed:1000
 	})
 }
 

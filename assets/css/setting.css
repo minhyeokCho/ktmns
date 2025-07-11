@@ -195,6 +195,7 @@ textarea::-ms-placeholder {
 }
 
 /* 전체 스크롤바 */
+.all_menu .menu_wrap::-webkit-scrollbar,
 .rv_popup_inner .txt_wrap .rv::-webkit-scrollbar,
 .sidebar .res_li::-webkit-scrollbar,
 .mem_pop_wrap .txt_area::-webkit-scrollbar {
@@ -203,6 +204,7 @@ textarea::-ms-placeholder {
 }
 
 /* 트랙 (스크롤 배경) */
+.all_menu .menu_wrap::-webkit-scrollbar-track,
 .rv_popup_inner .txt_wrap .rv::-webkit-scrollbar-track,
 .sidebar .res_li::-webkit-scrollbar-track,
 .mem_pop_wrap .txt_area::-webkit-scrollbar-track {
@@ -217,6 +219,11 @@ textarea::-ms-placeholder {
   background: #B9B9B9;
   border-radius: 16px;
   border: 7px solid #fff;
+}
+.all_menu .menu_wrap::-webkit-scrollbar-thumb {
+	background: #fff;
+	border-radius: 16px;
+	border: 7px solid #000;
 }
 
 input[type=number]::-webkit-outer-spin-button,

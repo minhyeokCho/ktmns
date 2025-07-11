@@ -32,7 +32,7 @@
 }
 
 /* sub tab */
-.sub_tab {margin: 60px 0; position: sticky; top: 116px; z-index: 2;}
+.sub_tab {margin: 60px 0; position: sticky; top: 176px; z-index: 2;}
 .sub_tab ul {display: flex; justify-content: center;}
 .sub_tab ul li {background-color: #F6F6F6; position: relative;}
 .sub_tab ul li:first-child {border-radius: 28px 0 0 28px;}
@@ -76,7 +76,7 @@
 .select_map .cont_l .btn_map li {width: calc(33.33% - 14px);}
 .select_map .cont_l .btn_map li button {width: 100%; border:1.5px solid #000; border-radius: 25px; font-size: 18px; font-weight: 600; height: 49px; transition: .3s; background-image: url(../images/sub/btn_arr.svg); background-repeat: no-repeat; background-size: 12px auto; background-position: right 36px center; text-align: left; padding-left: 36px;}
 .select_map .cont_l .btn_map li.active button,
-.select_map .cont_l .btn_map li button:hover {background-color: #000; color: #fff;}
+.select_map .cont_l .btn_map li button:hover {background-color: #000; color: #fff; background-image: url(../images/sub/btn_arr_on.svg);}
 .select_map .cont_r {width: 410px; height: 547px; position: relative;}
 .select_map .cont_r .img_list {background: url(../images/sub/map_00.png) no-repeat 0 0; height: 547px; background-size: 100% auto; width: 100%; position: absolute; left: 0; top: 0;}
 .select_map .cont_r .img_list li {position: absolute; left: 0; top: 0; opacity: 0; transition: .2s;}
@@ -513,8 +513,8 @@
 .evt_list{display: flex;flex-wrap: wrap;margin-left: -40px;margin-top: -40px;}
 .evt_item{overflow: hidden;width: calc((100% - 80px)/2);margin-left: 40px;margin-top: 40px;border: 1px solid #ccc;border-radius: 20px;}
 .evt_item .img_wrap{overflow: hidden;position: relative;height: 200px;}
-.evt_item .img_wrap img{position: absolute;top: 0;right: 0;transition: 0.3s;}
-.evt_item:hover img{transform: scale(1.1);}
+.evt_item .img_wrap img{position: absolute;top: 0;right: 0;transition: 0.4s; transform-origin:right center; width: auto; height: 100%;}
+.evt_item:hover img{transform: scale(1.02);}
 .evt_item .label{display: flex;justify-content: flex-end;position: absolute;top: 30px;right: 30px;}
 .evt_item .label span{display: inline-block;padding: 4px 20px;border: 1px solid transparent;border-radius: 20px;font-size: 16px;font-weight: 500;}
 .evt_item .label span + span{margin-left: 10px;}
@@ -693,6 +693,27 @@
 	.recruit_prs .prs_item:nth-child(-n+2){margin-top: 0;}
 	.recruit_prs .prs_item:nth-child(2n+1){margin-left: 0;}
 }
+
+.recruit_wrap {max-width: 1240px; width: 100%; padding: 0 20px; margin: 0 auto;}
+.recruit_wrap .rec_title {padding: 30px; color: #fff; text-align: center; background: linear-gradient(86.71deg, #02ACAA 39.9%, #3B58EA 157.51%); border-radius: 8px;}
+.recruit_wrap .rec_title strong {font-size: 32px; font-weight: 700;}
+.recruit_wrap .rec_title p {margin-top: 6px; font-size: 24px; font-weight: 600; color: #fff;}
+.recruit_wrap .rec_sub_title {margin-top: 60px; background-color: #fff; border: 1px solid #00A9A7; padding: 20px; text-align: center; border-radius: 8px;}
+.recruit_wrap .rec_sub_title strong {font-size: 28px; font-weight: 600; color:#EC1B23;}
+.recruit_wrap .rec_sub_title strong span {color: #363636;}
+.recruit_wrap .rec_sub_title p {margin-top: 6px; font-size: 20px; font-weight: 500; color: #363636;}
+.recruit_wrap ul {margin-top: 30px; display: flex; gap:30px;}
+.recruit_wrap ul li {flex:1;}
+.recruit_wrap ul li .list_title {border: 1px solid #00A9A7; background: #E1F3F2; padding: 16px; text-align: center;}
+.recruit_wrap ul li .list_title strong {font-size: 24px; color: #363636; font-weight: 600; margin-bottom: 4px;}
+.recruit_wrap ul li .list_title strong::before {content: 'L'; color: #ec1b23;}
+.recruit_wrap ul li .list_title span {font-size: 22px; font-weight: 500; color: #363636;}
+.recruit_wrap ul li .list_cont {}
+.recruit_wrap ul li .list_cont h4 {}
+.recruit_wrap ul li .list_cont p {}
+.recruit_wrap ul li .list_cont p ~ p {}
+.recruit_wrap .res strong {}
+.recruit_wrap .res p {}
 
 /* 기업개요 */
 .company .highlight {display: inline-block; position: relative; font-weight: 600; font-size: 32px;}

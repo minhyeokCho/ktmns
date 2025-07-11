@@ -25,7 +25,6 @@ select {font:16px 'Pretendard',sans-serif; line-height: 1.4;}
 .img img {display:block; width:100%; height:auto; object-fit:cover;}
 * {word-wrap:break-word; word-break:keep-all; box-sizing: border-box;}
 a {display: block;}
-body.dim {overflow:hidden;}
 body.dim:before {background-color:rgba(0, 0, 0, 0.5); content:""; position:fixed; left:0; top:0; height:100vh; width:100%; z-index:9998;}
 .inner {max-width: 1640px; width: 100%; padding: 0 20px; margin: 0 auto;}
 
@@ -35,15 +34,17 @@ body.dim:before {background-color:rgba(0, 0, 0, 0.5); content:""; position:fixed
 .h_top ul {display: flex; align-items: center; justify-content:flex-end;}
 .h_top ul li ~ li {margin-left: 16px; padding-left: 16px; position: relative;}
 .h_top ul li ~ li::after {display: block; content: ''; width: 1px; height: 10px; position: absolute; left: 0; top: 5px; background-color: rgba(0, 0, 0, 0.3); transition: .3s;}
-.h_top ul li a {font-weight: 500; font-size: 14px; transition: .3s;}
+.h_top ul li a {font-weight: 500; font-size: 14px; transition: .3s; border-bottom: 1px solid transparent;}
+.h_top ul li a:hover {border-color: #000;}
 
 .h_btm {display: flex; align-items: center; justify-content: space-between;  background-color: #fff; border-bottom: 1px solid rgba(0, 0, 0, .15); padding:0 60px; position: relative; transition: .3s;}
 .h_btm .menu_bg {display: none; position: absolute; left: 0; top: calc(100% + 1px); background-color: #fff; width: 100%; height: 450px; z-index: 1;}
 .h_btm h1 a {background: url(../images/common/logo.svg) no-repeat 0 0; width: 103px; height: 30px; display: block; background-size: 100% auto; transition: .3s;}
 .h_btm nav .dept_01 {display: flex;}
 .h_btm nav .dept_01 > li {width: 177px; position: relative;}
-.h_btm nav .dept_01 > li > a {width: 100%; height: 80px; font-weight: 600; font-size: 22px; display: flex; align-items: center; justify-content: center; color: #221E1F; transition: .3s;}
+.h_btm nav .dept_01 > li > a {width: 100%; height: 80px; font-weight: 600; font-size: 22px; display: flex; align-items: center; justify-content: center; color: #221E1F; transition: .3s; border-bottom: 3px solid transparent;}
 .h_btm nav .dept_01 > li > a.active {color: #EC1B23;}
+.h_btm nav .dept_01 > li:hover  > a {border-color: #000;}
 .h_btm nav .dept_01 .dept_02 {display: none; position: absolute; left: 0; top: 100%; width: 100%; padding: 35px 0 50px; z-index: 2;}
 .h_btm nav .dept_01 .dept_02 li ~ li {margin-top: 20px;}
 .h_btm nav .dept_01 .dept_02 li a {font-size: 20px; font-weight: 500; color: #000; text-align: center;}
@@ -52,6 +53,7 @@ body.dim:before {background-color:rgba(0, 0, 0, 0.5); content:""; position:fixed
 /* 헤더 투명 */
 #header.h_wh .h_top {background-color: #313131;}
 #header.h_wh .h_top ul li a {color: #fff;}
+#header.h_wh .h_top ul li a:hover {border-color: #fff;}
 #header.h_wh .h_top ul li ~ li::after {background-color: rgba(255, 255, 255, .3);}
 #header.h_wh .h_btm {background-color: transparent; border-bottom: 1px solid rgba(255, 255, 255, .2);}
 #header.h_wh .h_btm nav .dept_01 > li > a {color: #fff;}
@@ -89,13 +91,13 @@ body.dim:before {background-color:rgba(0, 0, 0, 0.5); content:""; position:fixed
 	.m_menu.active {display: block;}
 }
 /* ============================== [ 전체메뉴 - PC ] ========================================================================================== */
-.all_menu {opacity: 0; visibility: hidden; position: fixed; left: 0; top: 0; width: 100%; height: 100vh; overflow-y: auto; backdrop-filter: blur(16px);background: #000000CC; z-index: 1000; transition: .3s;}
+.all_menu {opacity: 0; visibility: hidden; position: fixed; left: 0; top: 0; width: 100%; height: 100vh; backdrop-filter: blur(16px);background: #000000CC; z-index: 1000; transition: .3s;}
 .all_menu.on {opacity: 1; visibility: visible;}
 .all_menu * {color: #fff;}
 .all_menu .menu_h {display: flex; align-items: center; justify-content: space-between; padding: 20px 60px; position: sticky; left: 0; top: 0; width: 100%;}
 .all_menu .menu_h .logo {width: 103px;}
 .all_menu .menu_h button {width: 60px; height: 60px; background: url(../images/common/icon_close_allmenu.svg) no-repeat 0 0; background-size: 100% auto;}
-.all_menu .menu_wrap {display: flex; margin: 100px auto 0; max-width: 1686px; width: 100%; padding: 0 20px;}
+.all_menu .menu_wrap {display: flex; margin: 100px auto 0; max-width: 1686px; width: 100%; padding: 0 20px; overflow-y: auto; max-height: calc(100vh - 370px);}
 .all_menu .menu_wrap .group {flex:1;}
 .all_menu .menu_wrap .group h2 {font-size: 32px; font-weight: 600; display: inline-block; padding-right: 17px; position: relative;}
 .all_menu .menu_wrap .group h2::after {display: block; content: ''; background: url(../images/common/mark.svg) no-repeat; width: 14px; height: 7px; position: absolute; right: 0; top: 0; opacity: 0; visibility: hidden; transition: .3s; background-size: 100% auto;}
@@ -107,11 +109,14 @@ body.dim:before {background-color:rgba(0, 0, 0, 0.5); content:""; position:fixed
 .all_menu .menu_wrap .group .dept_02 > li:has(> ul.dept_03) > a.active::after {transform: rotate(180deg);}
 .all_menu .menu_wrap .group .dept_02 .dept_03 {display: none;}
 .all_menu .menu_wrap .group .dept_02 .dept_03 > li ~ li {margin-top: 4px;}
-.all_menu .menu_wrap .group .dept_03 > li > a {font-size: 18px; font-weight: 500; padding: 6px 20px;}
+.all_menu .menu_wrap .group .dept_03 > li {padding: 3px 20px;}
+.all_menu .menu_wrap .group .dept_03 > li > a {font-size: 18px; font-weight: 500; padding: 3px 0; border-bottom: 1px solid transparent; display: inline-block; transition: .3s;}
+.all_menu .menu_wrap .group .dept_03 > li > a:hover {border-color: #fff;}
 .all_menu .menu_wrap .group .dept_04 > li > a {padding: 4px 20px 4px 30px;}
 .all_menu .menu_wrap .group .dept_04 > li > a::before {content: ' · ';}
-.all_menu .all_menu_link {display: flex; justify-content: flex-end; padding: 60px;}
-.all_menu .all_menu_link a {padding:10px 30px; font-weight: 500; font-size: 20px;}
+.all_menu .all_menu_link {display: flex; justify-content: flex-end; padding: 60px; position: absolute; left: 0; bottom: 0; width: 100%;}
+.all_menu .all_menu_link a {margin: 0 30px; padding:4px 0; font-weight: 500; font-size: 20px;  transition: .3s; border-bottom:1px solid #000;}
+.all_menu .all_menu_link a:hover {border-color: #fff;}
 
 @media screen and (max-width: 1024px) {
 	.all_menu {display: none;}
