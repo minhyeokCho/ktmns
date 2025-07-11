@@ -13,6 +13,7 @@ $(document).ready(function(){
 	$('.sub_tab_mo').length && subTab()
 	$('.history_wrap').length && history()
 	$('.bsi_li').length && bsi()
+	$('.cs_form').length && rdoCS()
 	$('.js-sub_tab').length && initSubTabMo();
 
 	$(window).resize(function () {
@@ -23,24 +24,36 @@ $(document).ready(function(){
 		$('.rv_slide').length && rvSlide();
 	});
 
-	$(window).on('scroll', function () {
-		const triggerY = 190;
-		const scrollTop = $(window).scrollTop();
-		const windowY = scrollTop + triggerY;
+$(window).on('scroll', function () {
+	const triggerY = 190;
+	const scrollTop = $(window).scrollTop();
+	const windowY = scrollTop + triggerY;
+	const $items = $('.history_detail_area li');
 
-		$('.history_detail_area li').each(function () {
-			const $this = $(this);
-			const offsetTop = $this.offset().top;
+	$items.each(function () {
+		const $this = $(this);
+		const offsetTop = $this.offset().top;
 
-			if (windowY >= offsetTop) {
-				$this.find('.line').css('height', '100%');
-				$this.addClass('active');
-			} else {
-				$this.find('.line').css('height', '0%');
-				$this.removeClass('active');
-			}
-		});
+		if (windowY >= offsetTop) {
+			$this.find('.line').css('height', '100%');
+			$this.addClass('active');
+		} else {
+			$this.find('.line').css('height', '0%');
+			$this.removeClass('active');
+		}
 	});
+	const scrollBottom = scrollTop + $(window).height();
+	const documentHeight = $(document).height();
+
+	if (scrollBottom >= documentHeight - 10) {
+		$items.each(function () {
+			const $this = $(this);
+			$this.find('.line').css('height', '100%');
+			$this.addClass('active');
+		});
+	}
+});
+
 	$(window).on('scroll', function () {
 		const scrollTop = $(window).scrollTop();
 		let currentIndex = 0;
@@ -556,4 +569,16 @@ function initSubTabMo() {
 		$items.removeClass('active');
 		$items.eq(currentIndex).addClass('active');
 	});
+}
+
+function rdoCS() {
+    $('input[name="mainType"]').on('change', function () {
+		const targetClass = $(this).val(); // ex) grp_02
+
+		// 모든 중분류 item 숨기기
+		$('.item-wrap .item').hide();
+
+		// 해당되는 중분류만 보여주기
+		$('.item-wrap .' + targetClass).css('display', 'flex');
+    });
 }

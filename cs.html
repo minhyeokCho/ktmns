@@ -417,22 +417,22 @@
 					<div class="item">
 						<div class="rdo_wrap">
 							<label for="rdo1">
-								<input type="radio" name="rdo" id="rdo1">
+								<input type="radio" name="mainType" id="rdo1" value="grp_01">
 								<i></i>
 								<p>상품 문의 및 가입</p>
 							</label>
 							<label for="rdo2">
-								<input type="radio" name="rdo" id="rdo2">
+								<input type="radio" name="mainType" id="rdo2" value="grp_02">
 								<i></i>
 								<p>중고폰 보상/구매(굿바이, 리본)</p>
 							</label>
 							<label for="rdo3">
-								<input type="radio" name="rdo" id="rdo3">
+								<input type="radio" name="mainType" id="rdo3" value="grp_03">
 								<i></i>
 								<p>판매점 개설</p>
 							</label>
 							<label for="rdo4">
-								<input type="radio" name="rdo" id="rdo4">
+								<input type="radio" name="mainType" id="rdo4" value="grp_04">
 								<i></i>
 								<p>인사 관련 서류</p>
 							</label>
@@ -441,30 +441,45 @@
 				</div>
 				<div class="group">
 					<h3>문의 유형</h3>
-					<div class="item">
-						<div class="rdo_wrap">
-							<label for="rdo11">
-								<input type="radio" name="rdo2" id="rdo11">
-								<i></i>
-								<p>모바일, 인터넷, TV, 결합</p>
-							</label>
-							<label for="rdo22">
-								<input type="radio" name="rdo2" id="rdo22">
-								<i></i>
-								<p>기업, IoT상품</p>
-							</label>
-							<label for="rdo33">
-								<input type="radio" name="rdo2" id="rdo33">
-								<i></i>
-								<p>유심 개통</p>
-							</label>
+					<!-- 여기에 분기될 item만 하나 유지 -->
+					<div class="item-wrap">
+						<!-- 각 중분류 아이템은 개별적으로 준비하고 display:none -->
+						<div class="item grp_01" style="display:block;">
+							<div class="rdo_wrap">
+								<label><input type="radio" name="subType_01"><i></i><p>모바일, 인터넷, TV, 결합</p></label>
+								<label><input type="radio" name="subType_01"><i></i><p>기업, IoT상품</p></label>
+								<label><input type="radio" name="subType_01"><i></i><p>유심 개통</p></label>
+							</div>
+						</div>
+
+						<div class="item grp_02" style="display:none;">
+							<div class="rdo_wrap">
+								<label><input type="radio" name="subType_02"><i></i><p>중고폰 보상(굿바이)</p></label>
+								<label><input type="radio" name="subType_02"><i></i><p>중고폰 구매(리본)</p></label>
+								<label><input type="radio" name="subType_02"><i></i><p>기타</p></label>
+							</div>
+						</div>
+
+						<div class="item grp_03" style="display:none;">
+							<div class="rdo_wrap">
+								<label><input type="radio" name="subType_03"><i></i><p>판매점 거래문의</p></label>
+								<label><input type="radio" name="subType_03"><i></i><p>기타</p></label>
+							</div>
+						</div>
+
+						<div class="item grp_04" style="display:none;">
+							<div class="rdo_wrap">
+								<label><input type="radio" name="subType_04"><i></i><p>경력증명서 서류</p></label>
+								<label><input type="radio" name="subType_04"><i></i><p>원천징수영수 서류</p></label>
+								<label><input type="radio" name="subType_04"><i></i><p>이직확인 및 기타</p></label>
+							</div>
 						</div>
 					</div>
 				</div>
 				<div class="group">
 					<h3>이름</h3>
 					<div class="item">
-						<input type="text" placeholder="이름을 입력해주세요">
+						<input type="text" placeholder="이름을 입력해주세요" onfocus="this.placeholder=''" onblur="this.placeholder='이름을 입력해주세요'">
 					</div>
 				</div>
 				<div class="group">
@@ -502,7 +517,7 @@
 				<div class="group txtarea">
 					<h3>문의내용</h3>
 					<div class="item">
-						<textarea placeholder="문의 내용을 입력해주세요"></textarea>
+						<textarea placeholder="문의 내용을 입력해주세요" onfocus="this.placeholder=''" onblur="this.placeholder='문의 내용을 입력해주세요'"></textarea>
 					</div>
 				</div>
 				<div class="group">

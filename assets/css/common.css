@@ -74,7 +74,7 @@ body.dim:before {background-color:rgba(0, 0, 0, 0.5); content:""; position:fixed
 .m_menu .head button {width: 28px; height: 28px; background: url(../images/common/icon_all_menu_back.svg) no-repeat left center;}
 .m_menu .head a {font-size: 14px; font-weight: 500; padding: 4px 14px; background-color: #EFF2F6; border-radius: 5px; display: inline-block;}
 .m_menu .cont {display: flex; background-color: #EFF2F6; height: calc(100% - 60px);} 
-.m_menu .cont .menuL_wrap {width: 33.33%; padding-top: 10px; height: 100%; overflow-y: auto;}
+.m_menu .cont .menuL_wrap {width: 33.33%; padding-top: 20px; height: 100%; overflow-y: auto;}
 .m_menu .cont .menuL_wrap li.active a {background-color: #EC1B23; color: #fff; font-weight: 600;}
 .m_menu .cont .menuL_wrap li a {padding: 14px 20px; font-size: 18px; color: #222; transition: .3s;}
 .m_menu .cont .menuR_wrap {flex:1; background-color: #fff; margin-top: 10px; height: calc(100% - 10px); overflow-y: auto;}
@@ -140,8 +140,11 @@ body.dim:before {background-color:rgba(0, 0, 0, 0.5); content:""; position:fixed
 .tab_Bar ul li a.chat:hover span {background-image: url(../images/common/tab_chat_on.svg);}
 .tab_Bar ul li a.map:hover span {background-image: url(../images/common/tab_map_on.svg);}
 .tab_Bar ul li a.tab_menu:hover span {background-image: url(../images/common/tab_menu_on.svg);}
+.tab_Bar ul li a.home.active span,
 .tab_Bar ul li a.home:active span {background-image: url(../images/common/tab_home_on.svg);}
+.tab_Bar ul li a.chat.active span,
 .tab_Bar ul li a.chat:active span {background-image: url(../images/common/tab_chat_on.svg);}
+.tab_Bar ul li a.map.active span,
 .tab_Bar ul li a.map:active span {background-image: url(../images/common/tab_map_on.svg);}
 .tab_Bar ul li a.tab_menu.active span,
 .tab_Bar ul li a.tab_menu:active span {background-image: url(../images/common/tab_menu_on.svg);}

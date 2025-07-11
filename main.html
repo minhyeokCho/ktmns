@@ -354,7 +354,7 @@
 	<div class="tab_Bar">
 		<ul>
 			<li>
-				<a href="#" class="home"><span>홈</span></a>
+				<a href="#" class="home active"><span>홈</span></a>
 			</li>
 			<li>
 				<a href="#" class="chat"><span>상담예약</span></a>
@@ -441,6 +441,7 @@
 					<a href="#">채용공고</a>
 				</div>
 			</div>
+			<span class="scroll"></span>
 		</section>
 		<section class="sec_02">
 			<div class="inner">
@@ -510,7 +511,7 @@
 					<div class="item inpt">
 						<p>매장 검색</p>
 						<div class="srch">
-							<input type="text" placeholder="매장명 또는 지역을 입력해 주세요.">
+							<input type="text" placeholder="매장명 또는 지역을 입력해 주세요." onfocus="this.placeholder=''" onblur="this.placeholder='매장명 또는 지역을 입력해 주세요.'">
 							<button type="submit" title="검색"></button>
 						</div>
 					</div>
