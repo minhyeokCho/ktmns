@@ -249,7 +249,7 @@ section {padding: 90px 0;}
 .emp_sec ul li a:hover {color: #fff;}
 .emp_sec ul li a:hover::after {opacity: 1;}
 .emp_sec ul li a strong {font-weight: 500;}
-.emp_sec ul li a span {padding: 4px 16px; font-family: 'NanumSquareNeo'; font-size: 18px; font-weight: 700; color: #4c4c4e; background-color: #E0E0E0; border-radius: 25px; transition: .3s;}
+.emp_sec ul li a span {padding: 4px 16px; font-family: 'NanumSquareNeo'; font-size: 18px; font-weight: 700; color: #4c4c4e; background-color: #E0E0E0; border-radius: 25px; transition:background .5s;}
 .emp_sec ul li a:hover span {background-color: #fff; font-weight: 800;}
 @media screen and (max-width: 1024px) {
 	.sec_05 {padding: 90px 0;}
