@@ -42,12 +42,14 @@ body.dim:before {background-color:rgba(0, 0, 0, 0.5); content:""; position:fixed
 .h_btm h1 a {background: url(../images/common/logo.svg) no-repeat 0 0; width: 103px; height: 30px; display: block; background-size: 100% auto; transition: .3s;}
 .h_btm nav .dept_01 {display: flex;}
 .h_btm nav .dept_01 > li {width: 177px; position: relative;}
-.h_btm nav .dept_01 > li > a {width: 100%; height: 80px; font-weight: 600; font-size: 22px; display: flex; align-items: center; justify-content: center; color: #221E1F; transition: .3s; border-bottom: 3px solid transparent;}
+.h_btm nav .dept_01 > li > a {width: 100%; height: 80px; font-weight: 600; font-size: 22px; display: flex; align-items: center; justify-content: center; color: #221E1F; transition: .3s; border-bottom: 3px solid transparent; transition: .3s;}
+.h_btm nav .dept_01 > li:hover > a,
 .h_btm nav .dept_01 > li > a.active {color: #EC1B23;}
 .h_btm nav .dept_01 > li:hover  > a {border-color: #000;}
 .h_btm nav .dept_01 .dept_02 {display: none; position: absolute; left: 0; top: 100%; width: 100%; padding: 35px 0 50px; z-index: 2;}
 .h_btm nav .dept_01 .dept_02 li ~ li {margin-top: 20px;}
-.h_btm nav .dept_01 .dept_02 li a {font-size: 20px; font-weight: 500; color: #000; text-align: center;}
+.h_btm nav .dept_01 .dept_02 li a {font-size: 20px; font-weight: 500; color: #000; text-align: center; transition: .3s;}
+.h_btm nav .dept_01 .dept_02 li a:hover {color: #EC1B23;}
 .h_btm .btn_all_menu {width: 56px; height: 56px; background: url(../images/common/icon_all_menu.svg) no-repeat 0 0; background-size: 100% auto; transition: .3s;}
 
 /* 헤더 투명 */
