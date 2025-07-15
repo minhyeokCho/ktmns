@@ -25,50 +25,36 @@ $(document).ready(function(){
 	});
 
 $(window).on('scroll', function () {
-	const triggerY = 190;
+	const $wrap = $('.history_wrap');
+	const $fill = $wrap.find('> .line .fill');
+	const $dots = $wrap.find('.dot');
+
+	const wrapTop = $wrap.offset().top;
+	const wrapHeight = $wrap.outerHeight();
 	const scrollTop = $(window).scrollTop();
-	const windowY = scrollTop + triggerY;
-	const $items = $('.history_detail_area li');
+	const windowHeight = $(window).height();
+	const scrollBottom = scrollTop + windowHeight;
 
-	$items.each(function () {
-		const $this = $(this);
-		const offsetTop = $this.offset().top;
+	// ✅ [1] 라인이 조금 늦게 채워지도록 지연 오프셋
+	const fillDelay = 100; // ← 이 값을 늘리면 라인이 더 늦게 채워짐
+	const fillScrollBottom = scrollBottom - fillDelay;
+	const ratio = Math.min(1, (fillScrollBottom - wrapTop) / wrapHeight);
+	$fill.css('height', `${ratio * 100}%`);
 
-		if (windowY >= offsetTop) {
-			$this.find('.line').css('height', '100%');
-			$this.addClass('active');
+	// ✅ [2] dot 활성화도 지연
+	const dotDelay = 100; // ← dot이 조금 더 내려가야 활성화됨
+
+	$dots.each(function () {
+		const $dot = $(this);
+		const dotMid = $dot.offset().top + $dot.outerHeight() / 2 + dotDelay;
+
+		if (scrollBottom >= dotMid) {
+			$dot.closest('li').addClass('active');
 		} else {
-			$this.find('.line').css('height', '0%');
-			$this.removeClass('active');
+			$dot.closest('li').removeClass('active');
 		}
 	});
-	const scrollBottom = scrollTop + $(window).height();
-	const documentHeight = $(document).height();
-
-	if (scrollBottom >= documentHeight - 10) {
-		$items.each(function () {
-			const $this = $(this);
-			$this.find('.line').css('height', '100%');
-			$this.addClass('active');
-		});
-	}
 });
-
-	$(window).on('scroll', function () {
-		const scrollTop = $(window).scrollTop();
-		let currentIndex = 0;
-
-		$('.history_wrap .row').each(function (index) {
-			const rowTop = $(this).offset().top;
-
-			if (scrollTop + 200 >= rowTop) {
-				currentIndex = index;
-			}
-		});
-
-		$('.js-sub.sub_tab li').removeClass('active');
-		$('.js-sub.sub_tab li').eq(currentIndex).addClass('active');
-	});
 
 });
 function history () {

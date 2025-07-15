@@ -79,7 +79,7 @@ body.dim:before {background-color:rgba(0, 0, 0, 0.5); content:""; position:fixed
 .m_menu .cont .menuL_wrap {width: 33.33%; padding-top: 20px; height: 100%; overflow-y: auto;}
 .m_menu .cont .menuL_wrap li.active a {background-color: #EC1B23; color: #fff; font-weight: 600;}
 .m_menu .cont .menuL_wrap li a {padding: 14px 20px; font-size: 18px; color: #222; transition: .3s;}
-.m_menu .cont .menuR_wrap {flex:1; background-color: #fff; margin-top: 10px; height: calc(100% - 10px); overflow-y: auto;}
+.m_menu .cont .menuR_wrap {flex:1; background-color: #fff; padding-top: 10px; margin-top: 10px; height: calc(100% - 10px); overflow-y: auto;}
 .m_menu .cont .menuR_wrap .menuR_list > li {display: none;}
 .m_menu .cont .menuR_wrap .menuR_list > li.active {display: block;}
 .m_menu .cont .menuR_wrap .dept_02 > li > a {padding: 16px 20px; font-weight: 600; position: relative;}
