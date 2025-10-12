@@ -15,6 +15,7 @@
 	<link rel="stylesheet" href="./resources/css/fonts.css" />
 	<link rel="stylesheet" href="./resources/css/common.css" />
 	<link rel="stylesheet" href="./resources/css/ui.css" />
+	<script src="./resources/js/jquery-3.6.0.js"></script>
 	<script src="./resources/js/ui.js"></script>
 </head>
 <body>
@@ -24,160 +25,21 @@
 		<!-- 사이트 헤더 영역-->
 		<header>
 			<div class="logo-box">
-				<a href="./index.html" class="logo-title">기산 김준근 풍속화</a>
+				<a href="./index.html" class="logo-title">
+					한국사 이미지 컬렉션
+					<img src="./resources/images/logo-header.svg" alt="기산 김준근 풍속화">
+				</a>
 			</div>
 			<nav class="menu-box">
 				<div class="menu-list">
-					<button class="menu-item icon-list" onclick="setMenu.open()"><span>목록</span></button>
-					<button class="menu-item icon-search" onclick="setSearch.open()"><span>검색</span></button>
-					<a href="./viewer.html" target="_blank" class="menu-item icon-slide"><span>슬라이드쇼</span></a>
+					<a href="#" class="menu-item icon-list" onclick="setMenu.open()"><span>목록</span></a>
+					<a href="#" class="menu-item icon-search" onclick="setSearch.open()"><span>검색</span></a>
+					<a href="#" target="_blank" class="menu-item icon-slide"><span>슬라이드쇼</span></a>
 					<a href="" class="menu-item icon-data"><span>소개</span></a>
 				</div>
 			</nav>
 		</header>
 		<!-- 사이트 헤더 영역-->
-		
-		<!-- 검색 창-->
-		<div class="search-layer">
-			<div class="dim"></div>
-			<div class="search-wrapper">
-				<button class="close-button" aria-label="검색창 닫기">Search</button>
-				<div class="search-box">
-					<form role="search">
-						<input type="text" name="search" id="search" placeholder="검색어를 입력하세요" aria-label="검색어 입력">
-						<button onclick="window.location.href='searchList.html'" type="button" class="search-button" aria-label="검색"></button>
-					</form>
-				</div>
-
-			</div>
-		</div>
-		<!-- 검색 창-->
-
-		<!-- 메뉴 창-->
-		<div class="menu-layer" role="dialog" aria-label="메뉴" aria-modal="true" hidden>
-			<div class="menu-wrapper">
-				<button class="close-button" aria-label="메뉴 닫기">Menu</button>
-				<nav class="layer-menu-box">
-					<div class="menu-content">
-						<div class="categories-item">
-							<h2 class="categories-name">해방 직후</h2>
-							<div class="menu-list">
-								<div class="menu-item">
-									<h3 class="menu-title">귀환</h3>
-									<ul class="submenu-list">
-										<li class="submenu-item active"><a href="list_해방직후01_귀환.html" aria-label="탈출하는 한국인들">탈출하는 한국인들</a></li>
-										<li class="submenu-item"><a href="list_해방직후01_귀환.html" aria-label="'포로'가 된 한국인">'포로'가 된 한국인</a></li>
-										<li class="submenu-item"><a href="list_해방직후01_귀환.html" aria-label="돌아가는 일본인들">돌아가는 일본인들</a></li>
-										<li class="submenu-item"><a href="list_해방직후01_귀환.html" aria-label="고향으로, 고향으로">고향으로, 고향으로</a></li>
-									</ul>
-								</div>
-								<div class="menu-item">
-									<h3 class="menu-title">해방과 일상</h3>
-									<ul class="submenu-list">
-										<li class="submenu-item"><a href="list_해방직후02_해방과일상.html" aria-label="일본의 항복과 미군의 진주">일본의 항복과 미군의 진주</a></li>
-										<li class="submenu-item"><a href="list_해방직후02_해방과일상.html" aria-label="하늘에서 본 해방 풍경">하늘에서 본 해방 풍경</a></li>
-										<li class="submenu-item"><a href="list_해방직후02_해방과일상.html" aria-label="다시 시작하는 일상">다시 시작하는 일상</a></li>
-									</ul>
-								</div>
-								<div class="menu-item">
-									<h3 class="menu-title">5·10 총선거 풍경</h3>
-									<ul class="submenu-list">
-										<li class="submenu-item"><a href="list_해방직후01_귀환.html" aria-label="선거에 이르기까지">선거에 이르기까지</a></li>
-										<li class="submenu-item"><a href="list_해방직후01_귀환.html" aria-label="여러분의 대표를 뽑아 국회에 보내시요">"여러분의 대표를 뽑아 국회에 보내시요"</a></li>
-										<li class="submenu-item"><a href="list_해방직후01_귀환.html" aria-label="선거 이후">선거 이후</a></li>
-									</ul>
-								</div>
-								<div class="menu-item">
-									<h3 class="menu-title">전단이 보여주는 세상</h3>
-									<ul class="submenu-list">
-										<li class="submenu-item"><a href="list_해방직후01_귀환.html" aria-label="공보원을 통해 접하는 세계">공보원을 통해 접하는 세계</a></li>
-										<li class="submenu-item"><a href="list_해방직후01_귀환.html" aria-label="계몽과 선전의 수단, 포스터">계몽과 선전의 수단, 포스터</a></li>
-										<li class="submenu-item"><a href="list_해방직후01_귀환.html" aria-label="삐라가 만드는 전쟁 이미지">삐라가 만드는 전쟁 이미지</a></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-						<div class="categories-item">
-							<h2 class="categories-name">전쟁 전후</h2>
-							<div class="menu-list">
-								<div class="menu-item">
-									<h3 class="menu-title">전쟁전야</h3>
-									<ul class="submenu-list">
-										<li class="submenu-item"><a href="list_전쟁전후01_전쟁전야.html" aria-label="38선, 그 경계에서">38선, 그 경계에서</a></li>
-										<li class="submenu-item"><a href="list_전쟁전후01_전쟁전야.html" aria-label="남과 북">남과 북</a></li>
-										<li class="submenu-item"><a href="list_전쟁전후01_전쟁전야.html" aria-label="카툰 속 냉전 인식">카툰 속 냉전 인식 </a></li>
-									</ul>
-								</div>
-								<div class="menu-item">
-									<h3 class="menu-title">톱질전쟁과 피난민</h3>
-									<ul class="submenu-list">
-										<li class="submenu-item"><a href="list_전쟁전후01_전쟁전야.html" aria-label="개전">개전</a></li>
-										<li class="submenu-item"><a href="list_전쟁전후01_전쟁전야.html" aria-label="상륙작전들">상륙작전들</a></li>
-										<li class="submenu-item"><a href="list_전쟁전후01_전쟁전야.html" aria-label="진격과 후퇴">진격과 후퇴</a></li>
-										<li class="submenu-item"><a href="list_전쟁전후01_전쟁전야.html" aria-label="피난길, 피난민">피난길, 피난민</a></li>
-									</ul>
-								</div>
-								<div class="menu-item">
-									<h3 class="menu-title">회담에서 협정까지</h3>
-									<ul class="submenu-list">
-										<li class="submenu-item"><a href="list_전쟁전후01_전쟁전야.html" aria-label="개시된 회담">개시된 회담</a></li>
-										<li class="submenu-item"><a href="list_전쟁전후01_전쟁전야.html" aria-label="폭격과 고지전">폭격과 고지전</a></li>
-										<li class="submenu-item"><a href="list_전쟁전후01_전쟁전야.html" aria-label="포로교환">포로교환</a></li>
-										<li class="submenu-item"><a href="list_전쟁전후01_전쟁전야.html" aria-label="정전협정">정전협정</a></li>
-									</ul>
-								</div>
-								<div class="menu-item"></div>
-							</div>
-						</div>
-						<div class="categories-item">
-							<h2 class="categories-name">전쟁 이후</h2>
-							<div class="menu-list">
-								<div class="menu-item">
-									<h3 class="menu-title">또 하나의 전쟁</h3>
-									<ul class="submenu-list">
-										<li class="submenu-item"><a href="list_전쟁이후01_또하나의전쟁.html" aria-label="포로">포로</a></li>
-										<li class="submenu-item"><a href="list_전쟁이후01_또하나의전쟁.html" aria-label="수용소와 포로들의 일상">수용소와 포로들의 일상</a></li>
-										<li class="submenu-item"><a href="list_전쟁이후01_또하나의전쟁.html" aria-label="이데올로기의 전장">이데올로기의 전장</a></li>
-										<li class="submenu-item"><a href="list_전쟁이후01_또하나의전쟁.html" aria-label="포로들의 선택">포로들의 선택</a></li>
-									</ul>
-								</div>
-								<div class="menu-item">
-									<h3 class="menu-title">전쟁과 사람들 </h3>
-									<ul class="submenu-list">
-										<li class="submenu-item"><a href="list_전쟁이후01_또하나의전쟁.html" aria-label="군인들">군인들</a></li>
-										<li class="submenu-item"><a href="list_전쟁이후01_또하나의전쟁.html" aria-label="동원되는 사람들">동원되는 사람들</a></li>
-										<li class="submenu-item"><a href="list_전쟁이후01_또하나의전쟁.html" aria-label="일상을 살아가는 사람들">일상을 살아가는 사람들</a></li>
-										<li class="submenu-item"><a href="list_전쟁이후01_또하나의전쟁.html" aria-label="전쟁과 아이들">전쟁과 아이들</a></li>
-									</ul>
-								</div>
-								<div class="menu-item">
-									<h3 class="menu-title">전쟁과 공간 </h3>
-									<ul class="submenu-list">
-										<li class="submenu-item"><a href="list_전쟁이후01_또하나의전쟁.html" aria-label="다리">다리</a></li>
-										<li class="submenu-item"><a href="list_전쟁이후01_또하나의전쟁.html" aria-label="항구">항구</a></li>
-										<li class="submenu-item"><a href="list_전쟁이후01_또하나의전쟁.html" aria-label="유적지, 전시회">유적지, 전시회</a></li>
-										<li class="submenu-item"><a href="list_전쟁이후01_또하나의전쟁.html" aria-label="파괴되는 공간들">파괴되는 공간들</a></li>
-									</ul>
-								</div>
-								<div class="menu-item">
-									<h3 class="menu-title">상처와 치유, 복구과정</h3>
-									<ul class="submenu-list">
-										<li class="submenu-item"><a href="list_전쟁이후01_또하나의전쟁.html" aria-label="후유증">후유증</a></li>
-										<li class="submenu-item"><a href="list_전쟁이후01_또하나의전쟁.html" aria-label="구호와 의료">구호와 의료</a></li>
-										<li class="submenu-item"><a href="list_전쟁이후01_또하나의전쟁.html" aria-label="전쟁 중 치러진 선거">전쟁 중 치러진 선거</a></li>
-										<li class="submenu-item"><a href="list_전쟁이후01_또하나의전쟁.html" aria-label="한미동맹의 시작">한미동맹의 시작</a></li>
-										<li class="submenu-item"><a href="list_전쟁이후01_또하나의전쟁.html" aria-label="원조와 재건, 체제경쟁">원조와 재건, 체제경쟁</a></li>
-										<li class="submenu-item"><a href="list_전쟁이후01_또하나의전쟁.html" aria-label="평화를 되찾은 공간들">평화를 되찾은 공간들</a></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-				</nav>
-			</div>
-		</div>
-		<!-- 메뉴 창-->
-
 
 		<!-- 본문 내용-->
 		<main class="main-page">
@@ -185,15 +47,17 @@
 				<div id="main-content">
 					<div class="site-title">
 						<span>한국사 이미지 컬렉션</span>
-						<h1></h1>
-						<p>붓끝으로 기록한 조선의 삶,<br/>기산 김준근이 그려낸 풍속의 세계</p>
+						<h1>
+							<img src="./resources/images/logo-main.svg" alt="기산 김준근 풍속화">
+							<p>붓끝으로 기록한 조선의 삶,<br/>기산 김준근이 그려낸 풍속의 세계</p>
+						</h1>
 					</div>
 					<ul class="quick-menu">
 						<li>
 							<a href="#" target="_blank">
 								<span>기산 풍속화의 세계<br/>소개</span>
 								<figure class="img">
-									<img src="" alt="기산 풍속화의 세계 소개">
+									<img src="./resources/images/quick-01.png" alt="기산 풍속화의 세계 소개">
 								</figure>
 							</a>
 						</li>
@@ -201,7 +65,7 @@
 							<a href="#" target="_blank">
 								<span>기산 풍속화의 세계<br/>영상 보기</span>
 								<figure class="img">
-									<img src="" alt="기산 풍속화의 세계 영상 보기">
+									<img src="./resources/images/quick-02.png" alt="기산 풍속화의 세계 영상 보기">
 								</figure>
 							</a>
 						</li>
@@ -211,22 +75,25 @@
 				<ul class="history-list">
 					<li>
 						<a href="#">
-							<p></p>
-							<h2></h2>
+							<figure class="img"><img src="./resources/images/history/history-01.png" alt="바다 건너 전한 개항기의 숨결"></figure>
+							<p>바다 건너 전한 개항기의 숨결</p>
+							<h2>스미소니언 자연사 박물관 소장본</h2>
 							<span>자세히 보기</span>
 						</a>
 					</li>
 					<li>
 						<a href="#">
-							<p></p>
-							<h2></h2>
+							<figure class="img"><img src="./resources/images/history/history-02.png" alt="민속 속에서 찾은 개항기의 이야기"></figure>
+							<p>민속 속에서 찾은 개항기의 이야기</p>
+							<h2>국립민속박물관 소장본</h2>
 							<span>자세히 보기</span>
 						</a>
 					</li>
 					<li>
 						<a href="#">
-							<p></p>
-							<h2></h2>
+							<figure class="img"><img src="./resources/images/history/history-03.png" alt="풍속첩 속 시간여행"></figure>
+							<p>풍속첩 속 시간여행</p>
+							<h2>국립중앙박물관 소장본</h2>
 							<span>자세히 보기</span>
 						</a>
 					</li>
@@ -241,6 +108,8 @@
 			<p class="copyright">Copyright © National Institute of Korean History All Rights Reserved.</p>
 		</footer>
 		<!-- 본문 내용-->
+
+		<button class="go_top"><span class="blind">상단으로 이동</span></button>
 	</div>
 </body>
 </html>

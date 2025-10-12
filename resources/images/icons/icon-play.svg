@@ -1,21 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="35.409px" height="35.411px" viewBox="66.455 -3.805 35.409 35.411" enable-background="new 66.455 -3.805 35.409 35.411"
-	 xml:space="preserve">
-<g>
-	<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="90.0339" y1="28.4404" x2="78.285" y2="-0.6391">
-		<stop  offset="0" style="stop-color:#000000"/>
-		<stop  offset="1" style="stop-color:#FFFFFF"/>
-	</linearGradient>
-	<circle fill-rule="evenodd" clip-rule="evenodd" fill="url(#SVGID_1_)" cx="84.159" cy="13.9" r="15.678"/>
-	<path fill="#FFFFFF" d="M84.159-1.805c8.66,0,15.705,7.045,15.705,15.706c0,8.66-7.045,15.705-15.705,15.705
-		c-8.659,0-15.704-7.045-15.704-15.705C68.455,5.24,75.5-1.805,84.159-1.805 M84.159-3.805c-9.777,0-17.704,7.927-17.704,17.706
-		c0,9.777,7.927,17.705,17.704,17.705c9.778,0,17.705-7.928,17.705-17.705C101.864,4.122,93.937-3.805,84.159-3.805L84.159-3.805z"
-		/>
-	<path fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" d="M80.286,18.08c0-0.434,0-8.046,0-8.346
-		c0-0.387,0.456-0.676,0.906-0.449c0.361,0.182,7.576,3.85,8.191,4.165c0.404,0.207,0.396,0.697,0,0.904
-		c-0.443,0.23-7.685,3.918-8.209,4.174C80.79,18.715,80.286,18.508,80.286,18.08z"/>
+<svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_52_15734)">
+<path d="M17.704 2C26.364 2 33.409 9.045 33.409 17.706C33.409 26.366 26.364 33.411 17.704 33.411C9.04499 33.411 2 26.366 2 17.706C2 9.045 9.04499 2 17.704 2ZM17.704 0C7.92699 0 0 7.927 0 17.706C0 27.483 7.92699 35.411 17.704 35.411C27.482 35.411 35.409 27.483 35.409 17.706C35.409 7.927 27.482 0 17.704 0Z" fill="white"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M13.8311 21.8848C13.8311 21.4508 13.8311 13.8388 13.8311 13.5388C13.8311 13.1518 14.2871 12.8628 14.7371 13.0898C15.0981 13.2718 22.3131 16.9398 22.9281 17.2548C23.3321 17.4618 23.3241 17.9518 22.9281 18.1588C22.4851 18.3888 15.2431 22.0768 14.7191 22.3328C14.3351 22.5198 13.8311 22.3128 13.8311 21.8848Z" fill="white"/>
 </g>
+<defs>
+<clipPath id="clip0_52_15734">
+<rect width="35.409" height="35.411" fill="white"/>
+</clipPath>
+</defs>
 </svg>
