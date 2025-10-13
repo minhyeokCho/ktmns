@@ -3,7 +3,7 @@
     --header-width : 16rem;
     font-family: 'Pretendard GOV','맑은고딕','나눔고딕', '돋움', sans-serif;
 }
-html {font-size:62.5%;  scroll-behavior: smooth;}
+html {font-size:62.5%;}
 body {font-size:1.6rem;}
 @font-face {
     font-family: 'Noto Serif KR';

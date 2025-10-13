@@ -1,5 +1,7 @@
 $(document).ready(function(){
 	$('.go_top').length && goTop(); //페이지상단이동
+	$('.btn_detail').length && btnDetail(); //소개 버튼
+	$('.tab-area').length && tabContent(); //탭버튼
 
 	$(window).scroll(function(){
 		var scrollTop = $(window).scrollTop();
@@ -27,6 +29,31 @@ function goTop(){ //페이지상단이동
 	});
 
 	$('.go_top').on('click', function() {
-		window.scrollTo({ top: 0 });
+		$('html, body').animate({
+			scrollTop: 0
+		}, 500);
+		return false;
+	});
+}
+
+function btnDetail(){ //소개 버튼
+	$('.btn_detail').on('click', function() {
+		$('.detail-content').slideToggle();
+	});
+	$('.detail-content .close').on('click', function() {
+		$('.detail-content').slideUp();
+	});
+}
+
+function tabContent() {
+	$('.tab-area a').on('click', function(e) {
+		e.preventDefault();
+	
+		var targetId = $(this).attr('href');
+		var targetOffset = $(targetId).offset().top - 100;
+	
+		$('html, body').animate({
+			scrollTop: targetOffset
+		}, 800);
 	});
 }
