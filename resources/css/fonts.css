@@ -86,3 +86,25 @@
     font-weight: 700;
     font-display: swap;
 }
+
+@font-face {
+    font-family: 'esamanru';
+    src: url('../fonts/esamanruBold.woff2') format('woff2'),
+    url('../fonts/esamanruBold.woff') format('woff');
+    font-weight: 700;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'esamanru';
+    src: url('../fonts/esamanruMedium.woff2') format('woff2'),
+    url('../fonts/esamanruMedium.woff') format('woff');
+    font-weight: 400;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'esamanru';
+    src: url('../fonts/esamanruLight.woff2') format('woff2'),
+    url('../fonts/esamanruLight.woff') format('woff');
+    font-weight: 300;
+    font-display: swap;
+}
