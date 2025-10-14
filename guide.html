@@ -1,0 +1,408 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Guide</title>
+	<link rel="preload" href="./resources/fonts/PretendardGOV-Regular.subset.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="preload" href="./resources/fonts/PretendardGOV-SemiBold.subset.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="preload" href="./resources/fonts/PretendardGOV-ExtraBold.subset.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="preload" href="./resources/fonts/PretendardGOV-Medium.subset.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="preload" href="./resources/fonts/GmarketSansTTFBold.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="preload" href="./resources/fonts/GmarketSansTTFMedium.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="stylesheet" href="./resources/css/reset.css" />
+	<link rel="stylesheet" href="./resources/css/fonts.css" />
+	<link rel="stylesheet" href="./resources/css/jquery-ui.css" />
+	<link rel="stylesheet" href="./resources/css/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="./resources/css/nice-select.css" />
+	<link rel="stylesheet" href="./resources/css/common.css" />
+	<link rel="stylesheet" href="./resources/css/style.css" />
+	<script src="./resources/js/jquery-3.6.0.js"></script>
+	<script src="./resources/js/jquery-ui.js"></script>
+	<script src="./resources/js/swiper-bundle.min.js"></script>
+	<script src="./resources/js/jquery.nice-select.js"></script>
+	<script src="./resources/js/ui.js"></script>
+</head>
+<body>
+<div class="wrapper">
+	<a href="#container" class="skip-link">본문으로</a>
+
+	<!-- 사이트 헤더 영역-->
+	<header>
+		<div class="head_top">
+			<h1></h1>
+			<div class="util">
+				<div class="search">
+					<select class="head_search">
+						<option value="">1</option>
+						<option value="">2</option>
+					</select>
+					<input type="text" placeholder="검색어를 입력하세요">
+					<button type="submit"><span class="blind">검색</span></button>
+				</div>
+				<button type="button" class="btn_detail">
+					<span>상세<br/>검색</span>
+				</button>
+				<div class="btn_menu">
+					<span class="blind">전체메뉴</span>
+				</div>
+			</div>
+		</div>
+		<nav>
+
+		</nav>
+	</header>
+	<!--// 사이트 헤더 영역-->
+
+	<!-- 본문 내용-->
+	<main class="container" id="container">
+		<div class="content">
+			<!-- 서브 타이틀 -->
+			<div class="sub_title">
+				<div class="inner">
+					<div class="contL">
+						<div class="breadcrumb">
+							<a href="#" class="home"><span class="blind">홈</span></a>
+							<ul>
+								<li><a href="#">메뉴1</a></li>
+								<li><a href="#">메뉴2</a></li>
+							</ul>
+							<a href="#" class="btn_bc"></a>
+						</div>
+						<div class="tit">
+							<h2>검색결과</h2>
+							<p>1919년</p>
+						</div>
+					</div>
+					<div class="contR">
+						<div class="sub_btn">
+							<div class="btn_list_wrap">
+								<a href="#" class="btn_prev"><span class="blind">이전</span></a>
+								<a href="#" class="btn_list"><span>목록</span></a>
+								<a href="#" class="btn_next"><span class="blind">다음</span></a>
+							</div>
+							<a href="#" class="btn_print"><span class="blind">프린트</span></a>
+							<a href="#" class="btn_bg btn_curation"><span>관련<br/>큐레이션</span></a>
+							<a href="#" class="btn_bg btn_error"><span>오류<br/>접수</span></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--// 서브 타이틀 -->
+
+			<div class="inner">
+				<!-- 테이블 -->
+				<div class="tb_wrap">
+					<div class="tb_sort">
+						<div class="tb_select">
+							<div class="total">
+								전체 <em>25</em>건
+							</div>
+							<select class="select01 tb01">
+								<option value="">신문선택</option>
+								<option value="">신문선택12</option>
+								<option value="">신문선택22</option>
+							</select>
+							<select class="select01">
+								<option value="">유형선택</option>
+								<option value="">유형선택12</option>
+								<option value="">유형선택22</option>
+							</select>
+							<select class="select01">
+								<option value="">지역선택</option>
+								<option value="">지역선택12</option>
+								<option value="">지역선택22</option>
+							</select>
+							<select class="select01">
+								<option value="">언어선택</option>
+								<option value="">언어선택12</option>
+								<option value="">언어선택22</option>
+							</select>
+						</div>
+	
+						<div class="sort">
+							<ul>
+								<li class="active"><button>시간순</button></li>
+								<li><button>시간역순</button></li>
+								<li><button>가나다순</button></li>
+								<li><button>가나다역순</button></li>
+							</ul>
+						</div>
+					</div>
+					<table class="type01">
+						<colgroup>
+							<col width="70">
+							<col width="100">
+							<col width="140">
+							<col width="*">
+						</colgroup>
+						<tbody>
+							<tr>
+								<td>제 1호</td>
+								<td>1면 1단</td>
+								<td>기타</td>
+								<td class="fb">創刊辭 - 창간사</td>
+							</tr>
+							<tr>
+								<td>제 99호</td>
+								<td>99면 99단</td>
+								<td>임시정부 기사</td>
+								<td class="fb">(歐美電報)오스터리아는 共和國 - (구미전보)오스터리아는 공화국</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<!--// 테이블 -->
+
+				<!-- 페이징 -->
+				<div class="paging_wrap">
+					<select class="select01">
+						<option value="">20</option>
+						<option value="">50</option>
+						<option value="">100</option>
+					</select>
+					<div class="total">
+						전체 <em>25</em>건
+					</div>
+					<div class="paging">
+						<button class="prev">이전</button>
+						<a href="#" class="num">1</a>
+						<a href="#" class="ellipsis">&#8230;</a>
+						<a href="#" class="num">4</a>
+						<a href="#" class="num">5</a>
+						<a href="#" class="num active">6</a>
+						<a href="#" class="num">7</a>
+						<a href="#" class="num">8</a>
+						<a href="#" class="ellipsis">&#8230;</a>
+						<a href="#" class="num">999</a>
+						<button class="next">다음</button>
+					</div>
+				</div>
+				<!--// 페이징 -->
+	
+	
+				<!-- 검색필터 -->
+				<div class="filter">
+					<div class="filter_title">
+						<h3>검색 필터</h3>
+						<button class="btn_reser"><span>초기화</span></button>
+					</div>
+					<div class="box">
+						<div class="item">
+							<div class="tit">
+								<h4></h4>
+								<button class="btn_toggle"><span>닫기</span></button>
+							</div>
+							<div class="list_wrap">
+								<ul class="dept01">
+									<li>
+										<label for="">
+											<input type="checkbox" id="">
+											<p>
+												<em></em>
+											</p>
+										</label>
+									</li>
+								</ul>
+								<button class="btn_all"><span>전체보기</span></button>
+							</div>
+						</div>
+	
+						<div class="btn_wrap">
+							<a href="#" class="btn_type01">적용</a>
+						</div>
+					</div>
+				</div>
+				<!--// 검색필터 -->
+	
+				<!-- 검색결과 -->
+				<div class="res_wrap">
+					<div class="title_wrap">
+						<div class="res_tit">
+							<strong>
+								'<em>피눈물</em>' 검색결과
+							</strong>
+							<p>
+								총 <span>197</span>건
+							</p>
+						</div>
+						<div class="sort">
+							<ul>
+								<li><button>시간순</button></li>
+								<li><button>시간역순</button></li>
+								<li><button>가나다순</button></li>
+								<li><button>가나다역순</button></li>
+							</ul>
+						</div>
+					</div>
+					<div class="search_filter">
+						<ul>
+							<li>
+								<span></span>
+								<button class="delete"></button>
+							</li>
+						</ul>
+					</div>
+					<ul class="res_list">
+						<li>
+							<div class="list_title">
+								<p></p>
+								<strong></strong>
+							</div>
+							<div class="info">
+								<dl>
+									<dt></dt>
+									<dd></dd>
+								</dl>
+								<dl>
+									<dt></dt>
+									<dd></dd>
+								</dl>
+								<dl>
+									<dt></dt>
+									<dd></dd>
+								</dl>
+							</div>
+							<p class="desc"></p>
+						</li>
+					</ul>
+				</div>
+				<!--// 검색결과 -->
+	
+	
+				<!-- 유형별 보기 -->
+				<div class="catg_box">
+					<ul>
+						<li>
+							<button>
+								<i class="catg_01"></i>
+								<span>일반 기사</span>
+							</button>
+						</li>
+						<li>
+							<button>
+								<i class="catg_02"></i>
+								<span>임시정보 기사</span>
+							</button>
+						</li>
+						<li>
+							<button>
+								<i class="catg_03"></i>
+								<span>기획기사</span>
+							</button>
+						</li>
+						<li>
+							<button>
+								<i class="catg_04"></i>
+								<span>사설</span>
+							</button>
+						</li>
+						<li>
+							<button>
+								<i class="catg_05"></i>
+								<span>평론 / 기고</span>
+							</button>
+						</li>
+						<li>
+							<button>
+								<i class="catg_06"></i>
+								<span>문예</span>
+							</button>
+						</li>
+						<li>
+							<button>
+								<i class="catg_07"></i>
+								<span>문평 / 단평</span>
+							</button>
+						</li>
+						<li>
+							<button>
+								<i class="catg_08"></i>
+								<span>광고 / 공고</span>
+							</button>
+						</li>
+						<li>
+							<button>
+								<i class="catg_09"></i>
+								<span>기타</span>
+							</button>
+						</li>
+					</ul>
+					<div class="search_date">
+						<p>기간설정</p>
+					</div>
+				</div>
+				<!--// 유형별 보기 -->
+	
+				<!-- 게시판 -->
+				<div class="board">
+					<div class="board_sort">
+						<div class="select_sort">
+							<strong>전체 <em>12</em>건</strong>
+							<select class="select01">
+								<option value="">1</option>
+								<option value="">2</option>
+							</select>
+						</div>
+						<div class="sort">
+							<ul>
+								<li><button>시간순</button></li>
+								<li><button>시간역순</button></li>
+								<li><button>가나다순</button></li>
+								<li><button>가나다역순</button></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!--// 게시판 -->
+			</div>
+		</div>
+	</main>
+	<!-- 본문 내용-->
+
+	<!-- 사이트 푸터 영역 -->
+	<footer>
+		<div class="f_menu_wrap">
+			<div class="f_menu">
+				<ul>
+					<li><a href="#"></a></li>
+				</ul>
+				<button type="button">
+					<span>관련 기관</span>
+				</button>
+			</div>
+			<div class="f_menu">
+				<ul>
+					<li><a href="#"></a></li>
+				</ul>
+				<button type="button">
+					<span>연계 사이트</span>
+				</button>
+			</div>
+		</div>
+		<div class="f_content">
+			<div class="f_l">
+				<div class="f_logo">
+					<img src="./resources/images/logo-footer.svg" alt="국사편찬위원회">
+				</div>
+				<div class="f_info">
+					<p>03732) 서울특별시 서대문구 통일로 279-24</p>
+					<p>대표번호 <strong>02-772-8708</strong></p>
+				</div>
+			</div>
+			<div class="f_r">
+				<div class="f_link">
+					<a href="#">사이트 소개</a>
+					<a href="#">저작권 정책</a>
+				</div>
+				<p class="copyright">Copyright © National Institute of Korean History All Rights Reserved.</p>
+			</div>
+		</div>
+	</footer>
+	<!--// 사이트 푸터 영역 -->
+
+	<button class="go_top"><span class="blind">상단으로 이동</span></button>
+</div>
+</body>
+</html>

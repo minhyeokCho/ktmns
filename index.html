@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>기산김준근풍속화</title>
+	<title>main</title>
 	<link rel="preload" href="./resources/fonts/PretendardGOV-Regular.subset.woff2" as="font" type="font/woff2" crossorigin>
 	<link rel="preload" href="./resources/fonts/PretendardGOV-SemiBold.subset.woff2" as="font" type="font/woff2" crossorigin>
 	<link rel="preload" href="./resources/fonts/PretendardGOV-ExtraBold.subset.woff2" as="font" type="font/woff2" crossorigin>
@@ -13,103 +13,118 @@
 	<link rel="preload" href="./resources/fonts/GmarketSansTTFMedium.woff2" as="font" type="font/woff2" crossorigin>
 	<link rel="stylesheet" href="./resources/css/reset.css" />
 	<link rel="stylesheet" href="./resources/css/fonts.css" />
+	<link rel="stylesheet" href="./resources/css/jquery-ui.css" />
+	<link rel="stylesheet" href="./resources/css/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="./resources/css/nice-select.css" />
 	<link rel="stylesheet" href="./resources/css/common.css" />
-	<link rel="stylesheet" href="./resources/css/ui.css" />
+	<link rel="stylesheet" href="./resources/css/style.css" />
 	<script src="./resources/js/jquery-3.6.0.js"></script>
+	<script src="./resources/js/jquery-ui.js"></script>
+	<script src="./resources/js/swiper-bundle.min.js"></script>
+	<script src="./resources/js/jquery.nice-select.js"></script>
 	<script src="./resources/js/ui.js"></script>
 </head>
 <body>
-	<div class="wrapper">
-		<a href="#main-content" class="skip-link">본문으로</a>
+<div class="wrapper">
+	<a href="#container" class="skip-link">본문으로</a>
 
-		<!-- 사이트 헤더 영역-->
-		<header>
-			<div class="logo-box">
-				<a href="./index.html" class="logo-title">
-					한국사 이미지 컬렉션
-					<img src="./resources/images/logo-header.svg" alt="기산 김준근 풍속화">
-				</a>
-			</div>
-			<nav class="menu-box">
-				<div class="menu-list">
-					<a href="#" class="menu-item icon-list" onclick="setMenu.open()"><span>목록</span></a>
-					<a href="#" class="menu-item icon-search" onclick="setSearch.open()"><span>검색</span></a>
-					<a href="#" target="_blank" class="menu-item icon-slide"><span>슬라이드쇼</span></a>
-					<a href="" class="menu-item icon-data"><span>소개</span></a>
+	<!-- 사이트 헤더 영역-->
+	<header>
+		<div class="head_top">
+			<h1></h1>
+			<div class="util">
+				<div class="search">
+					<select class="head_search">
+						<option value="">1</option>
+						<option value="">2</option>
+					</select>
+					<input type="text" placeholder="검색어를 입력하세요">
+					<button type="submit"><span class="blind">검색</span></button>
 				</div>
-			</nav>
-		</header>
-		<!-- 사이트 헤더 영역-->
+				<button type="button" class="btn_detail">
+					<span>상세<br/>검색</span>
+				</button>
+				<div class="btn_menu">
+					<span class="blind">전체메뉴</span>
+				</div>
+			</div>
+		</div>
+		<nav>
 
-		<!-- 본문 내용-->
-		<main class="main-page">
-			<div class="container">
-				<div id="main-content">
-					<div class="site-title">
-						<span>한국사 이미지 컬렉션</span>
-						<h1>
-							<img src="./resources/images/logo-main.svg" alt="기산 김준근 풍속화">
-							<p>붓끝으로 기록한 조선의 삶,<br/>기산 김준근이 그려낸 풍속의 세계</p>
-						</h1>
+		</nav>
+	</header>
+	<!--// 사이트 헤더 영역-->
+
+	<!-- 본문 내용-->
+	<main class="container" id="container">
+		<div class="content">
+			<!-- 달력 -->
+			<div id="datepicker"></div>
+			<!--// 달력 -->
+
+			<!-- 주제 큐레이션 -->
+			<section>
+				<div class="swiper curation_slide">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide"><img src="https://placeimg.com/640/480/any"></div>
+						<div class="swiper-slide"><img src="https://placeimg.com/640/480/any"></div>
+						<div class="swiper-slide"><img src="https://placeimg.com/640/480/any"></div>
+						<div class="swiper-slide"><img src="https://placeimg.com/640/480/any"></div>
 					</div>
-					<ul class="quick-menu">
-						<li>
-							<a href="#" target="_blank">
-								<span>기산 풍속화의 세계<br/>소개</span>
-								<figure class="img">
-									<img src="./resources/images/quick-01.png" alt="기산 풍속화의 세계 소개">
-								</figure>
-							</a>
-						</li>
-						<li>
-							<a href="#" target="_blank">
-								<span>기산 풍속화의 세계<br/>영상 보기</span>
-								<figure class="img">
-									<img src="./resources/images/quick-02.png" alt="기산 풍속화의 세계 영상 보기">
-								</figure>
-							</a>
-						</li>
-					</ul>
+					<div class="swiper-button-next"></div>
+					<div class="swiper-button-prev"></div>
+					<div class="swiper-pagination"></div>
 				</div>
+			</section>
+			<!--// 주제 큐레이션 -->
+		</div>
+	</main>
+	<!-- 본문 내용-->
 
-				<ul class="history-list">
-					<li>
-						<a href="#">
-							<figure class="img"><img src="./resources/images/history/history-01.png" alt="바다 건너 전한 개항기의 숨결"></figure>
-							<p>바다 건너 전한 개항기의 숨결</p>
-							<h2>스미소니언 자연사 박물관 소장본</h2>
-							<span>자세히 보기</span>
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							<figure class="img"><img src="./resources/images/history/history-02.png" alt="민속 속에서 찾은 개항기의 이야기"></figure>
-							<p>민속 속에서 찾은 개항기의 이야기</p>
-							<h2>국립민속박물관 소장본</h2>
-							<span>자세히 보기</span>
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							<figure class="img"><img src="./resources/images/history/history-03.png" alt="풍속첩 속 시간여행"></figure>
-							<p>풍속첩 속 시간여행</p>
-							<h2>국립중앙박물관 소장본</h2>
-							<span>자세히 보기</span>
-						</a>
-					</li>
+	<!-- 사이트 푸터 영역 -->
+	<footer>
+		<div class="f_menu_wrap">
+			<div class="f_menu">
+				<ul>
+					<li><a href="#"></a></li>
 				</ul>
-
+				<button type="button">
+					<span>관련 기관</span>
+				</button>
 			</div>
-		</main>
-		<footer class="site-footer">
-			<div class="footer-logo">
-				<img src="./resources/images/logo-footer.svg" alt="국사편찬위원회">
+			<div class="f_menu">
+				<ul>
+					<li><a href="#"></a></li>
+				</ul>
+				<button type="button">
+					<span>연계 사이트</span>
+				</button>
 			</div>
-			<p class="copyright">Copyright © National Institute of Korean History All Rights Reserved.</p>
-		</footer>
-		<!-- 본문 내용-->
+		</div>
+		<div class="f_content">
+			<div class="f_1">
+				<div class="f_logo">
+					<img src="./resources/images/logo-footer.svg" alt="국사편찬위원회">
+				</div>
+				<div class="f_link">
+					<a href="#">사이트 소개</a>
+					<a href="#">저작권 정책</a>
+				</div>
+			</div>
+			<div class="f_2">
+				<div class="f_info">
+					<p></p>
+					<p>
+						<strong>02-772-8708</strong>
+					</p>
+				</div>
+				<p class="copyright">Copyright © National Institute of Korean History All Rights Reserved.</p>
+			</div>
+		</div>
+	</footer>
+	<!--// 사이트 푸터 영역 -->
 
-		<button class="go_top"><span class="blind">상단으로 이동</span></button>
-	</div>
+	<button class="go_top"><span class="blind">상단으로 이동</span></button>
+</div>
 </body>
 </html>

@@ -1,0 +1,178 @@
+@charset "utf-8";
+
+/* layout */
+
+
+/* datepicker */
+.ui-datepicker-title {display: flex; height: 60px;}
+.ui-datepicker-year, .ui-datepicker-month {width: 68px !important; height: 42px; background-color: #fff; border:none; padding-left: 18px; padding-right: 30px;}
+
+/* selectBox */
+.select01.nice-select {border-radius: 2px; border: 1px solid #d5d5d5; min-width: 7rem; height: 3.3rem; line-height: 3.1rem; padding-left: 1rem; padding-right: 3rem; font-size: 1.3rem;}
+.nice-select .list {width: 100%; border: 1px solid #cccccd; border-radius: 2px; filter: drop-shadow(2.5px 4.33px 2.5px rgba(0,0,0,0.09)); background-color: #ffffff;}
+.nice-select .option {padding: 0 1.2rem; min-height: 3.2rem; line-height: 3.2rem; font-size: 1.4rem; color: #000; font-weight: 500;}
+
+/* 페이징 */
+.paging_wrap {display: flex; align-items: center; justify-content: center; margin-top: 4.5rem;} 
+.paging_wrap .total {margin-left: 3.2rem; font-size: 1.5rem; font-weight: 700; color: #ca481d;} 
+.paging_wrap .paging {display: flex; align-items: center; gap:1rem; margin-left: 4rem;} 
+.paging_wrap .paging .prev {margin-right: 1.2rem; padding-left: 1.2rem; font-size: 1.3rem; color: #666;} 
+.paging_wrap .paging .next {margin-left: 1.2rem; padding-right: 1.2rem; font-size: 1.3rem; color: #666;} 
+.paging_wrap .paging a {display: flex; align-items: center; justify-content: center; font-size: 1.4rem; color: #333; width: 2.9rem; height: 2.9rem; border-radius: 4px;} 
+.paging_wrap .paging .num.active {background-color: #e1e1e1;} 
+
+/* 테이블 */
+.tb_sort {display: flex; align-items: center; justify-content: space-between; margin-bottom: 2rem;}
+.tb_sort .tb_select {display: flex; gap:3px; align-items: center;}
+.tb_sort .tb_select .total {font-size: 1.5rem; margin-right: 3rem; font-weight: 700; color: #ca481d;}
+
+.tb_wrap table {border-collapse: collapse; border-bottom: 1px solid #d3d3d3; width: 100%;}
+.tb_wrap table tr td {font-size: 1.7rem; padding: 1.5rem 0; border-top: 1px solid #d3d3d3; transition: .3s;}
+.tb_wrap table tr:hover td {background-color: #f7f8fc;}
+.tb_wrap table tr td.fb {font-weight: 700;}
+
+/* 정렬 */
+.sort {} 
+.sort ul {display: flex;} 
+.sort li ~ li {margin-left: 1.2rem; padding-left: 1.2rem; position: relative;} 
+.sort li ~ li::before {display: block; content: ''; width: 1px; height: 2.1rem; background-color: #d3d3d3; position: absolute; left: 0; top: 0;}
+.sort li button {font-size: 1.5rem; color: #4d4d4d; font-weight: 700;} 
+.sort li.active button {color:#ca481d; padding-left: 2.2rem;}
+
+@media only screen and (max-width: 1559px) {
+
+}
+@media only screen and (max-width: 1239px) {
+
+}
+@media only screen and (max-width: 767px) {
+
+}
+
+#container {} 
+#container .content {} 
+
+/* 서브 타이틀 */
+.sub_title {border-top:1px solid #c3c3c3; border-bottom:1px solid #c3c3c3; padding: 2rem 0; margin-bottom: 6rem;} 
+.sub_title .inner {display: flex; align-items: flex-end;}
+.sub_title .contL {} 
+.sub_title .contL .breadcrumb {} 
+.sub_title .contL .breadcrumb a.home {} 
+.sub_title .contL .breadcrumb a.btn_bc {} 
+.sub_title .contL .breadcrumb ul {display: flex; align-items: center; margin: 0 1.2rem;} 
+.sub_title .contL .breadcrumb li {} 
+.sub_title .contL .breadcrumb li ~ li {margin-left: 1rem; padding-left: 1.4rem; background: url(../images/icons/icon-arr.svg) no-repeat left center; background-size: 1rem auto;}  
+.sub_title .contL .breadcrumb li a {font-size: 1.4rem; color: #222;}
+.sub_title .contL .tit {margin-top: 2rem; display: flex; align-items: flex-end;} 
+.sub_title .contL .tit h2 {font-size: 3.8rem; font-weight: 800; color: #222;} 
+.sub_title .contL .tit p {margin-left: 2.4rem; font-size: 1.8rem; color: #222; font-weight: 500;} 
+.sub_title .contR {margin-left: auto;} 
+.sub_title .contR .sub_btn {display: flex; gap:.4rem} 
+.sub_title .contR .sub_btn a {display: flex; align-items: center; font-size: 1.3rem; min-width: 4.3rem; height: 4.3rem; border-radius: 8px; border: 1px solid rgba(0,0,0,0.36);}
+.sub_title .contR .sub_btn .btn_list_wrap {display: flex; gap:.4rem;}  
+.sub_title .contR .sub_btn .btn_list_wrap .btn_prev {} 
+.sub_title .contR .sub_btn .btn_list_wrap .btn_list {} 
+.sub_title .contR .sub_btn .btn_list_wrap .btn_next {} 
+.sub_title .contR .sub_btn .btn_print {} 
+.sub_title .contR .sub_btn .btn_bg {background-color: #3a3d72; border:none; color: #fff;} 
+.sub_title .contR .sub_btn .btn_curation {} 
+.sub_title .contR .sub_btn .btn_error {} 
+.sub_title .contR .sub_btn .btn_bg span {} 
+
+/* 기본 셀렉트 */
+.select01 {} 
+.select01 option {} 
+
+
+/* 검색 필터 */
+.filter {} 
+.filter .filter_title {} 
+.filter .filter_title h3 {} 
+.filter .filter_title .btn_reser {} 
+.filter .box {} 
+.filter .box .item {} 
+.filter .box .item .tit {} 
+.filter .box .item .tit h4 {} 
+.filter .box .item .tit .btn_toggle {} 
+.filter .box .item .list_wrap {} 
+.filter .box .item .list_wrap .dept01 {} 
+.filter .box .item .list_wrap .dept01 li {} 
+.filter .box .item .list_wrap .dept01 li label {} 
+.filter .box .item .list_wrap .dept01 li input[type="checkbox"] {} 
+.filter .box .item .list_wrap .dept01 li p {} 
+.filter .box .item .list_wrap .dept01 li p em {} 
+.filter .box .item .list_wrap .btn_all {} 
+.filter .box .btn_wrap {} 
+.filter .box .btn_wrap .btn_type01 {} 
+
+/* 검색 결과 */
+.res_wrap {} 
+.res_wrap .title_wrap {} 
+.res_wrap .title_wrap .res_tit {} 
+.res_wrap .title_wrap .res_tit strong {} 
+.res_wrap .title_wrap .res_tit strong em {} 
+.res_wrap .title_wrap .res_tit p {} 
+.res_wrap .title_wrap .res_tit p span {} 
+
+.res_wrap .search_filter {} 
+.res_wrap .search_filter ul {} 
+.res_wrap .search_filter li {} 
+.res_wrap .search_filter li span {} 
+.res_wrap .search_filter li .delete {} 
+.res_wrap .res_list {} 
+.res_wrap .res_list li {} 
+.res_wrap .res_list .list_title {} 
+.res_wrap .res_list .list_title p {} 
+.res_wrap .res_list .list_title strong {} 
+.res_wrap .res_list .info {} 
+.res_wrap .res_list .info dl {} 
+.res_wrap .res_list .info dt {} 
+.res_wrap .res_list .info dd {} 
+.res_wrap .res_list .desc {} 
+
+/* 유형별 보기 */
+.catg_box {} 
+.catg_box ul {} 
+.catg_box li {} 
+.catg_box li button {} 
+.catg_box li button i {} 
+.catg_box li button i.catg_01 {} 
+.catg_box li button i.catg_02 {} 
+.catg_box li button i.catg_03 {} 
+.catg_box li button i.catg_04 {} 
+.catg_box li button i.catg_05 {} 
+.catg_box li button i.catg_06 {} 
+.catg_box li button i.catg_07 {} 
+.catg_box li button i.catg_08 {} 
+.catg_box li button i.catg_09 {} 
+.catg_box li button span {} 
+.catg_box .search_date {} 
+.catg_box .search_date p {} 
+
+/* 게시판 */
+.board {} 
+.board .board_sort {} 
+.board .board_sort .select_sort {} 
+.board .board_sort .select_sort strong {} 
+.board .board_sort .select_sort strong em {} 
+.board .board_sort .select_sort .select01 {} 
+.board .board_sort .sort {} 
+.board .board_sort .sort ul {} 
+.board .board_sort .sort li {} 
+.board .board_sort .sort li button {}
+
+/*  */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
