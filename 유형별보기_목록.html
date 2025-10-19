@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>검색결과</title>
+	<title>유형별보기_목록</title>
 	<link rel="stylesheet" href="./resources/css/reset.css" />
 	<link rel="stylesheet" href="./resources/css/jquery-ui.css" />
 	<link rel="stylesheet" href="./resources/css/swiper-bundle.min.css" />
@@ -313,6 +313,33 @@
 	</div>
 	<!--// 도움말 팝업 -->
 
+	<!-- 유형별 도움말 팝업 -->
+	<div class="help_layer search_help_layer">
+		<div class="layer_wrap">
+			<button class="btn_close" title="닫기"></button>
+			<h2>검색 도움말</h2>
+			<div class="content scroll_area">
+				<div class="group">
+					<h3>1. 유형 선택   2. 기간 입력</h3>
+					<p>먼저 목록에서 하나의 유형을 선택합니다.</p>
+				</div>
+				<div class="group">
+					<h3>2. 기간 입력</h3>
+					<ul>
+						<li>기간을 입력하면 해당 유형 중 입력한 기간 내 기사만 검색됩니다.</li>
+						<li>기가을 입력하지 않으면 선택한 유형의 전체 기사가 표시됩니다.</li>
+					</ul>
+				</div>
+				<div class="group">
+					<h3>3. 검색 실행</h3>
+					<p>‘검색’ 버튼을 누르면 조건에 맞는 결과가 표시됩니다.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--// 유형별 도움말 팝업 -->
+
+
 	<!-- MO 검색 레이어 -->
 	<div class="mo_head_layer" id="search_layer">
 		<div class="search_layer">
@@ -409,12 +436,14 @@
 						<div class="breadcrumb">
 							<a href="#" class="home"><span class="blind">홈</span></a>
 							<ul>
-								<li><a href="#">검색결과</a></li>
+								<li><a href="#">유형별 보기</a></li>
+								<li><a href="#">일반기사</a></li>
 							</ul>
 							<a href="#" class="btn_url_copy"></a>
 						</div>
 						<div class="tit">
-							<h2>검색결과</h2>
+							<h2>유형별 보기</h2>
+							<p>일반기사</p>
 						</div>
 					</div>
 					<div class="contR">
@@ -426,506 +455,181 @@
 			</div>
 			<!--// 서브 타이틀 -->
 
-			<div class="inner res_inner">
-				<!-- 검색필터 -->
-				<div class="filter scroll_area">
-					<div class="filter_title">
-						<h3>검색 필터</h3>
-						<button class="btn_reset"><span>초기화</span></button>
-					</div>
-					<div class="box">
-						<div class="item">
-							<h4>신문 · 잡지</h4>
-							<div class="list_wrap">
-								<ul class="dept01 scroll_area">
-									<li>
-										<label for="media_sinmun_sgh_k">
-											<input type="checkbox" id="media_sinmun_sgh_k">
-											<p>
-												독립신문 상해 국한문판
-												<em>12</em>
-											</p>
-										</label>
-									</li>
-									<li>
-										<label for="media_sinmun_sgh_h">
-											<input type="checkbox" id="media_sinmun_sgh_h">
-											<p>
-												독립신문 상해 한문판
-												<em>5</em>
-											</p>
-										</label>
-									</li>
-									<li>
-										<label for="media_sinmun_jg">
-											<input type="checkbox" id="media_sinmun_jg">
-											<p>
-												독립신문 중경판
-												<em>2</em>
-											</p>
-										</label>
-									</li>
-									<li>
-										<label for="media_donga">
-											<input type="checkbox" id="media_donga">
-											<p>
-												동아일보
-												<em>2</em>
-											</p>
-										</label>
-									</li>
-									<li>
-										<label for="media_sinhan">
-											<input type="checkbox" id="media_sinhan">
-											<p>
-												신한민보
-												<em>1</em>
-											</p>
-										</label>
-									</li>
-									<li>
-										<label for="media_sinhan">
-											<input type="checkbox" id="media_sinhan">
-											<p>
-												신한민보
-												<em>1</em>
-											</p>
-										</label>
-									</li>
-								</ul>
-								<button class="btn_all"><span>전체보기</span></button>
-							</div>
-						</div>
-						<div class="item">
-							<h4>년도</h4>
-							<div class="list_wrap">
-								<ul class="dept01 scroll_area">
-									<li>
-										<label for="year_1910s">
-											<input type="checkbox" id="year_1910s">
-											<p>
-												1910년대
-												<em>12</em>
-											</p>
-										</label>
-									</li>
-									<li>
-										<label for="year_1920s">
-											<input type="checkbox" id="year_1920s">
-											<p>
-												1920년대
-												<em>12</em>
-											</p>
-										</label>
-									</li>
-									<li>
-										<label for="year_1930s_main">
-											<input type="checkbox" id="year_1930s_main">
-											<p>
-												1930년대
-												<em>12</em>
-											</p>
-										</label>
-										<ul class="dept02">
-											<li>
-												<label for="year_1940_sub">
-													<input type="checkbox" id="year_1940_sub">
-													<p>
-														1940년
-														<em>12</em>
-													</p>
-												</label>
-											</li>
-											<li>
-												<label for="year_1941_sub">
-													<input type="checkbox" id="year_1941_sub">
-													<p>
-														1941년
-														<em>12</em>
-													</p>
-												</label>
-											</li>
-											<li>
-												<label for="year_1942_sub">
-													<input type="checkbox" id="year_1942_sub">
-													<p>
-														1942년
-														<em>12</em>
-													</p>
-												</label>
-											</li>
-											<li>
-												<label for="year_1943_sub">
-													<input type="checkbox" id="year_1943_sub">
-													<p>
-														1943년
-														<em>12</em>
-													</p>
-												</label>
-											</li>
-											<li>
-												<label for="year_1944_sub">
-													<input type="checkbox" id="year_1944_sub">
-													<p>
-														1944년
-														<em>12</em>
-													</p>
-												</label>
-											</li>
-											<li>
-												<label for="year_1945_sub">
-													<input type="checkbox" id="year_1945_sub">
-													<p>
-														1945년
-														<em>12</em>
-													</p>
-												</label>
-											</li>
-										</ul>
-									</li>
-									<li>
-										<label for="year_1940s_main"> <!-- 1940년대 대표 체크박스 -->
-											<input type="checkbox" id="year_1940s_main">
-											<p>
-												1940년대
-												<em>12</em>
-											</p>
-										</label>
-									</li>
-									<li>
-										<label for="year_1940s_main"> <!-- 1940년대 대표 체크박스 -->
-											<input type="checkbox" id="year_1940s_main">
-											<p>
-												1940년대
-												<em>12</em>
-											</p>
-										</label>
-									</li>
-									<li>
-										<label for="year_1940s_main"> <!-- 1940년대 대표 체크박스 -->
-											<input type="checkbox" id="year_1940s_main">
-											<p>
-												1940년대
-												<em>12</em>
-											</p>
-										</label>
-									</li>
-								</ul>
-								<button class="btn_all"><span>전체보기</span></button>
-							</div>
-						</div>
-						<div class="item">
-							<h4>유형</h4>
-							<div class="list_wrap">
-								<ul class="dept01 scroll_area">
-									<li>
-										<label for="type_general_article">
-											<input type="checkbox" id="type_general_article">
-											<p>
-												일반 기사
-												<em>12</em>
-											</p>
-										</label>
-									</li>
-									<li>
-										<label for="type_gov_article">
-											<input type="checkbox" id="type_gov_article">
-											<p>
-												임시정부 기사
-												<em>12</em>
-											</p>
-										</label>
-									</li>
-									<li>
-										<label for="type_feature_article">
-											<input type="checkbox" id="type_feature_article">
-											<p>
-												기획기사
-												<em>12</em>
-											</p>
-										</label>
-									</li>
-									<li>
-										<label for="type_editorial">
-											<input type="checkbox" id="type_editorial">
-											<p>
-												사설
-												<em>12</em>
-											</p>
-										</label>
-									</li>
-									<li>
-										<label for="type_critique_contrib">
-											<input type="checkbox" id="type_critique_contrib">
-											<p>
-												평론 / 기고
-												<em>12</em>
-											</p>
-										</label>
-									</li>
-									<li>
-										<label for="type_editorial">
-											<input type="checkbox" id="type_editorial">
-											<p>
-												사설
-												<em>12</em>
-											</p>
-										</label>
-									</li>
-									<li>
-										<label for="type_critique_contrib">
-											<input type="checkbox" id="type_critique_contrib">
-											<p>
-												평론 / 기고
-												<em>12</em>
-											</p>
-										</label>
-									</li>
-								</ul>
-								<button class="btn_all"><span>전체보기</span></button>
-							</div>
-						</div>
-						<div class="item">
-							<h4>지역</h4>
-							<div class="list_wrap">
-								<ul class="dept01 scroll_area">
-									<li>
-										<label for="region_domestic">
-											<input type="checkbox" id="region_domestic">
-											<p>
-												국내
-												<em>12</em>
-											</p>
-										</label>
-									</li>
-									<li>
-										<label for="region_china_parent">
-											<input type="checkbox" id="region_china_parent">
-											<p>
-												중국
-												<em>12</em>
-											</p>
-										</label>
-										<ul class="dept02">
-											<li>
-												<label for="region_china_shanghai">
-													<input type="checkbox" id="region_china_shanghai">
-													<p>
-														상해
-														<em>222</em>
-													</p>
-												</label>
-											</li>
-											<li>
-												<label for="region_china_chongqing">
-													<input type="checkbox" id="region_china_chongqing">
-													<p>
-														중경
-														<em>222</em>
-													</p>
-												</label>
-											</li>
-										</ul>
-									</li>
-									<li>
-										<label for="region_japan">
-											<input type="checkbox" id="region_japan">
-											<p>
-												일본
-												<em>12</em>
-											</p>
-										</label>
-									</li>
-									<li>
-										<label for="region_japan">
-											<input type="checkbox" id="region_japan">
-											<p>
-												일본
-												<em>12</em>
-											</p>
-										</label>
-									</li>
-									<li>
-										<label for="region_japan">
-											<input type="checkbox" id="region_japan">
-											<p>
-												일본
-												<em>12</em>
-											</p>
-										</label>
-									</li>
-									<li>
-										<label for="region_japan">
-											<input type="checkbox" id="region_japan">
-											<p>
-												일본
-												<em>12</em>
-											</p>
-										</label>
-									</li>
-									<li>
-										<label for="region_japan">
-											<input type="checkbox" id="region_japan">
-											<p>
-												일본
-												<em>12</em>
-											</p>
-										</label>
-									</li>
-								</ul>
-								<button class="btn_all"><span>전체보기</span></button>
-							</div>
-						</div>
-						<div class="item">
-							<h4>언어</h4>
-							<div class="list_wrap">
-								<ul class="dept01 scroll_area">
-									<li>
-										<label for="lang_korean">
-											<input type="checkbox" id="lang_korean">
-											<p>
-												국문
-												<em>12</em>
-											</p>
-										</label>
-									</li>
-									<li>
-										<label for="lang_korean_chinese">
-											<input type="checkbox" id="lang_korean_chinese">
-											<p>
-												국한문
-												<em>5</em>
-											</p>
-										</label>
-									</li>
-									<li>
-										<label for="lang_chinese">
-											<input type="checkbox" id="lang_chinese">
-											<p>
-												중문
-												<em>2</em>
-											</p>
-										</label>
-									</li>
-									<li>
-										<label for="lang_japanese">
-											<input type="checkbox" id="lang_japanese">
-											<p>
-												일본어
-												<em>2</em>
-											</p>
-										</label>
-									</li>
-									<li>
-										<label for="lang_english">
-											<input type="checkbox" id="lang_english">
-											<p>
-												영어
-												<em>1</em>
-											</p>
-										</label>
-									</li>
-								</ul>
-								<button class="btn_all"><span>전체보기</span></button>
-							</div>
-						</div>
-	
-						<div class="btn_wrap">
-							<a href="#" class="btn_type01">적용</a>
-						</div>
-						<button class="btn_filter_close"><span>닫<br/>기</span></button>
-					</div>
-				</div>
-				<!--// 검색필터 -->
-	
-				<!-- 검색결과 -->
-				<div class="res_wrap">
-					<div class="title_wrap">
-						<div class="res_tit">
-							<strong>
-								'<em>피눈물</em>' 검색결과
-							</strong>
-							<p>
-								총 <span>197</span>건
-							</p>
-						</div>
-						<div class="sort">
-							<ul>
-								<li><button>시간순</button></li>
-								<li class="active"><button>시간역순</button></li>
-								<li><button>가나다순</button></li>
-								<li><button>가나다역순</button></li>
-							</ul>
-						</div>
-					</div>
-					<div class="search_filter">
+			<div class="inner">
+				<div class="catg_list">
+					<!-- 유형별 보기 -->
+					<div class="catg_box">
 						<ul>
-							<li class="filter_li">
-								<button class="btn_filter"><span>필터 열기</span></button>
+							<li class="catg_01">
+								<button class="active">
+									<span>일반 기사</span>
+								</button>
 							</li>
-							<li>
-								<span>필터 1</span>
-								<button class="delete"></button>
+							<li class="catg_02">
+								<button>
+									<span>임시정보 기사</span>
+								</button>
 							</li>
-							<li>
-								<span>필터 2</span>
-								<button class="delete"></button>
+							<li class="catg_03">
+								<button>
+									<span>기획기사</span>
+								</button>
+							</li>
+							<li class="catg_04">
+								<button>
+									<span>사설</span>
+								</button>
+							</li>
+							<li class="catg_05">
+								<button>
+									<span>평론 / 기고</span>
+								</button>
+							</li>
+							<li class="catg_06">
+								<button>
+									<span>문예</span>
+								</button>
+							</li>
+							<li class="catg_07">
+								<button>
+									<span>문평 / 단평</span>
+								</button>
+							</li>
+							<li class="catg_08">
+								<button>
+									<span>광고 / 공고</span>
+								</button>
+							</li>
+							<li class="catg_09">
+								<button>
+									<span>기타</span>
+								</button>
 							</li>
 						</ul>
+						<div class="search_date">
+							<p class="tit">기간설정</p>
+							<div class="date_inpt">
+								<input type="text" placeholder="YYYYMMDD">
+								<span>~</span>
+								<input type="text" placeholder="YYYYMMDD">
+								<a href="#" class="btn_search">검색</a>
+								<button class="btn_search_help" title="도움말"><span class="blind">도움말</span></button>
+							</div>
+						</div>
 					</div>
-					<ul class="res_list">
-						<li>
-							<a href="#">
-								<div class="list_title">
-									<p>1919년 8월 26일 제 2호 <strong>피눈물</strong></p>
-									
+					<!--// 유형별 보기 -->
+					<!-- 테이블 -->
+					<div class="tb_wrap">
+						<div class="tb_sort">
+							<div class="tb_select">
+								<div class="total">
+									전체 <em>25</em>건
 								</div>
-								<div class="info">
-									<dl>
-										<dt>유형</dt>
-										<dd>문예</dd>
-									</dl>
-									<dl>
-										<dt>지역</dt>
-										<dd>중국 상해</dd>
-									</dl>
-									<dl>
-										<dt>언어</dt>
-										<dd>국한문 혼용</dd>
-									</dl>
-								</div>
-								<p class="desc">
-									二더구나 三月一日 以後로서○ 韓人은 日人의 보기에 皆是罪人이오 不逞鮮人이오 犬馬엿다. 處女의 ○살녀주시오○하는 ○는 아주 피눈물 목에 虛함은 아니엇다. 允燮은 가만히 血痕잇는 周衣를 버서 노코 나는 드시 달녀들어 背後로서 巡査의 耳邊에 一擊을 加하고 因해 그의 項을 扼야하 路上에 꺽구러떠리며. 女子다려 ○자. 어서 逃亡하시오○ 한다 女子는 한번 允燮을 보고 어듸든지 몸을 避한다.巡査○ 不意의 猛打를 當하야 精神을 차리지 못하다가 이윽고 눈을 떠보니 一靑年이 주먹을 두러메고 自己를 노려보며 今時에 自己의 腹臟을 붓칠 뜻한 氣勢 들보인다. 靑年은 ○이놈아, 너도 사람이야, 너는 大韓의 雨露를 밧고 生長한 놈이 아니야, 이놈아○ 하고 구두로을 胸部를 차려 하다가 힘끗 념구리를 한번 찔느고 亦是 몸을 避하엿다.
-								</p>
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<div class="list_title">
-									<p>1919년 8월 26일 제 2호<strong>피눈물</strong></p>
-									
-								</div>
-								<div class="info">
-									<dl>
-										<dt>유형</dt>
-										<dd>문예</dd>
-									</dl>
-									<dl>
-										<dt>지역</dt>
-										<dd>중국 상해</dd>
-									</dl>
-									<dl>
-										<dt>언어</dt>
-										<dd>국한문 혼용</dd>
-									</dl>
-								</div>
-								<p class="desc">
-									二더구나 三月一日 以後로서○ 韓人은 日人의 보기에 皆是罪人이오 不逞鮮人이오 犬馬엿다. 處女의 ○살녀주시오○하는 ○는 아주 피눈물 목에 虛함은 아니엇다. 允燮은 가만히 血痕잇는 周衣를 버서 노코 나는 드시 달녀들어 背後로서 巡査의 耳邊에 一擊을 加하고 因해 그의 項을 扼야하 路上에 꺽구러떠리며. 女子다려 ○자. 어서 逃亡하시오○ 한다 女子는 한번 允燮을 보고 어듸든지 몸을 避한다.巡査○ 不意의 猛打를 當하야 精神을 차리지 못하다가 이윽고 눈을 떠보니 一靑年이 주먹을 두러메고 自己를 노려보며 今時에 自己의 腹臟을 붓칠 뜻한 氣勢 들보인다. 靑年은 ○이놈아, 너도 사람이야, 너는 大韓의 雨露를 밧고 生長한 놈이 아니야, 이놈아○ 하고 구두로을 胸部를 차려 하다가 힘끗 념구리를 한번 찔느고 亦是 몸을 避하엿다.
-								</p>
-							</a>
-						</li>
-					</ul>
-
+								<select class="select01 tb01">
+									<option value="">신문선택</option>
+									<option value="">독립신문 상해 중문판</option>
+									<option value="">독립신문 상해 국한문판</option>
+									<option value="">독립신문 중경판</option>
+									<option value="">신한민보</option>
+								</select>
+								<select class="select01">
+									<option value="">유형선택</option>
+									<option value="">유형선택12</option>
+									<option value="">유형선택22</option>
+								</select>
+								<select class="select01">
+									<option value="">지역선택</option>
+									<option value="">지역선택12</option>
+									<option value="">지역선택22</option>
+								</select>
+								<select class="select01">
+									<option value="">언어선택</option>
+									<option value="">언어선택12</option>
+									<option value="">언어선택22</option>
+								</select>
+							</div>
+							<div class="sort">
+								<ul>
+									<li><button>시간순</button></li>
+									<li class="active"><button>시간역순</button></li>
+									<li><button>가나다순</button></li>
+									<li><button>가나다역순</button></li>
+								</ul>
+							</div>
+						</div>
+						<table class="type01">
+							<colgroup>
+								<col width="70">
+								<col width="100">
+								<col width="140">
+								<col width="*">
+							</colgroup>
+							<tbody>
+								<tr>
+									<td>제 1호</td>
+									<td>1면 1단</td>
+									<td>기타</td>
+									<td class="fb">創刊辭 - 창간사</td>
+								</tr>
+								<tr>
+									<td>제 99호</td>
+									<td>99면 99단</td>
+									<td>임시정부 기사</td>
+									<td class="fb">(歐美電報)오스터리아는 共和國 - (구미전보)오스터리아는 공화국</td>
+								</tr>
+								<tr>
+									<td>제 1호</td>
+									<td>1면 1단</td>
+									<td>기타</td>
+									<td class="fb">創刊辭 - 창간사</td>
+								</tr>
+								<tr>
+									<td>제 99호</td>
+									<td>99면 99단</td>
+									<td>임시정부 기사</td>
+									<td class="fb">(歐美電報)오스터리아는 共和國 - (구미전보)오스터리아는 공화국</td>
+								</tr>
+								<tr>
+									<td>제 1호</td>
+									<td>1면 1단</td>
+									<td>기타</td>
+									<td class="fb">創刊辭 - 창간사</td>
+								</tr>
+								<tr>
+									<td>제 99호</td>
+									<td>99면 99단</td>
+									<td>임시정부 기사</td>
+									<td class="fb">(歐美電報)오스터리아는 共和國 - (구미전보)오스터리아는 공화국</td>
+								</tr>
+								<tr>
+									<td>제 1호</td>
+									<td>1면 1단</td>
+									<td>기타</td>
+									<td class="fb">創刊辭 - 창간사</td>
+								</tr>
+								<tr>
+									<td>제 99호</td>
+									<td>99면 99단</td>
+									<td>임시정부 기사</td>
+									<td class="fb">(歐美電報)오스터리아는 共和國 - (구미전보)오스터리아는 공화국</td>
+								</tr>
+								<tr>
+									<td>제 1호</td>
+									<td>1면 1단</td>
+									<td>기타</td>
+									<td class="fb">創刊辭 - 창간사</td>
+								</tr>
+								<tr>
+									<td>제 99호</td>
+									<td>99면 99단</td>
+									<td>임시정부 기사</td>
+									<td class="fb">(歐美電報)오스터리아는 共和國 - (구미전보)오스터리아는 공화국</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<!--// 테이블 -->
+	
 					<!-- 페이징 -->
 					<div class="paging_wrap">
 						<select class="select01">
@@ -958,8 +662,8 @@
 						</div>
 					</div>
 					<!--// 페이징 -->
+					
 				</div>
-				<!--// 검색결과 -->
 			</div>
 		</div>
 	</main>

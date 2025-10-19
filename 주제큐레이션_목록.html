@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>신문잡지별보기_목록</title>
+	<title>주제큐레이션_목록</title>
 	<link rel="stylesheet" href="./resources/css/reset.css" />
 	<link rel="stylesheet" href="./resources/css/jquery-ui.css" />
 	<link rel="stylesheet" href="./resources/css/swiper-bundle.min.css" />
@@ -313,6 +313,33 @@
 	</div>
 	<!--// 도움말 팝업 -->
 
+	<!-- 유형별 도움말 팝업 -->
+	<div class="help_layer search_help_layer">
+		<div class="layer_wrap">
+			<button class="btn_close" title="닫기"></button>
+			<h2>검색 도움말</h2>
+			<div class="content scroll_area">
+				<div class="group">
+					<h3>1. 유형 선택   2. 기간 입력</h3>
+					<p>먼저 목록에서 하나의 유형을 선택합니다.</p>
+				</div>
+				<div class="group">
+					<h3>2. 기간 입력</h3>
+					<ul>
+						<li>기간을 입력하면 해당 유형 중 입력한 기간 내 기사만 검색됩니다.</li>
+						<li>기가을 입력하지 않으면 선택한 유형의 전체 기사가 표시됩니다.</li>
+					</ul>
+				</div>
+				<div class="group">
+					<h3>3. 검색 실행</h3>
+					<p>‘검색’ 버튼을 누르면 조건에 맞는 결과가 표시됩니다.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--// 유형별 도움말 팝업 -->
+
+
 	<!-- MO 검색 레이어 -->
 	<div class="mo_head_layer" id="search_layer">
 		<div class="search_layer">
@@ -409,22 +436,16 @@
 						<div class="breadcrumb">
 							<a href="#" class="home"><span class="blind">홈</span></a>
 							<ul>
-								<li><a href="#">신문·잡지별 보기</a></li>
-								<li><a href="#">독립신문 상해 국한문판</a></li>
+								<li><a href="#">주제 큐레이션</a></li>
 							</ul>
 							<a href="#" class="btn_url_copy"></a>
 						</div>
 						<div class="tit">
-							<h2>독립신문 상해 국한문판</h2>
-							<p>1919년 8월 21일 ( 제 1호 )</p>
+							<h2>주제 큐레이션</h2>
 						</div>
 					</div>
 					<div class="contR">
 						<div class="sub_btn">
-							<div class="btn_list_wrap">
-								<a href="#" class="btn_list"><span>목록</span></a>
-							</div>
-							<i class="bar"></i>
 							<a href="#" class="btn_print"><span class="blind">프린트</span></a>
 						</div>
 					</div>
@@ -433,156 +454,144 @@
 			<!--// 서브 타이틀 -->
 
 			<div class="inner">
-				<div class="view_list">
-					<div class="contL">
-						<!-- 달력 -->
-						<div id="datepicker"></div>
-						<!--// 달력 -->
-						<p class="date_desc">열람할 날짜를 선택하세요</p>
+				<div class="tab_container">
+					<!-- tab menu -->
+					<div class="tab_wrap">
+						<ul class="tab_menu">
+							<li class="tab_item active"><a href="#n">전체</a></li>
+							<li class="tab_item"><a href="#n">조직과 제도</a></li>
+							<li class="tab_item"><a href="#n">투쟁과 선전</a></li>
+							<li class="tab_item"><a href="#n">망명과 네트워크</a></li>
+							<li class="tab_item"><a href="#n">기타</a></li>
+						</ul>
 					</div>
-					<div class="contR">
-						<!-- 테이블 -->
-						<div class="tb_wrap">
-							<div class="tb_sort">
-								<div class="tb_select">
-									<div class="total">
-										전체 <em>25</em>건
+					<!-- // tab menu -->
+					
+					<!-- 주제 큐레이션 목록 -->
+					<div class="tab_content">
+						<div class="tab_conbox">
+							<div class="total">전체 <em>25</em>건</div>
+							<ul class="curation_list">
+								<li class="curation_item">
+									<a href="#n">
+										<span class="img_wrap">
+											<figure><img src="./resources/images/temp/curation_01.png" alt=""></figure>
+										</span>
+										<span class="text_wrap">
+											<strong class="curation_title">
+												도시는 바뀌어도 나라는 있다
+											</strong>
+											<span class="curation_sub">
+												임정의 여정, 상하이에서 충칭까지
+											</span>
+											<span class="curation_desc">
+												1919년 4월, 대한민국임시정부는 중국 상하이에 첫 발을 내디뎠다. 
+												망명이라는 이름의 독립운동은 그저 피신이나 은신이 아니었다. 전 세계 열강과 
+												일본 제국주의를 마주한 채, 어디에도 존재를 공인받지 못한 '나라'를 
+												12345678901234567890
+											</span>
+										</span>
+									</a>
+								</li>
+								<li class="curation_item">
+									<a href="#n">
+										<span class="img_wrap">
+											<figure><img src="./resources/images/temp/curation_02.png" alt=""></figure>
+										</span>
+										<span class="text_wrap">
+											<strong class="curation_title">
+												망명정부의 법과 질서
+											</strong>
+											<span class="curation_sub">
+												임시헌장과 그 너머
+											</span>
+											<span class="curation_desc">
+												1919년 4월, 대한민국임시정부는 중국 상하이에 첫 발을 내디뎠다. 
+												망명이라는 이름의 독립운동은 그저 피신이나 은신이 아니었다. 전 세계 열강과 
+												일본 제국주의를 마주한 채, 어디에도 존재를 공인받지 못한 '나라'를 
+												12345678901234567890
+											</span>
+										</span>
+									</a>
+								</li>
+								<li class="curation_item">
+									<a href="#n">
+										<span class="img_wrap">
+											<figure><img src="./resources/images/temp/curation_03.png" alt=""></figure>
+										</span>
+										<span class="text_wrap">
+											<strong class="curation_title">
+												독립은 공짜가 아니었다
+											</strong>
+											<span class="curation_sub">
+												후원과 모금의 기록들
+											</span>
+											<span class="curation_desc">
+												1919년 4월, 대한민국임시정부는 중국 상하이에 첫 발을 내디뎠다. 
+												망명이라는 이름의 독립운동은 그저 피신이나 은신이 아니었다. 전 세계 열강과 
+												일본 제국주의를 마주한 채, 어디에도 존재를 공인받지 못한 '나라'를 
+												12345678901234567890
+											</span>
+										</span>
+									</a>
+								</li>
+								<li class="curation_item">
+									<a href="#n">
+										<span class="img_wrap">
+											<figure><img src="./resources/images/temp/curation_04.png" alt=""></figure>
+										</span>
+										<span class="text_wrap">
+											<strong class="curation_title">
+												총을 든 임정
+											</strong>
+											<span class="curation_sub">
+												한국광복군의 탄생과 작전 보고
+											</span>
+											<span class="curation_desc">
+												1919년 4월, 대한민국임시정부는 중국 상하이에 첫 발을 내디뎠다. 
+												망명이라는 이름의 독립운동은 그저 피신이나 은신이 아니었다. 전 세계 열강과 
+												일본 제국주의를 마주한 채, 어디에도 존재를 공인받지 못한 '나라'를 
+												12345678901234567890
+											</span>
+										</span>
+									</a>
+								</li>
+							</ul>
+
+							<!-- 페이징 -->
+							<div class="paging_wrap">
+								<select class="select01">
+									<option value="">20</option>
+									<option value="">50</option>
+									<option value="">100</option>
+								</select>
+								<div class="total">
+									전체 <em>25</em>건
+								</div>
+								<div class="paging">
+									<button class="prev">이전</button>
+									<div class="pc_paging">
+										<a href="#" class="num active">1</a>
+										<a href="#" class="num">2</a>
 									</div>
-									<select class="select01 tb01">
-										<option value="">신문선택</option>
-										<option value="">독립신문 상해 중문판</option>
-										<option value="">독립신문 상해 국한문판</option>
-										<option value="">독립신문 중경판</option>
-										<option value="">신한민보</option>
-									</select>
-									<select class="select01">
-										<option value="">유형선택</option>
-										<option value="">유형선택12</option>
-										<option value="">유형선택22</option>
-									</select>
-									<select class="select01">
-										<option value="">지역선택</option>
-										<option value="">지역선택12</option>
-										<option value="">지역선택22</option>
-									</select>
-									<select class="select01">
-										<option value="">언어선택</option>
-										<option value="">언어선택12</option>
-										<option value="">언어선택22</option>
-									</select>
+									<div class="mo_paging">
+										<p>
+											<span>1</span> / <span>2</span>
+										</p>
+									</div>
+									<button class="next">다음</button>
 								</div>
 							</div>
-							<table class="type01">
-								<colgroup>
-									<col width="70">
-									<col width="100">
-									<col width="140">
-									<col width="*">
-								</colgroup>
-								<tbody>
-									<tr>
-										<td>제 1호</td>
-										<td>1면 1단</td>
-										<td>기타</td>
-										<td class="fb">創刊辭 - 창간사</td>
-									</tr>
-									<tr>
-										<td>제 99호</td>
-										<td>99면 99단</td>
-										<td>임시정부 기사</td>
-										<td class="fb">(歐美電報)오스터리아는 共和國 - (구미전보)오스터리아는 공화국</td>
-									</tr>
-									<tr>
-										<td>제 1호</td>
-										<td>1면 1단</td>
-										<td>기타</td>
-										<td class="fb">創刊辭 - 창간사</td>
-									</tr>
-									<tr>
-										<td>제 99호</td>
-										<td>99면 99단</td>
-										<td>임시정부 기사</td>
-										<td class="fb">(歐美電報)오스터리아는 共和國 - (구미전보)오스터리아는 공화국</td>
-									</tr>
-									<tr>
-										<td>제 1호</td>
-										<td>1면 1단</td>
-										<td>기타</td>
-										<td class="fb">創刊辭 - 창간사</td>
-									</tr>
-									<tr>
-										<td>제 99호</td>
-										<td>99면 99단</td>
-										<td>임시정부 기사</td>
-										<td class="fb">(歐美電報)오스터리아는 共和國 - (구미전보)오스터리아는 공화국</td>
-									</tr>
-									<tr>
-										<td>제 1호</td>
-										<td>1면 1단</td>
-										<td>기타</td>
-										<td class="fb">創刊辭 - 창간사</td>
-									</tr>
-									<tr>
-										<td>제 99호</td>
-										<td>99면 99단</td>
-										<td>임시정부 기사</td>
-										<td class="fb">(歐美電報)오스터리아는 共和國 - (구미전보)오스터리아는 공화국</td>
-									</tr>
-									<tr>
-										<td>제 1호</td>
-										<td>1면 1단</td>
-										<td>기타</td>
-										<td class="fb">創刊辭 - 창간사</td>
-									</tr>
-									<tr>
-										<td>제 99호</td>
-										<td>99면 99단</td>
-										<td>임시정부 기사</td>
-										<td class="fb">(歐美電報)오스터리아는 共和國 - (구미전보)오스터리아는 공화국</td>
-									</tr>
-								</tbody>
-							</table>
+							<!--// 페이징 -->
 						</div>
-						<!--// 테이블 -->
-		
-						<!-- 페이징 -->
-						<div class="paging_wrap">
-							<select class="select01">
-								<option value="">20</option>
-								<option value="">50</option>
-								<option value="">100</option>
-							</select>
-							<div class="total">
-								전체 <em>25</em>건
-							</div>
-							<div class="paging">
-								<button class="prev">이전</button>
-								<div class="pc_paging">
-									<a href="#" class="num">1</a>
-									<span class="ellipsis">&#8230;</span>
-									<a href="#" class="num">4</a>
-									<a href="#" class="num">5</a>
-									<a href="#" class="num active">6</a>
-									<a href="#" class="num">7</a>
-									<a href="#" class="num">8</a>
-									<span class="ellipsis">&#8230;</span>
-									<a href="#" class="num">999</a>
-								</div>
-								<div class="mo_paging">
-									<p>
-										<span>6</span> / <span>999</span>
-									</p>
-								</div>
-								<button class="next">다음</button>
-							</div>
-						</div>
-						<!--// 페이징 -->
 					</div>
+					<!-- // 주제 큐레이션 목록 -->
 				</div>
+
 			</div>
 		</div>
 	</main>
-	<!-- 본문 내용-->
+	<!-- // 본문 내용-->
 
 	<!-- 사이트 푸터 영역 -->
 	<footer>

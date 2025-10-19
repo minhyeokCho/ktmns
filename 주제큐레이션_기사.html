@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>신문잡지별보기_목록</title>
+	<title>주제큐레이션_기사</title>
 	<link rel="stylesheet" href="./resources/css/reset.css" />
 	<link rel="stylesheet" href="./resources/css/jquery-ui.css" />
 	<link rel="stylesheet" href="./resources/css/swiper-bundle.min.css" />
@@ -313,6 +313,33 @@
 	</div>
 	<!--// 도움말 팝업 -->
 
+	<!-- 유형별 도움말 팝업 -->
+	<div class="help_layer search_help_layer">
+		<div class="layer_wrap">
+			<button class="btn_close" title="닫기"></button>
+			<h2>검색 도움말</h2>
+			<div class="content scroll_area">
+				<div class="group">
+					<h3>1. 유형 선택   2. 기간 입력</h3>
+					<p>먼저 목록에서 하나의 유형을 선택합니다.</p>
+				</div>
+				<div class="group">
+					<h3>2. 기간 입력</h3>
+					<ul>
+						<li>기간을 입력하면 해당 유형 중 입력한 기간 내 기사만 검색됩니다.</li>
+						<li>기가을 입력하지 않으면 선택한 유형의 전체 기사가 표시됩니다.</li>
+					</ul>
+				</div>
+				<div class="group">
+					<h3>3. 검색 실행</h3>
+					<p>‘검색’ 버튼을 누르면 조건에 맞는 결과가 표시됩니다.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--// 유형별 도움말 팝업 -->
+
+
 	<!-- MO 검색 레이어 -->
 	<div class="mo_head_layer" id="search_layer">
 		<div class="search_layer">
@@ -409,23 +436,27 @@
 						<div class="breadcrumb">
 							<a href="#" class="home"><span class="blind">홈</span></a>
 							<ul>
-								<li><a href="#">신문·잡지별 보기</a></li>
-								<li><a href="#">독립신문 상해 국한문판</a></li>
+								<li><a href="#">주제 큐레이션</a></li>
+								<li><a href="#">도시는 바뀌어도 나라는 있다</a></li>
 							</ul>
 							<a href="#" class="btn_url_copy"></a>
 						</div>
 						<div class="tit">
-							<h2>독립신문 상해 국한문판</h2>
-							<p>1919년 8월 21일 ( 제 1호 )</p>
+							<h2>주제 큐레이션</h2>
+							<p>도시는 바뀌어도 나라는 있다</p>
 						</div>
 					</div>
 					<div class="contR">
 						<div class="sub_btn">
 							<div class="btn_list_wrap">
+								<a href="#" class="btn_prev"><span class="blind">이전</span></a>
 								<a href="#" class="btn_list"><span>목록</span></a>
+								<a href="#" class="btn_next"><span class="blind">다음</span></a>
 							</div>
 							<i class="bar"></i>
 							<a href="#" class="btn_print"><span class="blind">프린트</span></a>
+							<i class="bar"></i>
+							<a href="#" class="btn_bg btn_error"><span>오류<br/>접수</span></a>
 						</div>
 					</div>
 				</div>
@@ -433,156 +464,118 @@
 			<!--// 서브 타이틀 -->
 
 			<div class="inner">
-				<div class="view_list">
-					<div class="contL">
-						<!-- 달력 -->
-						<div id="datepicker"></div>
-						<!--// 달력 -->
-						<p class="date_desc">열람할 날짜를 선택하세요</p>
+				<div class="article_wrap">
+					<div class="title">
+						<h3>도시는 바뀌어도<br> 나라는 있다</h3>
+						<strong>임정의 여정, 상하이에서 충칭까지</strong>
 					</div>
-					<div class="contR">
-						<!-- 테이블 -->
-						<div class="tb_wrap">
-							<div class="tb_sort">
-								<div class="tb_select">
-									<div class="total">
-										전체 <em>25</em>건
+					<div class="article">
+						<div class="dt_info">
+							<div class="group">
+								<p>1919년 4월, 대한민국임시정부는 중국 상하이에 첫 발을 내디뎠다. 망명이라는 이름의 독립운동은 그저 피신이나 은신이 아니었다. 전 세계 열강과 일본 제국주의를 마주한 채, 어디에도 존재를 공인받지 못한 '나라'를 인쇄물로, 행정문서로, 정치 담론으로 만들어내는 고된 여정이었다. 임시정부는 정치적, 군사적, 재정적 압박을 거치며 여러 도시로 자리를 옮겨야 했다. 상하이에서 시작된 임정은 항저우, 전장(쩐장), 창사, 광저우, 류저우, 구이양, 그리고 마침내 충칭에 이르기까지 무려 10여 차례 거점을 이동하며 '이동 정부'로 존재했다. 도시가 바뀔 때마다 임시정부는 인쇄소를 다시 세우고, 신문을 다시 찍고, 사람들을 다시 모아야 했다.</p>
+							</div>
+							<div class="group">
+								<div class="img_01">
+									<figure class="img">
+										<img src="./resources/images/temp/article_01.png" alt="">
+										<figcaption>
+											상해 조계 표시(노란색이 프랑스 조계, 1943)
+											<button class="btn_plus"></button>
+										</figcaption>
+									</figure>
+									<div class="txt_wrap">
+										<p>이 과정에서 신문과 잡지는 단순한 정보 전달 수단을 넘어 ‘임시정부가 살아 있다’는 증거가 되었고, 국내외 독립운동가들과 재외동포들의 네트워크를 유지하는 핵심 도구가 되었다. 『독립신문』, 『한인시보』, 『신한민보』, 『한교보』 등은 각 도시의 환경과 재정 사정에 따라 크기와 형식, 발행 주기가 달라졌지만 모두 하나의 목표, ‘나라를 만든다’는 의지 아래에서 이어졌다</p>
+										<h4>1. 제목이 들어갑니다.</h4>
+										<p>특히 1932년 윤봉길 의거 이후 임시정부는 일본의 추격을 피해 더욱 험난한 이동을 감수해야 했다. 이동 경로 자체가 일종의 전략이었고, 각 도시에서의 체류는 짧았지만 그 안에서도 회보가 만들어지고 성명이 발표되었으며, 새로운 선언과 구호가 인쇄되었다. 충칭에 도착한 임시정부는 전시 수도라는 국제적 정세 속에서 중국 국민당 정부와의 관계를 재정립하고 , 한국광복군 창설, 조선의용대 합류 등 군사·외교 면에서 가장 활발한 시기를 맞는다. 이 시기 발행된 『정부공보』, 『대일전선』 등은 전쟁 속에서의 임정의 정체성과 역할을 보여주는 중요한 사료이다. 임시정부는 도시를 옮기며 물리적 공간을 잃었지만, 신문과 잡지라는 인쇄물로 정체성을 지켜냈다. 나라가 존재한다는 믿음은 종이 위에서 구현되었고, 그 종이를 통해 공동체는 다시 이어졌다. 도시는 바뀌었지만, 나라는 사라지지 않았다.</p>
 									</div>
-									<select class="select01 tb01">
-										<option value="">신문선택</option>
-										<option value="">독립신문 상해 중문판</option>
-										<option value="">독립신문 상해 국한문판</option>
-										<option value="">독립신문 중경판</option>
-										<option value="">신한민보</option>
-									</select>
-									<select class="select01">
-										<option value="">유형선택</option>
-										<option value="">유형선택12</option>
-										<option value="">유형선택22</option>
-									</select>
-									<select class="select01">
-										<option value="">지역선택</option>
-										<option value="">지역선택12</option>
-										<option value="">지역선택22</option>
-									</select>
-									<select class="select01">
-										<option value="">언어선택</option>
-										<option value="">언어선택12</option>
-										<option value="">언어선택22</option>
-									</select>
 								</div>
 							</div>
-							<table class="type01">
-								<colgroup>
-									<col width="70">
-									<col width="100">
-									<col width="140">
-									<col width="*">
-								</colgroup>
-								<tbody>
-									<tr>
-										<td>제 1호</td>
-										<td>1면 1단</td>
-										<td>기타</td>
-										<td class="fb">創刊辭 - 창간사</td>
-									</tr>
-									<tr>
-										<td>제 99호</td>
-										<td>99면 99단</td>
-										<td>임시정부 기사</td>
-										<td class="fb">(歐美電報)오스터리아는 共和國 - (구미전보)오스터리아는 공화국</td>
-									</tr>
-									<tr>
-										<td>제 1호</td>
-										<td>1면 1단</td>
-										<td>기타</td>
-										<td class="fb">創刊辭 - 창간사</td>
-									</tr>
-									<tr>
-										<td>제 99호</td>
-										<td>99면 99단</td>
-										<td>임시정부 기사</td>
-										<td class="fb">(歐美電報)오스터리아는 共和國 - (구미전보)오스터리아는 공화국</td>
-									</tr>
-									<tr>
-										<td>제 1호</td>
-										<td>1면 1단</td>
-										<td>기타</td>
-										<td class="fb">創刊辭 - 창간사</td>
-									</tr>
-									<tr>
-										<td>제 99호</td>
-										<td>99면 99단</td>
-										<td>임시정부 기사</td>
-										<td class="fb">(歐美電報)오스터리아는 共和國 - (구미전보)오스터리아는 공화국</td>
-									</tr>
-									<tr>
-										<td>제 1호</td>
-										<td>1면 1단</td>
-										<td>기타</td>
-										<td class="fb">創刊辭 - 창간사</td>
-									</tr>
-									<tr>
-										<td>제 99호</td>
-										<td>99면 99단</td>
-										<td>임시정부 기사</td>
-										<td class="fb">(歐美電報)오스터리아는 共和國 - (구미전보)오스터리아는 공화국</td>
-									</tr>
-									<tr>
-										<td>제 1호</td>
-										<td>1면 1단</td>
-										<td>기타</td>
-										<td class="fb">創刊辭 - 창간사</td>
-									</tr>
-									<tr>
-										<td>제 99호</td>
-										<td>99면 99단</td>
-										<td>임시정부 기사</td>
-										<td class="fb">(歐美電報)오스터리아는 共和國 - (구미전보)오스터리아는 공화국</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-						<!--// 테이블 -->
-		
-						<!-- 페이징 -->
-						<div class="paging_wrap">
-							<select class="select01">
-								<option value="">20</option>
-								<option value="">50</option>
-								<option value="">100</option>
-							</select>
-							<div class="total">
-								전체 <em>25</em>건
+							<div class="group">
+								<h5>1) 소제목이 들어갑니다. </h5>
+								<p>1919년 4월, 대한민국임시정부는 중국 상하이에 첫 발을 내디뎠다. 망명이라는 이름의 독립운동은 그저 피신이나 은신이 아니었다. 전 세계 열강과 일본 제국주의를 마주한 채, 어디에도 존재를 공인받지 못한 '나라'를 인쇄물로, 행정문서로, 정치 담론으로 만들어내는 고된 여정이었다. 임시정부는 정치적, 군사적, 재정적 압박을 거치며 여러 도시로 자리를 옮겨야 했다. 상하이에서 시작된 임정은 항저우, 전장(쩐장), 창사, 광저우, 류저우, 구이양, 그리고 마침내 충칭에 이르기까지 무려 10여 차례 거점을 이동하며 '이동 정부'로 존재했다. 도시가 바뀔 때마다 임시정부는 인쇄소를 다시 세우고, 신문을 다시 찍고, 사람들을 다시 </p>
 							</div>
-							<div class="paging">
-								<button class="prev">이전</button>
-								<div class="pc_paging">
-									<a href="#" class="num">1</a>
-									<span class="ellipsis">&#8230;</span>
-									<a href="#" class="num">4</a>
-									<a href="#" class="num">5</a>
-									<a href="#" class="num active">6</a>
-									<a href="#" class="num">7</a>
-									<a href="#" class="num">8</a>
-									<span class="ellipsis">&#8230;</span>
-									<a href="#" class="num">999</a>
+							<div class="group">
+								<div class="img_02">
+									<figure class="img">
+										<img src="./resources/images/temp/article_02.png" alt="">
+										<figcaption>
+											대한민국 임시 정부에서 발행한 독립 공채 5원짜리
+											<button class="btn_plus"></button>
+										</figcaption>
+									</figure>
 								</div>
-								<div class="mo_paging">
-									<p>
-										<span>6</span> / <span>999</span>
-									</p>
-								</div>
-								<button class="next">다음</button>
 							</div>
 						</div>
-						<!--// 페이징 -->
+						<div class="ot_li">
+							<div class="title_area">
+								<h3>관련항목</h3>
+								<p><em>25</em>건</p>
+							</div>
+							<ul>
+								<li>
+									<a href="#">
+										<p>1919년 8월 21일 ( 제 1호 ) 1면 1단</p>
+										<span>유형 : 일반기사</span>
+										<strong>臨時議政院의 開會 - 임시의정원의 개회</strong>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<p>1919년 8월 21일 ( 제 1호 ) 1면 1단</p>
+										<span>유형 : 일반기사</span>
+										<strong>創刊辭 - 창간사</strong>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<p>1919년 8월 21일 ( 제 1호 ) 1면 1단</p>
+										<span>유형 : 일반기사</span>
+										<strong>(歐美電報)오스터리아는 共和國 - (구미전보)오스터리아는 공화국</strong>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<p>1919년 8월 21일 ( 제 1호 ) 1면 1단</p>
+										<span>유형 : 일반기사</span>
+										<strong>臨時議政院의 開會 - 임시의정원의 개회</strong>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<p>1919년 8월 21일 ( 제 1호 ) 1면 1단</p>
+										<span>유형 : 일반기사</span>
+										<strong>創刊辭 - 창간사</strong>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<p>1919년 8월 21일 ( 제 1호 ) 1면 1단</p>
+										<span>유형 : 일반기사</span>
+										<strong>臨時議政院의 開會 - 임시의정원의 개회</strong>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<p>1919년 8월 21일 ( 제 1호 ) 1면 1단</p>
+										<span>유형 : 일반기사</span>
+										<strong>創刊辭 - 창간사</strong>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<p>1919년 8월 21일 ( 제 1호 ) 1면 1단</p>
+										<span>유형 : 일반기사</span>
+										<strong>(歐美電報)오스터리아는 共和國 - (구미전보)오스터리아는 공화국</strong>
+									</a>
+								</li>
+							</ul>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</main>
-	<!-- 본문 내용-->
+	<!-- // 본문 내용-->
 
 	<!-- 사이트 푸터 영역 -->
 	<footer>

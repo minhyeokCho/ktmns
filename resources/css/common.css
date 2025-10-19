@@ -75,7 +75,9 @@ header {background-color: #fff; z-index: 999; position: relative;}
 header nav {border-top:1px solid #c3c3c3}
 header nav ul {display: flex; max-width: 133rem; width: 100%; margin: 0 auto;}
 header nav ul li {flex:1; position: relative;}
-header nav ul li > a {height: 6rem; display: block; width: 100%; text-align: center; line-height: 6rem; font-weight: 700; font-size: 2rem; color: #222;}
+header nav ul li > a {height: 6rem; display: block; width: 100%; text-align: center; line-height: 6rem; font-weight: 700; font-size: 2rem; color: #222; position: relative;}
+header nav ul li > a::before {display: block; content: ''; background: url(../images/icons/icon_slash.svg) no-repeat 0 0; width: 1.3rem; height: 1.3rem; background-size: 100% auto; position: absolute; left: -0.6rem; top: calc(50% - 0.6rem);}
+header nav ul li:first-child > a::before {display: none;}
 header nav ul li .sub_menu {position: absolute; left: calc(50% - 6.8rem); top: calc(100% - 10px); width: 13.6rem; padding: 0 1.6rem; border-radius: 8px; filter: drop-shadow(4px 6.928px 4px rgba(0,0,0,0.2)); background-color: #3a3d72; opacity: 0; visibility: hidden; transition: .3s;}  
 header nav ul li:hover .sub_menu {opacity: 1; visibility: visible;}
 header nav ul li .sub_menu a {display: block; width: 100%; height: 5.5rem; line-height: 5.5rem; color: #fff; font-weight: 700; text-align: center;}

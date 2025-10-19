@@ -1,12 +1,16 @@
 $(document).ready(function(){
 	$('.go_top').length && goTop(); //페이지상단이동
+	$('.catg_box').length && handleCategoryTabs($('.catg_box'));
+	$('.history_list').length && handleHistoryTabs(); //신문잡지별보기 탭
 	$('.filter').length && handleFilter(); //filter함수
-	$('.help_layer').length && handleHelpLayer(); // 도움말 팝업
+	$('.search_help_layer').length && handleSearchHelpLayer(); // 유형별 도움말 팝업 기능
+	$('.menu_help_layer').length && handleHelpLayer(); // 도움말 팝업
 	$('.detail_layer').length && handleDetailLayer(); //상세 검색 레이어
 	$('.all_menu_pc').length && handleAllMenuPC(); //전체메뉴 PC
 	$('header').length && handleHeaderFixed(); //헤더 고정
 	$('.f_menu_wrap').length && initFooterMenuToggle(); //푸터 사이트
 	$('#datepicker').length && datepicker(); //datepicker
+	$('.history_slide').length && historySlide(); //주요자료 슬라이드
 	$('.curation_slide').length && curationSlide(); //큐레이션 슬라이드
 	$('.mo_util').length && handleMoLayers(); //모바일 유틸 메뉴
 	$('.select01').niceSelect();
@@ -28,6 +32,50 @@ function goTop(){ //페이지상단이동
 			scrollTop: 0
 		}, 500);
 		return false;
+	});
+}
+
+
+function handleHistoryTabs() { //신문잡지별보기 탭
+	const $tabArea = $('.his_head .tab_area');
+
+	$tabArea.find('button').on('click', function() {
+		const $thisButton = $(this);
+		$tabArea.find('button').removeClass('active');
+		$thisButton.addClass('active');
+	});
+
+	if ($tabArea.find('button.active').length === 0) {
+		$tabArea.find('button').first().addClass('active');
+	}
+}
+
+function handleCategoryTabs($container) { //유형별보기 
+	$container.find('button').on('click', function() {
+		const $thisButton = $(this);
+		$container.find('button').removeClass('active');
+		$thisButton.addClass('active');
+	});
+}
+
+function handleSearchHelpLayer() { //목록 | 도움말 팝업
+	const $openBtn = $('.btn_search_help');
+	const $closeBtn = $('.search_help_layer .btn_close');
+	const $helpLayer = $('.search_help_layer');
+
+	$openBtn.on('click', function(e) {
+		e.stopPropagation();
+		$helpLayer.stop().fadeIn(300);
+	});
+
+	$closeBtn.on('click', function() {
+		$helpLayer.stop().fadeOut(300);
+	});
+
+	$(document).on('click', function(e) {
+		if (!$helpLayer.is(e.target) && $helpLayer.has(e.target).length === 0 && $helpLayer.is(':visible')) {
+			$helpLayer.stop().fadeOut(300);
+		}
 	});
 }
 
@@ -159,7 +207,7 @@ function handleDetailLayer() { //상세 검색 레이어
 	});
 
 	$(document).on('click', function(e) {
-		if ($('body').hasClass('dim') && !$detailLayer.is(e.target) && $detailLayer.has(e.target).length === 0 && $('.help_layer').has(e.target).length === 0) {
+		if ($('body').hasClass('dim') && !$detailLayer.is(e.target) && $detailLayer.has(e.target).length === 0 && $('.menu_help_layer').has(e.target).length === 0) {
 			$detailLayer.stop().fadeOut(0);
 			$('body').removeClass('dim');
 		}
@@ -168,9 +216,9 @@ function handleDetailLayer() { //상세 검색 레이어
 
 
 function handleHelpLayer() {// 도움말 팝업
-	const $openBtn = $('.dt_head .btn_help'); 
-	const $closeBtn = $('.help_layer .btn_close')
-	const $helpLayer = $('.help_layer')
+	const $openBtn = $('.dt_head .btn_help, .btn_main_help'); 
+	const $closeBtn = $('.menu_help_layer .btn_close')
+	const $helpLayer = $('.menu_help_layer')
 
 	$openBtn.on('click', function(e) {
 		e.stopPropagation(); 
@@ -244,26 +292,44 @@ function initFooterMenuToggle() { //푸터 사이트
 	});
 }
 
-function curationSlide() { //큐레이션 슬라이드
-	var swiper = new Swiper(".curation_slide", {
-		spaceBetween: 30,
-		slidesPerView : 2,
+function historySlide() { //주요자료 슬라이드
+	var swiper = new Swiper(".history_slide", {
+		spaceBetween: 0,
+		slidesPerView : 1,
+		loop:true,
 		pagination: {
-			el: ".swiper-pagination",
-			clickable: true,
+			el: ".history_slide_wrap .swiper_bullet",
+			type : 'fraction',
+
 		},
 		navigation: {
-			nextEl: ".swiper-button-next",
-			prevEl: ".swiper-button-prev",
+			nextEl: ".history_slide_wrap .btn_slide_next",
+			prevEl: ".history_slide_wrap .btn_slide_prev",
+		},
+	});
+}
+
+function curationSlide() { //큐레이션 슬라이드
+	var swiper = new Swiper(".curation_slide", {
+		spaceBetween: 20,
+		slidesPerView : 4,
+		pagination: {
+			el: ".sec_cur .swiper_bullet",
+			type : 'fraction',
+
+		},
+		navigation: {
+			nextEl: ".sec_cur .btn_slide_next",
+			prevEl: ".sec_cur .btn_slide_prev",
 		},
 	});
 }
 
 // 달력
 const specialDatesWithLinks = {
-    '2025-10-17': 'https://www.example.com/event/2025-10-17',
-    '2025-10-25': 'https://www.example.com/notice/special-day',
-    '2025-11-01': 'https://www.example.com/promo/november',
+    '2025-10-03': 'https://www.example.com/event/2025-10-17',
+    '2025-10-06': 'https://www.example.com/notice/special-day',
+    '2025-11-16': 'https://www.example.com/promo/november',
 };
 
 function formatDateToYYYYMMDD(date) {
@@ -285,7 +351,7 @@ function datepicker() {
 		dayNamesMin: ['일','월','화','수','목','금','토'],
 		showMonthAfterYear: true,
 		showOtherMonths: true,
-		yearRange: 'c-999:c+99'
+		yearRange: 'c-99:c+99'
 	});
 
 	$( "#datepicker" ).datepicker({
@@ -314,7 +380,7 @@ function datepicker() {
 		}
 	});
 
-	$(document).on('click', '#datepicker .ui-datepicker-calendar .link-day', function(e) {
+	$(document).off('click.dpLink').on('click.dpLink', '#datepicker .ui-datepicker-calendar .link-day', function(e) {
 		e.preventDefault();
 		e.stopPropagation();
 
@@ -338,6 +404,16 @@ function datepicker() {
 		addYearSuffix();
 		applyNiceSelectToDatepicker();
 	}, 0);
+
+	let dpResizeTimer;
+	$(window).off('resize.dp').on('resize.dp', function () {
+	clearTimeout(dpResizeTimer);
+	dpResizeTimer = setTimeout(function () {
+		$('#datepicker').datepicker('refresh'); // 헤더 재그림
+		addYearSuffix();                        // '년' 복구
+		applyNiceSelectToDatepicker();          // 월/년 niceSelect + applyMobileLayout()
+	}, 10);
+	});
 }
 
 function addYearSuffix() {
@@ -365,4 +441,73 @@ function applyNiceSelectToDatepicker() {
 
 	$monthSelect.addClass('hasNiceSelect');
 	$yearSelect.addClass('hasNiceSelect');
+
+	applyMobileLayout();
+}
+function isMobile() {
+  return window.matchMedia('(max-width: 768px)').matches;
+}
+
+// 월/년 기준 해당 달의 일 수
+function daysInMonth(year, monthZeroBased) {
+  return new Date(year, monthZeroBased + 1, 0).getDate();
+}
+
+function applyMobileLayout() {
+  if (!isMobile()) {
+    // 데스크탑 모드: 보이기 & 정리
+    $('#datepicker').removeClass('dp-mobile');
+    $('.ui-datepicker-day-select-wrap').remove();
+    $('.ui-datepicker-calendar, .ui-datepicker-header .ui-datepicker-day-select-wrap').show();
+    return;
+  }
+
+  // 모바일 모드 고정 클래스 부여(그리드 항상 숨김)
+  $('#datepicker').addClass('dp-mobile');
+
+  const $monthSelect = $('.ui-datepicker-month');
+  const $yearSelect  = $('.ui-datepicker-year');
+  if ($monthSelect.length === 0 || $yearSelect.length === 0) return;
+
+  // 재생성
+  $('.ui-datepicker-day-select-wrap').remove();
+
+  const year  = parseInt($yearSelect.val(), 10);
+  const month = parseInt($monthSelect.val(), 10); // 0-based
+  const today = $('#datepicker').datepicker('getDate') || new Date();
+
+  const maxDay = daysInMonth(year, month);
+  const $wrap  = $('<span class="ui-datepicker-day-select-wrap" style="margin-left:6px;"></span>');
+  const $day   = $('<select class="ui-datepicker-day"></select>');
+
+  for (let d = 1; d <= maxDay; d++) $day.append(`<option value="${d}">${d}일</option>`);
+
+  const sameYM = (today.getFullYear() === year && today.getMonth() === month);
+  const selectedDay = sameYM ? today.getDate() : 1;
+  $day.val(String(selectedDay));
+
+  $wrap.append($day);
+  $wrap.insertAfter($monthSelect.closest('.nice-select').length ? $monthSelect.closest('.nice-select') : $monthSelect);
+
+  if ($day.hasClass('hasNiceSelect')) $day.niceSelect('destroy');
+  $day.niceSelect().addClass('hasNiceSelect');
+
+  $day.off('change').on('change', function () {
+    const chosenDay = parseInt($(this).val(), 10);
+    const newDate   = new Date(year, month, chosenDay);
+
+    // ① 날짜 반영
+    $('#datepicker').datepicker('setDate', newDate);
+
+	$('#datepicker').datepicker('refresh');
+		setTimeout(function () {
+		addYearSuffix();
+		applyNiceSelectToDatepicker(); // 내부에서 applyMobileLayout도 호출됨
+	}, 0);
+
+    // ③ 특일 링크 이동
+    const clickedDateString = formatDateToYYYYMMDD(newDate);
+    const url = specialDatesWithLinks[clickedDateString];
+    if (url) window.location.href = url;
+  });
 }

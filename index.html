@@ -11,6 +11,7 @@
 	<link rel="stylesheet" href="./resources/css/nice-select.css" />
 	<link rel="stylesheet" href="./resources/css/common.css" />
 	<link rel="stylesheet" href="./resources/css/style.css" />
+	<link rel="stylesheet" href="./resources/css/main.css" />
 	<script src="./resources/js/jquery-3.6.0.js"></script>
 	<script src="./resources/js/jquery-ui.js"></script>
 	<script src="./resources/js/swiper-bundle.min.js"></script>
@@ -24,52 +25,628 @@
 	<!-- 사이트 헤더 영역-->
 	<header>
 		<div class="head_top">
-			<h1></h1>
-			<div class="util">
+			<h1>
+				<a href="#">
+					<figure class="img">
+						<img class="pc" src="./resources/images/logo.svg" alt="국립대한민국임시정부기념관 아카이브 신문·잡지 컬렉션">
+						<img class="mo" src="./resources/images/logo_small.svg" alt="국립대한민국임시정부기념관 아카이브 신문·잡지 컬렉션">
+					</figure>
+				</a>
+			</h1>
+			<div class="pc_util">
 				<div class="search">
-					<select class="head_search">
-						<option value="">1</option>
-						<option value="">2</option>
+					<select class="head_search select_search">
+						<option value="">전체</option>
+						<option value="">신문</option>
+						<option value="">잡지</option>
 					</select>
+					<i class="bar"></i>
 					<input type="text" placeholder="검색어를 입력하세요">
-					<button type="submit"><span class="blind">검색</span></button>
+					<button type="submit" class="btn_search"><span class="blind">검색</span></button>
 				</div>
-				<button type="button" class="btn_detail">
+				<button type="button" class="btn_detail js-btn_deatil">
 					<span>상세<br/>검색</span>
 				</button>
-				<div class="btn_menu">
+				<button type="button" class="btn_menu" title="전체메뉴">
 					<span class="blind">전체메뉴</span>
-				</div>
+				</button>
+			</div>
+			<div class="mo_util">
+				<a href="#" class="btn_util_search">
+					<span class="blind">검색 버튼</span>
+				</a>
+				<a href="#" class="btn_util_menu">
+					<span class="blind">전체메뉴 버튼</span>
+				</a>
+				<a href="#" class="btn_util_etc">
+					<span class="blind">기타메뉴 버튼</span>
+				</a>
 			</div>
 		</div>
 		<nav>
-
+			<ul>
+				<li><a href="#">신문·잡지별 보기</a></li>
+				<li><a href="#">일자별 보기</a></li>
+				<li><a href="#">유형별 보기</a></li>
+				<li><a href="#">지역별 보기</a></li>
+				<li><a href="#">언어별 보기</a></li>
+				<li><a href="#">주제 큐레이션</a></li>
+				<li>
+					<a href="#">소개</a>
+					<div class="sub_menu">
+						<a href="#">사이트 소개</a>
+						<a href="#">자료 소개</a>
+					</div>
+				</li>
+			</ul>
 		</nav>
 	</header>
 	<!--// 사이트 헤더 영역-->
 
+	<!-- 전체메뉴PC -->
+	<div class="all_menu_pc">
+		<div class="menu_inner">
+			<button class="btn_close">
+				<span>전체메뉴</span>
+			</button>
+			<nav>
+				<div class="group">
+					<a href="#">신문·잡지별 보기</a>
+					<a href="#">일자별 보기</a>
+				</div>
+				<div class="group">
+					<a href="#">유형별 보기</a>
+					<a href="#">지역별 보기</a>
+				</div>
+				<div class="group">
+					<a href="#">언어별 보기</a>
+					<a href="#">주제 큐레이션</a>
+				</div>
+				<div class="group">
+					<a href="#">소개</a>
+					<div class="sub_menu">
+						<a href="#">사이트 소개</a>
+						<a href="#">자료 소개</a>
+					</div>
+				</div>
+			</nav>
+		</div>
+	</div>
+	<!--// 전체메뉴PC -->
+
+	<!-- 상세검색 -->
+	<div class="detail_layer">
+		<div class="dt_head">
+			<h2>상세검색</h2>
+			<button class="btn_help">
+				<span>검색 도움말</span>
+			</button>
+			<button class="btn_close" title="닫기"></button>
+		</div>
+		<div class="dt_cont scroll_area">
+			<div class="group">
+				<h3>자료 선택</h3>
+				<div class="chk_wrap">
+					<label for="material_all" class="all">
+						<input type="checkbox" id="material_all">
+						<p>전체</p>
+					</label>
+					<label for="material_1">
+						<input type="checkbox" id="material_1">
+						<p>독립신문 상해 국한문판</p>
+					</label>
+					<label for="material_2">
+						<input type="checkbox" id="material_2">
+						<p>독립신문 상해 중문판</p>
+					</label>
+					<label for="material_3">
+						<input type="checkbox" id="material_3">
+						<p>독립신문 중경판</p>
+					</label>
+					<label for="material_4">
+						<input type="checkbox" id="material_4">
+						<p>신한민보</p>
+					</label>
+					<label for="material_5">
+						<input type="checkbox" id="material_5">
+						<p>국민보</p>
+					</label>
+				</div>
+			</div>
+			<div class="group">
+				<h3>유형 선택</h3>
+				<div class="chk_wrap">
+					<label for="type_all" class="all">
+						<input type="checkbox" id="type_all">
+						<p>전체</p>
+					</label>
+					<label for="type_1">
+						<input type="checkbox" id="type_1">
+						<p>일반기사</p>
+					</label>
+					<label for="type_2">
+						<input type="checkbox" id="type_2">
+						<p>임시정부 기사</p>
+					</label>
+					<label for="type_3">
+						<input type="checkbox" id="type_3">
+						<p>기획기사</p>
+					</label>
+					<label for="type_4">
+						<input type="checkbox" id="type_4">
+						<p>사설</p>
+					</label>
+					<label for="type_5">
+						<input type="checkbox" id="type_5">
+						<p>평론/기고</p>
+					</label>
+					<label for="type_6">
+						<input type="checkbox" id="type_6">
+						<p>문예</p>
+					</label>
+					<label for="type_7">
+						<input type="checkbox" id="type_7">
+						<p>만평/단평</p>
+					</label>
+					<label for="type_8">
+						<input type="checkbox" id="type_8">
+						<p>광고/공고</p>
+					</label>
+					<label for="type_9">
+						<input type="checkbox" id="type_9">
+						<p>기타</p>
+					</label>
+				</div>
+			</div>
+			<div class="group">
+				<h3>지역 선택</h3>
+				<div class="chk_wrap">
+					<label for="region_all" class="all">
+						<input type="checkbox" id="region_all">
+						<p>전체</p>
+					</label>
+					<label for="region_1">
+						<input type="checkbox" id="region_1">
+						<p>중국-상해</p>
+					</label>
+					<label for="region_2">
+						<input type="checkbox" id="region_2">
+						<p>중국-중경</p>
+					</label>
+					<label for="region_3">
+						<input type="checkbox" id="region_3">
+						<p>일본</p>
+					</label>
+					<label for="region_4">
+						<input type="checkbox" id="region_4">
+						<p>미주</p>
+					</label>
+					<label for="region_5">
+						<input type="checkbox" id="region_5">
+						<p>유럽</p>
+					</label>
+					<label for="region_6">
+						<input type="checkbox" id="region_6">
+						<p>기타</p>
+					</label>
+				</div>
+			</div>
+			<div class="group">
+				<h3>언어 선택</h3>
+				<div class="chk_wrap">
+					<label for="lang_all" class="all">
+						<input type="checkbox" id="lang_all">
+						<p>전체</p>
+					</label>
+					<label for="lang_1">
+						<input type="checkbox" id="lang_1">
+						<p>한국어</p>
+					</label>
+					<label for="lang_2">
+						<input type="checkbox" id="lang_2">
+						<p>영어</p>
+					</label>
+					<label for="lang_3">
+						<input type="checkbox" id="lang_3">
+						<p>중국어</p>
+					</label>
+					<label for="lang_4">
+						<input type="checkbox" id="lang_4">
+						<p>일본어</p>
+					</label>
+					<label for="lang_5">
+						<input type="checkbox" id="lang_5">
+						<p>기타</p>
+					</label>
+				</div>
+			</div>
+		</div>
+		<div class="inpt">
+			<h3>기간 설정</h3>
+			<div class="date_inpt">
+				<input type="text" placeholder="YYYYMMDD">
+				<span>~</span>
+				<input type="text" placeholder="YYYYMMDD">
+			</div>
+		</div>
+		<div class="inpt">
+			<h3>키워드</h3>
+			<input type="text" placeholder="검색어를 입력하세요">
+		</div>
+		<div class="btn_wrap">
+			<a href="#" class="btn">검색</a>
+			<a href="#" class="btn btn_gray">취소</a>
+		</div>
+	</div>
+	<!--// 상세검색 -->
+
+	<!-- 도움말 팝업 -->
+	<div class="help_layer menu_help_layer">
+		<div class="layer_wrap">
+			<button class="btn_close" title="닫기"></button>
+			<h2>검색 도움말</h2>
+			<div class="content scroll_area">
+				<div class="group">
+					<h3>1. 기간검색</h3>
+					<p>검색창에 원하는 시작일과 종료일을 입력하면, 해당 기간에 발행된 모든 자료를 조회할 수 있습니다.</p>
+					<ul>
+						<li>키워드를 입력하지 않은 경우 → 지정한 기간 내 전체 기사가 검색됩니다.</li>
+						<li>키워드와 함께 입력한 경우 → 해당 기간 중 입력한 키워드를 포함한 기사만 표시됩니다.</li>
+					</ul>
+				</div>
+				<div class="group">
+					<h3>2. 키워드검색</h3>
+					<p>기간을 지정하지 않고 키워드만 입력하면, 모든 기간의 자료 중 키워드와 일치하는 결과를 보여줍니다.</p>
+					<ul>
+						<li>키워드에 “독립신문”을 입력하면 모든 연도의 ‘독립신문’ 관련 기사가 검색됩니다.</li>
+					</ul>
+				</div>
+				<div class="group">
+					<h3>3. 검색 예시</h3>
+					<ul>
+						<li>기간: 19190401 ~ 19191231 / 키워드: ‘상해’ → 1919년 상해 관련 기사만 표시</li>
+						<li>기간: 19200101 ~ 19201231 / 키워드 비움 → 1920년 전체 기사 표시</li>
+						<li>기간 미입력 / 키워드: ‘임시정부’ → 전체 연도 중 임시정부 관련 기사 표시</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--// 도움말 팝업 -->
+
+	<!-- MO 검색 레이어 -->
+	<div class="mo_head_layer" id="search_layer">
+		<div class="search_layer">
+			<div class="search">
+				<select class="head_search select_search">
+					<option value="">전체</option>
+					<option value="">신문</option>
+					<option value="">잡지</option>
+				</select>
+				<input type="text" placeholder="검색어를 입력하세요">
+				<button type="submit" class="btn_search"><span class="blind">검색</span></button>
+			</div>
+			<button type="button" class="btn_detail js-btn_deatil">
+				<span>상세<br/>검색</span>
+			</button>
+		</div>
+	</div>
+	<!--// MO 검색 레이어 -->
+
+	<!-- MO 전체메뉴 -->
+	<div class="mo_head_layer" id="menu_layer">
+		<div class="menu_layer">
+			<nav>
+				<ul class="group">
+					<li><a href="#">신문·잡지별 보기</a></li>
+					<li><a href="#">일자별 보기</a></li>
+					<li><a href="#">유형별 보기</a></li>
+					<li><a href="#">지역별 보기</a></li>
+				</ul>
+				<div class="group">
+					<li><a href="#">언어별 보기</a></li>
+					<li><a href="#">주제 큐레이션</a></li>
+					<li>
+						<a href="#">소개</a>
+						<div class="sub_menu">
+							<a href="#">사이트 소개</a>
+							<a href="#">자료 소개</a>
+						</div>
+					</li>
+				</div>
+			</nav>
+		</div>
+	</div>
+	<!--// MO 전체메뉴 -->
+
+	<!-- MO 기타레이어 -->
+	<div class="mo_head_layer" id="etc_layer">
+		<div class="etc_layer">
+			<ul class="sns">
+				<li>
+					<a href="#" title="페이스북">
+						<img src="./resources/images/icons/sns_fb.svg" alt="">
+					</a>
+				</li>
+				<li>
+					<a href="#" title="인스타">
+						<img src="./resources/images/icons/sns_insta.svg" alt="인스타">
+					</a>
+				</li>
+				<li>
+					<a href="#" title="트위터">
+						<img src="./resources/images/icons/sns_tw.svg" alt="트위터">
+					</a>
+				</li>
+				<li>
+					<a href="#" title="유투브">
+						<img src="./resources/images/icons/sns_ytb.svg" alt="유투브">
+					</a>
+				</li>
+				<li>
+					<a href="#" title="블로그">
+						<img src="./resources/images/icons/sns_blog.svg" alt="블로그">
+					</a>
+				</li>
+			</ul>
+			<ul class="menu_etc">
+				<li><a href="#">국립대한민국임시정부기념관</a></li>
+				<li><a href="#">이어온</a></li>
+				<li><a href="#">디지털아카이브</a></li>
+				<li><a href="#">웹진</a></li>
+				<li><a href="#">블로그</a></li>
+			</ul>
+		</div>
+	</div>
+	<!--// MO 기타레이어 -->
+
 	<!-- 본문 내용-->
 	<main class="container" id="container">
 		<div class="content">
-			<!-- 달력 -->
-			<div id="datepicker"></div>
-			<!--// 달력 -->
+			
+			<!-- 메인 검색 -->
+			<section class="sec_search">
+				<div class="sec_wrap">
+					<div class="sec_inner">
+						<div class="contL">
+							<div class="main_title">
+								<p class="txt1">국립대한민국임시정부기념관 아카이브</p>
+								<h2>신문·잡지 컬렉션</h2>
+								<p class="txt2">망명지에서 이어진 언론의 힘, 자유와 독립을 향한 열망이 신문과 잡지 속에 살아 있습니다</p>
+							</div>
+							<div class="search_date">
+								<input type="text" placeholder="YYYYMMDD">
+								<span>~</span>
+								<input type="text" placeholder="YYYYMMDD">
+								<button class="btn_main_help" title="도움말"><span class="blind">도움말</span></button>
+							</div>
+							<div class="search">
+								<select class="head_search select_search">
+									<option value="">전체</option>
+									<option value="">신문</option>
+									<option value="">잡지</option>
+								</select>
+								<i class="bar"></i>
+								<input type="text" placeholder="검색어를 입력하세요">
+								<button type="submit" class="btn_search"><span class="blind">검색</span></button>
+							</div>
+						</div>
+						<!-- 달력 -->
+						<div id="datepicker" class="main_datepicker"></div>
+						<!--// 달력 -->
+					</div>
+				</div>
+			</section>
+			<!--// 메인 검색 -->
+
+			<!-- 메인 view -->
+			<section class="sec_view sec_inner">
+				<ul class="quick_menu">
+					<li>
+						<a href="#">
+							<strong>신문·잡지별 보기</strong>
+							<p>간행물별로 정리된 임시정부 및 관련<br> 단체의 신문과 잡지를 살펴봅니다 </p>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<strong>유형별 보기</strong>
+							<p>기사 유형(일반, 특집, 광고 등)에 따라<br> 콘텐츠를 분류해 제공합니다 </p>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<strong>지역별 보기</strong>
+							<p>간행물의 발행 지역을 기준으로<br> 탐색할 수 있습니다 </p>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<strong>언어별 보기</strong>
+							<p>간행물의 발행 언어를 기준으로<br> 탐색할 수 있습니다</p>
+						</a>
+					</li>
+				</ul>
+				<div class="history_slide_wrap">
+					<div class="title_area">
+						<h3>주요 자료</h3>
+						<div class="swiper_ctr">
+							<div class="btn_slide_prev"></div>
+							<div class="swiper_bullet"></div>
+							<div class="btn_slide_next"></div>
+						</div>
+					</div>
+					<div class="swiper history_slide">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<div class="item">
+									<figure class="img">
+										<img src="./resources/images/temp/his_01.png" alt="독립신문 상해 국한문판">
+									</figure>
+									<div class="txt_wrap">
+										<div>
+											<h4>독립신문 상해 국한문판</h4>
+											<p>한글과 한자가 함께한 국한문판 『독립신문』은 국민 누구나 쉽게 접할 수 있도록 만들어진 희망의 목소리였습니다. 독한글과 한자가 함께한 국한문판 『독립신문』은 국민 누구나 쉽게 접할 수 있도록 만들어진 희망의 목소리였습니다. 독</p>
+										</div>
+										<div class="his_btn">
+											<a href="#" class="btn_bl"><span>자료보기 +</span></a>
+											<a href="#" class="btn_gr"><span>자료소개 +</span></a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="item">
+									<figure class="img">
+										<img src="./resources/images/temp/his_02.png" alt="독립신문 상해 국한문판">
+									</figure>
+									<div class="txt_wrap">
+										<div>
+											<h4>독립신문 상해 국한문판</h4>
+											<p>한글과 한자가 함께한 국한문판 『독립신문』은 국민 누구나 쉽게 접할 수 있도록 만들어진 희망의 목소리였습니다. 독한글과 한자가 함께한 국한문판 『독립신문』은 국민 누구나 쉽게 접할 수 있도록 만들어진 희망의 목소리였습니다. 독</p>
+										</div>
+										<div class="his_btn">
+											<a href="#" class="btn_bl"><span>자료보기 +</span></a>
+											<a href="#" class="btn_gr"><span>자료소개 +</span></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!--// 메인 view -->
 
 			<!-- 주제 큐레이션 -->
-			<section>
-				<div class="swiper curation_slide">
-					<div class="swiper-wrapper">
-						<div class="swiper-slide"><img src="https://placeimg.com/640/480/any"></div>
-						<div class="swiper-slide"><img src="https://placeimg.com/640/480/any"></div>
-						<div class="swiper-slide"><img src="https://placeimg.com/640/480/any"></div>
-						<div class="swiper-slide"><img src="https://placeimg.com/640/480/any"></div>
+			<section class="sec_cur">
+				<div class="sec_inner">
+					<div class="tit_area">
+						<h3>주제 큐레이션</h3>
+						<div class="swiper_ctr">
+							<div class="btn_slide_prev"></div>
+							<div class="swiper_bullet"></div>
+							<div class="btn_slide_next"></div>
+						</div>
 					</div>
-					<div class="swiper-button-next"></div>
-					<div class="swiper-button-prev"></div>
-					<div class="swiper-pagination"></div>
+					<div class="swiper curation_slide">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<a href="#">
+									<figure class="img">
+										<img src="./resources/images/temp/curation_01.png" alt="도시는 바뀌어도 나라는 있다">
+									</figure>
+									<h4>도시는 바뀌어도 나라는 있다</h4>
+									<strong>임정의 여정, 상하이에서 충칭까지</strong>
+									<p>1919년 4월, 대한민국임시정부는 중국 상하이에 첫 발을 내디뎠다. 망명이라는 이름의 독립운동은 그저 피신이나 은신이 아니었다.</p>
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a href="#">
+									<figure class="img">
+										<img src="./resources/images/temp/curation_02.png" alt="망명정부의 법과 질서">
+									</figure>
+									<h4>망명정부의 법과 질서</h4>
+									<strong>임시헌장과 그 너머</strong>
+									<p>헌법 초안, 회의록, 포고문 속에서 국가는 존재했다. 망명 중에도 자치와 통치를 멈추지 않았던 기록을 찾아 떠난다</p>
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a href="#">
+									<figure class="img">
+										<img src="./resources/images/temp/curation_03.png" alt="">
+									</figure>
+									<h4>독립은 공짜가 아니었다</h4>
+									<strong>후원과 모금의 기록들</strong>
+									<p>외교만으로는 부족했다. 임시정부는 스스로 군을 조직했고, 그들의 총은 해방을 향해 조준되어 있었다</p>
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a href="#">
+									<figure class="img">
+										<img src="./resources/images/temp/curation_04.png" alt="">
+									</figure>
+									<h4>총을 든 임정</h4>
+									<strong>한국광복군의 탄생과 작전 보고</strong>
+									<p>의연금, 애국공채, 교포의 헌금까지. 모든 투쟁에는 자금이 있었고, 모든 자금엔 이름 없는 손이 있었다의연금, 애국공채, 교포의 헌금까지. 모든 투쟁에는 자금이 있었고, 모든 자금엔 이름 없는 손이 있었다</p>
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a href="#">
+									<figure class="img">
+										<img src="./resources/images/temp/curation_01.png" alt="도시는 바뀌어도 나라는 있다">
+									</figure>
+									<h4>도시는 바뀌어도 나라는 있다</h4>
+									<strong>임정의 여정, 상하이에서 충칭까지</strong>
+									<p>1919년 4월, 대한민국임시정부는 중국 상하이에 첫 발을 내디뎠다. 망명이라는 이름의 독립운동은 그저 피신이나 은신이 아니었다.</p>
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a href="#">
+									<figure class="img">
+										<img src="./resources/images/temp/curation_02.png" alt="망명정부의 법과 질서">
+									</figure>
+									<h4>망명정부의 법과 질서</h4>
+									<strong>임시헌장과 그 너머</strong>
+									<p>헌법 초안, 회의록, 포고문 속에서 국가는 존재했다. 망명 중에도 자치와 통치를 멈추지 않았던 기록을 찾아 떠난다</p>
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a href="#">
+									<figure class="img">
+										<img src="./resources/images/temp/curation_03.png" alt="">
+									</figure>
+									<h4>독립은 공짜가 아니었다</h4>
+									<strong>후원과 모금의 기록들</strong>
+									<p>외교만으로는 부족했다. 임시정부는 스스로 군을 조직했고, 그들의 총은 해방을 향해 조준되어 있었다</p>
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a href="#">
+									<figure class="img">
+										<img src="./resources/images/temp/curation_04.png" alt="">
+									</figure>
+									<h4>총을 든 임정</h4>
+									<strong>한국광복군의 탄생과 작전 보고</strong>
+									<p>의연금, 애국공채, 교포의 헌금까지. 모든 투쟁에는 자금이 있었고, 모든 자금엔 이름 없는 손이 있었다의연금, 애국공채, 교포의 헌금까지. 모든 투쟁에는 자금이 있었고, 모든 자금엔 이름 없는 손이 있었다</p>
+								</a>
+							</div>
+						</div>
+					</div>
 				</div>
 			</section>
 			<!--// 주제 큐레이션 -->
+
+			<!-- 메인 dt -->
+			<section class="sec_dt">
+				<div class="catg_wrap">
+					<div class="tit_area">
+						<h3>유형별 보기</h3>
+						<a href="#" class="more" title="더보기"></a>
+					</div>
+					<ul>
+						<li class="catg_01"><a href="#"><span>일반 기사</span></a></li>
+						<li class="catg_02"><a href="#"><span>임시정보 기사</span></a></li>
+						<li class="catg_03"><a href="#"><span>기획기사</span></a></li>
+						<li class="catg_04"><a href="#"><span>사설</span></a></li>
+						<li class="catg_05"><a href="#"><span>평론 / 기고</span></a></li>
+						<li class="catg_06"><a href="#"><span>문예</span></a></li>
+						<li class="catg_07"><a href="#"><span>문평 / 단평</span></a></li>
+						<li class="catg_08"><a href="#"><span>광고 / 공고</span></a></li>
+						<li class="catg_09"><a href="#"><span>기타</span></a></li>
+					</ul>
+				</div>
+				<div class="map_wrap">
+					<div class="tit_area">
+						<h3>지역별 보기</h3>
+						<a href="#" class="more" title="더보기"></a>
+					</div>
+					<div class="map">
+						<p class="desc">임시정부 관련 신문·잡지를 세계 주요 발행지에 표시해, 지역별로 흐름과 확산 과정을 한눈에 살펴볼 수 있습니다</p>
+					</div>
+				</div>
+			</section>
+			<!--// 메인 dt -->
 		</div>
 	</main>
 	<!-- 본문 내용-->
@@ -78,39 +655,47 @@
 	<footer>
 		<div class="f_menu_wrap">
 			<div class="f_menu">
-				<ul>
-					<li><a href="#"></a></li>
-				</ul>
-				<button type="button">
+				<button type="button" class="btn_f_menu">
 					<span>관련 기관</span>
 				</button>
+				<ul>
+					<li><a href="#">국립대한민국임시정부기념관</a></li>
+					<li><a href="#">국립대한민국임시정부기념관아카이브</a></li>
+					<li><a href="#">독립기념관</a></li>
+					<li><a href="#">대한민국역사박물관</a></li>
+					<li><a href="#">국립중앙도서관</a></li>
+					<li><a href="#">국사편찬위원회</a></li>
+				</ul>
 			</div>
 			<div class="f_menu">
-				<ul>
-					<li><a href="#"></a></li>
-				</ul>
-				<button type="button">
+				<button type="button" class="btn_f_menu">
 					<span>연계 사이트</span>
 				</button>
+				<ul>
+					<li><a href="#">국립대한민국임시정부기념관</a></li>
+					<li><a href="#">국립대한민국임시정부기념관아카이브</a></li>
+					<li><a href="#">독립기념관</a></li>
+					<li><a href="#">대한민국역사박물관</a></li>
+					<li><a href="#">국립중앙도서관</a></li>
+					<li><a href="#">국사편찬위원회</a></li>
+				</ul>
 			</div>
 		</div>
 		<div class="f_content">
-			<div class="f_1">
+			<div class="f_l">
 				<div class="f_logo">
 					<img src="./resources/images/logo_footer.svg" alt="국립대한민국임시정부기념관">
 				</div>
-				<div class="f_link">
-					<a href="#">사이트 소개</a>
-					<a href="#">저작권 정책</a>
+				<div class="f_info">
+					<p>03732) 서울특별시 서대문구 통일로 279-24</p>
+					<p>대표번호 <strong>02-772-8708</strong></p>
 				</div>
 			</div>
-			<div class="f_2">
-				<div class="f_info">
-					<p></p>
-					<p>
-						<strong>02-772-8708</strong>
-					</p>
-				</div>
+			<div class="f_r">
+				<ul class="f_link">
+					<li><a href="#">사이트 소개</a></li>
+					<li><a href="#">저작권 정책</a></li>
+				</ul>
 				<p class="copyright">Copyright © National Institute of Korean History All Rights Reserved.</p>
 			</div>
 		</div>

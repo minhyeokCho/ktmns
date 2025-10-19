@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>신문잡지별보기_목록</title>
+	<title>신문잡지별보기</title>
 	<link rel="stylesheet" href="./resources/css/reset.css" />
 	<link rel="stylesheet" href="./resources/css/jquery-ui.css" />
 	<link rel="stylesheet" href="./resources/css/swiper-bundle.min.css" />
@@ -410,22 +410,11 @@
 							<a href="#" class="home"><span class="blind">홈</span></a>
 							<ul>
 								<li><a href="#">신문·잡지별 보기</a></li>
-								<li><a href="#">독립신문 상해 국한문판</a></li>
 							</ul>
 							<a href="#" class="btn_url_copy"></a>
 						</div>
 						<div class="tit">
-							<h2>독립신문 상해 국한문판</h2>
-							<p>1919년 8월 21일 ( 제 1호 )</p>
-						</div>
-					</div>
-					<div class="contR">
-						<div class="sub_btn">
-							<div class="btn_list_wrap">
-								<a href="#" class="btn_list"><span>목록</span></a>
-							</div>
-							<i class="bar"></i>
-							<a href="#" class="btn_print"><span class="blind">프린트</span></a>
+							<h2>신문·잡지별 보기</h2>
 						</div>
 					</div>
 				</div>
@@ -433,150 +422,157 @@
 			<!--// 서브 타이틀 -->
 
 			<div class="inner">
-				<div class="view_list">
-					<div class="contL">
-						<!-- 달력 -->
-						<div id="datepicker"></div>
-						<!--// 달력 -->
-						<p class="date_desc">열람할 날짜를 선택하세요</p>
+				<div class="history_list">
+					<div class="his_head">
+						<ul class="tab_area">
+							<li><button class="active">전체</button></li>
+							<li><button>신문</button></li>
+							<li><button>잡지</button></li>
+						</ul>
+						<div class="total">전체 <em>4</em>건</div>
 					</div>
-					<div class="contR">
-						<!-- 테이블 -->
-						<div class="tb_wrap">
-							<div class="tb_sort">
-								<div class="tb_select">
-									<div class="total">
-										전체 <em>25</em>건
+					<div class="news_card">
+						<div class="item">
+							<figure class="img">
+								<img src="./resources/images/temp/his_01.png" alt="독립신문 상해 국한문판">
+							</figure>
+							<div class="txt_area">
+								<h3>독립신문 상해 국한문판</h3>
+								<div class="info">
+									<span>1919~1927</span>
+									<span>총185호</span>
+									<span>대한민국임시정부</span>
+									<span>중국 상해</span>
+									<span>국한문</span>
+								</div>
+								<p class="desc">
+									한글과 한자가 함께한 국한문판 『독립신문』은 국민 누구나 쉽게 접할 수 있도록 만들어진 희망의 목소리였습니다. 독립운동의 소식과 국제 정세를 전하며 민중을 깨우고, 나라의 미래를 향한 뜨거운 열망을 담아냈습니다.
+								</p>
+								<div class="his_btn">
+									<a href="#" class="btn_bl"><span>자료보기 +</span></a>
+									<a href="#" class="btn_gr"><span>자료소개 +</span></a>
+								</div>
+								<div class="timeline">
+									<span class="start">1910</span>
+									<div class="preiod" style="width: 30%;">
+										<span>1919</span>
 									</div>
-									<select class="select01 tb01">
-										<option value="">신문선택</option>
-										<option value="">독립신문 상해 중문판</option>
-										<option value="">독립신문 상해 국한문판</option>
-										<option value="">독립신문 중경판</option>
-										<option value="">신한민보</option>
-									</select>
-									<select class="select01">
-										<option value="">유형선택</option>
-										<option value="">유형선택12</option>
-										<option value="">유형선택22</option>
-									</select>
-									<select class="select01">
-										<option value="">지역선택</option>
-										<option value="">지역선택12</option>
-										<option value="">지역선택22</option>
-									</select>
-									<select class="select01">
-										<option value="">언어선택</option>
-										<option value="">언어선택12</option>
-										<option value="">언어선택22</option>
-									</select>
+									<div class="preiod rest" style="width: 50%;">
+										<span>1927</span>
+									</div>
+									<div class="preiod active" style="width: 20%;">
+										<span>1945</span>
+									</div>
 								</div>
-							</div>
-							<table class="type01">
-								<colgroup>
-									<col width="70">
-									<col width="100">
-									<col width="140">
-									<col width="*">
-								</colgroup>
-								<tbody>
-									<tr>
-										<td>제 1호</td>
-										<td>1면 1단</td>
-										<td>기타</td>
-										<td class="fb">創刊辭 - 창간사</td>
-									</tr>
-									<tr>
-										<td>제 99호</td>
-										<td>99면 99단</td>
-										<td>임시정부 기사</td>
-										<td class="fb">(歐美電報)오스터리아는 共和國 - (구미전보)오스터리아는 공화국</td>
-									</tr>
-									<tr>
-										<td>제 1호</td>
-										<td>1면 1단</td>
-										<td>기타</td>
-										<td class="fb">創刊辭 - 창간사</td>
-									</tr>
-									<tr>
-										<td>제 99호</td>
-										<td>99면 99단</td>
-										<td>임시정부 기사</td>
-										<td class="fb">(歐美電報)오스터리아는 共和國 - (구미전보)오스터리아는 공화국</td>
-									</tr>
-									<tr>
-										<td>제 1호</td>
-										<td>1면 1단</td>
-										<td>기타</td>
-										<td class="fb">創刊辭 - 창간사</td>
-									</tr>
-									<tr>
-										<td>제 99호</td>
-										<td>99면 99단</td>
-										<td>임시정부 기사</td>
-										<td class="fb">(歐美電報)오스터리아는 共和國 - (구미전보)오스터리아는 공화국</td>
-									</tr>
-									<tr>
-										<td>제 1호</td>
-										<td>1면 1단</td>
-										<td>기타</td>
-										<td class="fb">創刊辭 - 창간사</td>
-									</tr>
-									<tr>
-										<td>제 99호</td>
-										<td>99면 99단</td>
-										<td>임시정부 기사</td>
-										<td class="fb">(歐美電報)오스터리아는 共和國 - (구미전보)오스터리아는 공화국</td>
-									</tr>
-									<tr>
-										<td>제 1호</td>
-										<td>1면 1단</td>
-										<td>기타</td>
-										<td class="fb">創刊辭 - 창간사</td>
-									</tr>
-									<tr>
-										<td>제 99호</td>
-										<td>99면 99단</td>
-										<td>임시정부 기사</td>
-										<td class="fb">(歐美電報)오스터리아는 共和國 - (구미전보)오스터리아는 공화국</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-						<!--// 테이블 -->
-		
-						<!-- 페이징 -->
-						<div class="paging_wrap">
-							<select class="select01">
-								<option value="">20</option>
-								<option value="">50</option>
-								<option value="">100</option>
-							</select>
-							<div class="total">
-								전체 <em>25</em>건
-							</div>
-							<div class="paging">
-								<button class="prev">이전</button>
-								<div class="pc_paging">
-									<a href="#" class="num">1</a>
-									<span class="ellipsis">&#8230;</span>
-									<a href="#" class="num">4</a>
-									<a href="#" class="num">5</a>
-									<a href="#" class="num active">6</a>
-									<a href="#" class="num">7</a>
-									<a href="#" class="num">8</a>
-									<span class="ellipsis">&#8230;</span>
-									<a href="#" class="num">999</a>
-								</div>
-								<div class="mo_paging">
-									<p>
-										<span>6</span> / <span>999</span>
-									</p>
-								</div>
-								<button class="next">다음</button>
 							</div>
 						</div>
-						<!--// 페이징 -->
+						<div class="item">
+							<figure class="img">
+								<img src="./resources/images/temp/his_02.png" alt="독립신문 상해 중문판">
+							</figure>
+							<div class="txt_area">
+								<h3>독립신문 상해 중문판</h3>
+								<div class="info">
+									<span>1919~1927</span>
+									<span>총185호</span>
+									<span>대한민국임시정부</span>
+									<span>중국 상해</span>
+									<span>국한문</span>
+								</div>
+								<p class="desc">
+									한글과 한자가 함께한 국한문판 『독립신문』은 국민 누구나 쉽게 접할 수 있도록 만들어진 희망의 목소리였습니다. 독립운동의 소식과 국제 정세를 전하며 민중을 깨우고, 나라의 미래를 향한 뜨거운 열망을 담아냈습니다.
+									한글과 한자가 함께한 국한문판 『독립신문』은 국민 누구나 쉽게 접할 수 있도록 만들어진 희망의 목소리였습니다. 독립운동의 소식과 국제 정세를 전하며 민중을 깨우고, 나라의 미래를 향한 뜨거운 열망을 담아냈습니다.
+								</p>
+								<div class="his_btn">
+									<a href="#" class="btn_bl"><span>자료보기 +</span></a>
+									<a href="#" class="btn_gr"><span>자료소개 +</span></a>
+								</div>
+								<div class="timeline">
+									<span class="start">1910</span>
+									<div class="preiod" style="width: 30%;">
+										<span>1919</span>
+									</div>
+									<div class="preiod active" style="width: 10%;">
+										<span>1924</span>
+									</div>
+									<div class="preiod rest" style="width: 40%;">
+										<span>1927</span>
+									</div>
+									<div class="preiod active" style="width: 20%;">
+										<span>1945</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<figure class="img">
+								<img src="./resources/images/temp/his_03.png" alt="독립신문 상해 국한문판">
+							</figure>
+							<div class="txt_area">
+								<h3>독립신문 상해 국한문판</h3>
+								<div class="info">
+									<span>1919~1927</span>
+									<span>총185호</span>
+									<span>대한민국임시정부</span>
+									<span>중국 상해</span>
+									<span>국한문</span>
+								</div>
+								<p class="desc">
+									한글과 한자가 함께한 국한문판 『독립신문』은 국민 누구나 쉽게 접할 수 있도록 만들어진 희망의 목소리였습니다. 독립운동의 소식과 국제 정세를 전하며 민중을 깨우고, 나라의 미래를 향한 뜨거운 열망을 담아냈습니다.
+								</p>
+								<div class="his_btn">
+									<a href="#" class="btn_bl"><span>자료보기 +</span></a>
+									<a href="#" class="btn_gr"><span>자료소개 +</span></a>
+								</div>
+								<div class="timeline">
+									<span class="start">1910</span>
+									<div class="preiod" style="width: 30%;">
+										<span>1919</span>
+									</div>
+									<div class="preiod rest" style="width: 50%;">
+										<span>1927</span>
+									</div>
+									<div class="preiod active" style="width: 20%;">
+										<span>1945</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<figure class="img">
+								<img src="./resources/images/temp/his_04.png" alt="독립신문 상해 중문판">
+							</figure>
+							<div class="txt_area">
+								<h3>독립신문 상해 중문판</h3>
+								<div class="info">
+									<span>1919~1927</span>
+									<span>총185호</span>
+									<span>대한민국임시정부</span>
+									<span>중국 상해</span>
+									<span>국한문</span>
+								</div>
+								<p class="desc">
+									한글과 한자가 함께한 국한문판 『독립신문』은 국민 누구나 쉽게 접할 수 있도록 만들어진 희망의 목소리였습니다. 독립운동의 소식과 국제 정세를 전하며 민중을 깨우고, 나라의 미래를 향한 뜨거운 열망을 담아냈습니다.
+									한글과 한자가 함께한 국한문판 『독립신문』은 국민 누구나 쉽게 접할 수 있도록 만들어진 희망의 목소리였습니다. 독립운동의 소식과 국제 정세를 전하며 민중을 깨우고, 나라의 미래를 향한 뜨거운 열망을 담아냈습니다.
+								</p>
+								<div class="his_btn">
+									<a href="#" class="btn_bl"><span>자료보기 +</span></a>
+									<a href="#" class="btn_gr"><span>자료소개 +</span></a>
+								</div>
+								<div class="timeline">
+									<span class="start">1910</span>
+									<div class="preiod" style="width: 37%;">
+										<span></span>
+									</div>
+									<div class="preiod active" style="width: 2%;">
+										<span>1924</span>
+									</div>
+									<div class="preiod" style="width: 60%;">
+										<span>1945</span>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
