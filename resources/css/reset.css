@@ -28,12 +28,8 @@ time, mark, audio, video, input, textarea {margin: 0;padding: 0;border: 0;font: 
 input:focus {outline:none;}
 
 
-
-/* --- 팝업 전용 스크롤바 설정 --- */
-/* (예시: .all_menu_pc 클래스를 가진 팝업 내부에 스크롤이 생기는 경우) */
-/* .all_menu_pc 내부에 .menu_inner 같은 스크롤 가능한 요소가 있다면 해당 선택자로 변경해줘. */
 .scroll_area::-webkit-scrollbar {
-    width: 10px; /* 팝업 스크롤바를 더 얇게 (예: 5px) */
+    width: 10px;
     height: 10px;
 }
 .scroll_area::-webkit-scrollbar-track {
@@ -41,13 +37,19 @@ input:focus {outline:none;}
     border-radius: 5px;
 }
 .scroll_area::-webkit-scrollbar-thumb {
-    background: #d0d0d0; /* 핸들 색상 */
+    background: #d0d0d0; 
     border-radius: 5px;
-    /* 핸들 주변 테두리를 얇게 하거나 아예 없앨 수 있어 */
-    border: 3px solid #fff; /* 3px은 두껍게 느껴질 수 있으니 1px로 줄여봄 */
-    /* 만약 테두리까지 없애서 더 얇게 하고 싶다면 이 줄을 제거해줘. */
+    border: 3px solid #fff;
 }
 .dt_cont::-webkit-scrollbar-thumb {border: 3px solid #f7f8fc;}
+.dragscroll::-webkit-scrollbar {
+    height: 0;
+}
+
+.view_detail .contents::-webkit-scrollbar  {width: 4px;}
+.tree_list::-webkit-scrollbar  {width: 4px;}
+.view_detail .contents::-webkit-scrollbar-thumb {background-color: #424a75;}
+.tree_list::-webkit-scrollbar-thumb {background-color: #424a75;}
 
 ::-webkit-input-placeholder {
 	color:#8c8c8c;

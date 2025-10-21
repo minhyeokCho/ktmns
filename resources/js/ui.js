@@ -10,12 +10,210 @@ $(document).ready(function(){
 	$('header').length && handleHeaderFixed(); //헤더 고정
 	$('.f_menu_wrap').length && initFooterMenuToggle(); //푸터 사이트
 	$('#datepicker').length && datepicker(); //datepicker
+	$('.view_slide').length && viewSlide(); //  슬라이드
 	$('.history_slide').length && historySlide(); //주요자료 슬라이드
 	$('.curation_slide').length && curationSlide(); //큐레이션 슬라이드
 	$('.mo_util').length && handleMoLayers(); //모바일 유틸 메뉴
 	$('.select01').niceSelect();
+	$('.select02').niceSelect();
 	$('.select_search').niceSelect();
+
+	$('.view_detail').length && initViewHeights();
+	$('.tree_wrap').length && initTree();
+	$('.btn_view_a').length && initWideNarrow();
+	($('figcaption .btn_plus').length || $('.img_layer').length) && initImageLayer();
+	$('.btn_view_p').length && initOnePageToggle();
+	$('.select_view_big').length && handleSelectViewBig();
+	$('.view_detail').length && handleResponsiveViewBig();
 });
+
+function initViewHeights() {
+	function setLayoutHeights() {
+		var headerH = $('header').outerHeight() || 0;
+		var titleH  = $('.view_title').outerHeight() || 0;
+		var targetH = window.innerHeight - (headerH + titleH + 60);
+		console.log(window.innerHeight);
+		console.log(headerH);
+		console.log(titleH);
+		
+		if (targetH < 200) targetH = 200; 
+
+		$('.tree_list').css({ height: targetH });
+		$('.view_info .view_cont .contents').css({ height: targetH });
+		$('.view_slide_wrap .view_cont').css({ height: targetH });
+	}
+
+	setLayoutHeights();
+	$(window).on('resize orientationchange', setLayoutHeights);
+
+	window.__setLayoutHeights = setLayoutHeights;
+}
+
+function initTree() {
+	function syncTreeButtonText() {
+		var isActive = $('.tree_wrap').hasClass('active');
+		$('.tree_wrap .btn_tree_toggle span').text(isActive ? '닫기' : '열기');
+	}
+	syncTreeButtonText();
+
+	$('.tree_wrap .btn_tree_toggle').on('click', function (e) {
+		e.preventDefault();
+		var $tree = $('.tree_wrap');
+		var $slideWrap = $('.view_slide_wrap');
+		var $viewDetail = $('.view_detail');
+
+		$tree.toggleClass('active');
+		syncTreeButtonText();
+
+		if ($viewDetail.hasClass('img_content')) {
+			$slideWrap.toggleClass('active', $tree.hasClass('active'));
+		}
+
+		window.__setLayoutHeights && window.__setLayoutHeights();
+	});
+
+	var tree = $('.tree_list');
+	tree.on('click', 'a', function (e) {
+		var $a = $(this);
+		if ($a.closest('.dept04').length) return; 
+
+		e.preventDefault();
+
+		var $li = $a.closest('li');
+		var $siblings = $li.siblings('li');
+
+		$siblings.find('> a.active').removeClass('active');
+		$siblings.find('> ul').slideUp(180);
+
+		$a.addClass('active');
+		var $nextUl = $a.next('ul');
+		if ($nextUl.length) {
+			$nextUl.stop(true, true).slideDown(180);
+		}
+	});
+}
+
+function initWideNarrow() {
+	$('.btn_view_a').on('click', function (e) {
+		e.preventDefault();
+		var $wrapper = $('.wrapper');
+		var $btn = $(this).find('span');
+		var isBig = $wrapper.hasClass('view_big');
+
+		if (isBig) {
+			$wrapper.removeClass('view_big');
+			$btn.text('넓게 보기');
+		} else {
+			$wrapper.addClass('view_big');
+			$btn.text('좁게 보기');
+		}
+
+		setTimeout(function () {
+			window.__setLayoutHeights && window.__setLayoutHeights();
+		}, 0);
+	});
+}
+
+function initImageLayer() {
+	$(document).on('click', 'figcaption .btn_plus', function (e) {
+		e.preventDefault();
+		$('.img_layer').fadeIn(150);
+	});
+	$(document).on('click', '.img_layer .btn_close', function (e) {
+		e.preventDefault();
+		$('.img_layer').fadeOut(150);
+	});
+}
+
+function initOnePageToggle() {
+	var $viewDetail = $('.view_detail');
+	var $btn = $('.btn_view_p').find('span');
+
+	$('.btn_view_p').on('click', function (e) {
+		e.preventDefault();
+		var isOnePage = $viewDetail.hasClass('text_content') || $viewDetail.hasClass('img_content');
+
+		if (!isOnePage) {
+			$btn.text('나란히 보기');
+			$viewDetail.addClass('text_content').removeClass('img_content');
+
+			if ($('.tree_wrap').hasClass('active')) {
+				$('.view_slide_wrap').addClass('active');
+			}
+		} else {
+			$btn.text('한면 보기');
+			$viewDetail.removeClass('text_content img_content');
+		}
+
+		setTimeout(function () {
+			window.__setLayoutHeights && window.__setLayoutHeights();
+		}, 0);
+	});
+}
+
+function handleSelectViewBig() {
+	function applyMode(mode) {
+		console.log(4);
+
+		var $viewDetail = $('.view_detail')
+		if(!$viewDetail.length) return
+
+		if (mode === 'img') {
+			console.log(5);
+			$viewDetail.addClass('img_content').removeClass('text_content');
+		} else {
+			$viewDetail.addClass('text_content').removeClass('img_content');
+		}
+		window.__setLayoutHeights && window.__setLayoutHeights();
+	}
+
+	$(document).on('change', '.select_view_big', function () {
+		var $sel = $(this);
+		var modeValue = $sel.val();
+
+		setTimeout(function () {
+			$('.select_view_big').not($sel).each(function() {
+				var $other = $(this); 
+				$other.val(modeValue);
+				if($.fn.niceSelect){
+					try{
+						$other.niceSelect('update');
+					} catch(e){
+						console.error("NiceSelect 업데이트 중 오류 발생:", e);
+					}
+				}
+			});
+			if (modeValue === 'img') {
+				applyMode('img');
+			} else {
+				applyMode('text');
+			}
+		}, 0)
+	});
+}
+
+function handleResponsiveViewBig() {
+	function applyRules() {
+		var w = $(window).width();
+		var $vd = $('.view_detail');
+		if (w <= 1239) {
+			$('.wrapper').removeClass('view_big');
+
+			if ($vd.length && !$vd.hasClass('text_content') && !$vd.hasClass('img_content')) {
+				$vd.addClass('text_content');
+			}
+
+			window.__setLayoutHeights && window.__setLayoutHeights();
+		}else {
+			if($vd.length) {
+				$vd.removeClass('text_content img_content')
+			}
+		}
+	} 
+
+	applyRules();
+	$(window).on('load resize orientationchange', applyRules);
+}
 
 function goTop(){ //페이지상단이동
 	$(window).scroll(function(){
@@ -84,22 +282,17 @@ function handleFilter() {
 	const $filterOpenBtn = $('.btn_filter');
 	const $filterCloseBtn = $filter.find('.btn_filter_close');
 
-	// --- 추가된 로직: dept01 li 개수에 따라 btn_all 버튼 삭제 ---
 	$filter.find('.item').each(function() {
 		const $item = $(this);
 		const $dept01 = $item.find('ul.dept01');
 		const $btnAll = $item.find('.btn_all');
 
-		if ($dept01.children('li').length < 6) { // dept01 안의 li 개수가 6개 미만일 경우
-			$btnAll.remove(); // 해당 btn_all 버튼을 삭제
+		if ($dept01.children('li').length < 6) {
+			$btnAll.remove(); 
 		}
 	});
-	// -----------------------------------------------------------
+	const $allBtns = $filter.find('.list_wrap .btn_all');
 
-	// ** 참고: 위 로직에서 이미 버튼이 삭제될 수 있으므로, 아래 $allBtns를 다시 정의해야 함 **
-	const $allBtns = $filter.find('.list_wrap .btn_all'); // 삭제된 버튼 제외하고 다시 찾음
-
-	// 1. 전체보기/축소보기 버튼 클릭 시
 	$allBtns.on('click', function() {
 		const $thisBtn = $(this);
 		const $targetUl = $thisBtn.siblings('ul.dept01');
@@ -113,28 +306,23 @@ function handleFilter() {
 		}
 	});
 
-	// 2. dept02 확장/축소 (label 클릭 시)
 	$filter.find('ul.dept01 > li > label > input[type="checkbox"]').on('change', function() {
-		const $thisCheckbox = $(this); // 클릭된 체크박스
-		// 체크박스의 부모(label)의 부모(li) 안에서 ul.dept02를 찾음
+		const $thisCheckbox = $(this);
 		const $targetDept02 = $thisCheckbox.closest('li').find('ul.dept02');
 
-		if ($targetDept02.length) { // ul.dept02가 존재할 경우에만
-			if ($thisCheckbox.is(':checked')) { // 체크박스가 체크되었으면
+		if ($targetDept02.length) {
+			if ($thisCheckbox.is(':checked')) {
 				$targetDept02.addClass('active');
-			} else { // 체크박스가 해제되었으면
+			} else {
 				$targetDept02.removeClass('active');
 			}
 		}
 	});
 
-
-	// 4. btn_filter (필터 열기) 클릭 시
 	$filterOpenBtn.on('click', function() {
 		$filter.addClass('active');
 	});
 
-	// 5. btn_filter_close (필터 닫기) 클릭 시
 	$filterCloseBtn.on('click', function() {
 		$filter.removeClass('active');
 	});
@@ -191,7 +379,7 @@ function handleMoLayers() { //모바일 유틸 메뉴
 }
 
 function handleDetailLayer() { //상세 검색 레이어
-	const $openBtn = $('.js-btn_deatil');
+	const $openBtn = $('.js-btn_detail');
 	const $closeBtn = $('.detail_layer .btn_close');
 	const $detailLayer = $('.detail_layer');
 
@@ -292,9 +480,25 @@ function initFooterMenuToggle() { //푸터 사이트
 	});
 }
 
+function viewSlide() { //슬라이드
+	var swiper = new Swiper(".view_slide", {
+		spaceBetween: 15,
+		slidesPerView : 1,
+		pagination: {
+			el: ".view_cont .swiper_bullet",
+			type : 'fraction',
+
+		},
+		navigation: {
+			nextEl: ".view_cont .btn_slide_next",
+			prevEl: ".view_cont .btn_slide_prev",
+		},
+	});
+}
+
 function historySlide() { //주요자료 슬라이드
 	var swiper = new Swiper(".history_slide", {
-		spaceBetween: 0,
+		spaceBetween: 15,
 		slidesPerView : 1,
 		loop:true,
 		pagination: {
@@ -306,6 +510,16 @@ function historySlide() { //주요자료 슬라이드
 			nextEl: ".history_slide_wrap .btn_slide_next",
 			prevEl: ".history_slide_wrap .btn_slide_prev",
 		},
+		breakpoints: {
+			768: {
+				slidesPerView: 2,
+				slidesPerGroup: 2
+			},
+			1024: {
+				slidesPerView: 1,
+				slidesPerGroup: 1
+			}
+		}
 	});
 }
 
@@ -322,6 +536,28 @@ function curationSlide() { //큐레이션 슬라이드
 			nextEl: ".sec_cur .btn_slide_next",
 			prevEl: ".sec_cur .btn_slide_prev",
 		},
+		breakpoints: {
+			0: {
+				slidesPerView: 1,
+				spaceBetween: 10,
+				grid: {
+					rows: 2,
+					fill: 'column'
+				}
+			},
+			768: {
+				slidesPerView: 3, 
+				spaceBetween: 15, 
+				slidesPerGroup: 3,
+				grid: {rows:1, fill:'row'}
+			},
+			1024: {
+				slidesPerView: 4, 
+				spaceBetween: 20, 
+				slidesPerGroup: 4,
+				grid: {rows:1, fill:'row'}
+			}
+		}
 	});
 }
 
@@ -409,9 +645,9 @@ function datepicker() {
 	$(window).off('resize.dp').on('resize.dp', function () {
 	clearTimeout(dpResizeTimer);
 	dpResizeTimer = setTimeout(function () {
-		$('#datepicker').datepicker('refresh'); // 헤더 재그림
-		addYearSuffix();                        // '년' 복구
-		applyNiceSelectToDatepicker();          // 월/년 niceSelect + applyMobileLayout()
+		$('#datepicker').datepicker('refresh');
+		addYearSuffix();
+		applyNiceSelectToDatepicker();
 	}, 10);
 	});
 }
@@ -445,69 +681,63 @@ function applyNiceSelectToDatepicker() {
 	applyMobileLayout();
 }
 function isMobile() {
-  return window.matchMedia('(max-width: 768px)').matches;
+	return window.matchMedia('(max-width: 768px)').matches;
 }
 
-// 월/년 기준 해당 달의 일 수
 function daysInMonth(year, monthZeroBased) {
-  return new Date(year, monthZeroBased + 1, 0).getDate();
+	return new Date(year, monthZeroBased + 1, 0).getDate();
 }
 
 function applyMobileLayout() {
-  if (!isMobile()) {
-    // 데스크탑 모드: 보이기 & 정리
-    $('#datepicker').removeClass('dp-mobile');
-    $('.ui-datepicker-day-select-wrap').remove();
-    $('.ui-datepicker-calendar, .ui-datepicker-header .ui-datepicker-day-select-wrap').show();
-    return;
-  }
+	if (!isMobile()) {
+		$('#datepicker').removeClass('dp-mobile');
+		$('.ui-datepicker-day-select-wrap').remove();
+		$('.ui-datepicker-calendar, .ui-datepicker-header .ui-datepicker-day-select-wrap').show();
+		return;
+	}
 
-  // 모바일 모드 고정 클래스 부여(그리드 항상 숨김)
-  $('#datepicker').addClass('dp-mobile');
+	$('#datepicker').addClass('dp-mobile');
 
-  const $monthSelect = $('.ui-datepicker-month');
-  const $yearSelect  = $('.ui-datepicker-year');
-  if ($monthSelect.length === 0 || $yearSelect.length === 0) return;
+	const $monthSelect = $('.ui-datepicker-month');
+	const $yearSelect  = $('.ui-datepicker-year');
+	if ($monthSelect.length === 0 || $yearSelect.length === 0) return;
 
-  // 재생성
-  $('.ui-datepicker-day-select-wrap').remove();
+	$('.ui-datepicker-day-select-wrap').remove();
 
-  const year  = parseInt($yearSelect.val(), 10);
-  const month = parseInt($monthSelect.val(), 10); // 0-based
-  const today = $('#datepicker').datepicker('getDate') || new Date();
+	const year  = parseInt($yearSelect.val(), 10);
+	const month = parseInt($monthSelect.val(), 10);
+	const today = $('#datepicker').datepicker('getDate') || new Date();
 
-  const maxDay = daysInMonth(year, month);
-  const $wrap  = $('<span class="ui-datepicker-day-select-wrap" style="margin-left:6px;"></span>');
-  const $day   = $('<select class="ui-datepicker-day"></select>');
+	const maxDay = daysInMonth(year, month);
+	const $wrap  = $('<span class="ui-datepicker-day-select-wrap" style="margin-left:6px;"></span>');
+	const $day   = $('<select class="ui-datepicker-day"></select>');
 
-  for (let d = 1; d <= maxDay; d++) $day.append(`<option value="${d}">${d}일</option>`);
+	for (let d = 1; d <= maxDay; d++) $day.append(`<option value="${d}">${d}일</option>`);
 
-  const sameYM = (today.getFullYear() === year && today.getMonth() === month);
-  const selectedDay = sameYM ? today.getDate() : 1;
-  $day.val(String(selectedDay));
+	const sameYM = (today.getFullYear() === year && today.getMonth() === month);
+	const selectedDay = sameYM ? today.getDate() : 1;
+	$day.val(String(selectedDay));
 
-  $wrap.append($day);
-  $wrap.insertAfter($monthSelect.closest('.nice-select').length ? $monthSelect.closest('.nice-select') : $monthSelect);
+	$wrap.append($day);
+	$wrap.insertAfter($monthSelect.closest('.nice-select').length ? $monthSelect.closest('.nice-select') : $monthSelect);
 
-  if ($day.hasClass('hasNiceSelect')) $day.niceSelect('destroy');
-  $day.niceSelect().addClass('hasNiceSelect');
+	if ($day.hasClass('hasNiceSelect')) $day.niceSelect('destroy');
+	$day.niceSelect().addClass('hasNiceSelect');
 
-  $day.off('change').on('change', function () {
-    const chosenDay = parseInt($(this).val(), 10);
-    const newDate   = new Date(year, month, chosenDay);
+	$day.off('change').on('change', function () {
+		const chosenDay = parseInt($(this).val(), 10);
+		const newDate   = new Date(year, month, chosenDay);
 
-    // ① 날짜 반영
-    $('#datepicker').datepicker('setDate', newDate);
+		$('#datepicker').datepicker('setDate', newDate);
 
-	$('#datepicker').datepicker('refresh');
-		setTimeout(function () {
-		addYearSuffix();
-		applyNiceSelectToDatepicker(); // 내부에서 applyMobileLayout도 호출됨
-	}, 0);
+		$('#datepicker').datepicker('refresh');
+			setTimeout(function () {
+			addYearSuffix();
+			applyNiceSelectToDatepicker();
+		}, 0);
 
-    // ③ 특일 링크 이동
-    const clickedDateString = formatDateToYYYYMMDD(newDate);
-    const url = specialDatesWithLinks[clickedDateString];
-    if (url) window.location.href = url;
-  });
+		const clickedDateString = formatDateToYYYYMMDD(newDate);
+		const url = specialDatesWithLinks[clickedDateString];
+		if (url) window.location.href = url;
+	});
 }

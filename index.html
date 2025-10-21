@@ -16,11 +16,52 @@
 	<script src="./resources/js/jquery-ui.js"></script>
 	<script src="./resources/js/swiper-bundle.min.js"></script>
 	<script src="./resources/js/jquery.nice-select.js"></script>
+	<script src="./resources/js/dragscroll.js"></script>
 	<script src="./resources/js/ui.js"></script>
 </head>
 <body>
 <div class="wrapper">
 	<a href="#container" class="skip-link">본문으로</a>
+	<!-- 유틸리티영역 -->
+	<div class="head_util">
+		<div class="util_inner">
+			<ul class="sns">
+				<li>
+					<a href="#" title="페이스북">
+						<img src="./resources/images/icons/sns_fb.svg" alt="">
+					</a>
+				</li>
+				<li>
+					<a href="#" title="인스타">
+						<img src="./resources/images/icons/sns_insta.svg" alt="인스타">
+					</a>
+				</li>
+				<li>
+					<a href="#" title="트위터">
+						<img src="./resources/images/icons/sns_tw.svg" alt="트위터">
+					</a>
+				</li>
+				<li>
+					<a href="#" title="유투브">
+						<img src="./resources/images/icons/sns_ytb.svg" alt="유투브">
+					</a>
+				</li>
+				<li>
+					<a href="#" title="블로그">
+						<img src="./resources/images/icons/sns_blog.svg" alt="블로그">
+					</a>
+				</li>
+			</ul>
+			<ul class="menu_etc">
+				<li><a href="#">국립대한민국임시정부기념관</a></li>
+				<li><a href="#">이어온</a></li>
+				<li><a href="#">디지털아카이브</a></li>
+				<li><a href="#">웹진</a></li>
+				<li><a href="#">블로그</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- // 유틸리티영역 -->
 
 	<!-- 사이트 헤더 영역-->
 	<header>
@@ -44,7 +85,7 @@
 					<input type="text" placeholder="검색어를 입력하세요">
 					<button type="submit" class="btn_search"><span class="blind">검색</span></button>
 				</div>
-				<button type="button" class="btn_detail js-btn_deatil">
+				<button type="button" class="btn_detail js-btn_detail">
 					<span>상세<br/>검색</span>
 				</button>
 				<button type="button" class="btn_menu" title="전체메뉴">
@@ -326,7 +367,7 @@
 				<input type="text" placeholder="검색어를 입력하세요">
 				<button type="submit" class="btn_search"><span class="blind">검색</span></button>
 			</div>
-			<button type="button" class="btn_detail js-btn_deatil">
+			<button type="button" class="btn_detail js-btn_detail">
 				<span>상세<br/>검색</span>
 			</button>
 		</div>
@@ -512,6 +553,40 @@
 									</div>
 								</div>
 							</div>
+							<div class="swiper-slide">
+								<div class="item">
+									<figure class="img">
+										<img src="./resources/images/temp/his_01.png" alt="독립신문 상해 국한문판">
+									</figure>
+									<div class="txt_wrap">
+										<div>
+											<h4>독립신문 상해 국한문판</h4>
+											<p>한글과 한자가 함께한 국한문판 『독립신문』은 국민 누구나 쉽게 접할 수 있도록 만들어진 희망의 목소리였습니다. 독한글과 한자가 함께한 국한문판 『독립신문』은 국민 누구나 쉽게 접할 수 있도록 만들어진 희망의 목소리였습니다. 독</p>
+										</div>
+										<div class="his_btn">
+											<a href="#" class="btn_bl"><span>자료보기 +</span></a>
+											<a href="#" class="btn_gr"><span>자료소개 +</span></a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="item">
+									<figure class="img">
+										<img src="./resources/images/temp/his_02.png" alt="독립신문 상해 국한문판">
+									</figure>
+									<div class="txt_wrap">
+										<div>
+											<h4>독립신문 상해 국한문판</h4>
+											<p>한글과 한자가 함께한 국한문판 『독립신문』은 국민 누구나 쉽게 접할 수 있도록 만들어진 희망의 목소리였습니다. 독한글과 한자가 함께한 국한문판 『독립신문』은 국민 누구나 쉽게 접할 수 있도록 만들어진 희망의 목소리였습니다. 독</p>
+										</div>
+										<div class="his_btn">
+											<a href="#" class="btn_bl"><span>자료보기 +</span></a>
+											<a href="#" class="btn_gr"><span>자료소개 +</span></a>
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -536,9 +611,11 @@
 									<figure class="img">
 										<img src="./resources/images/temp/curation_01.png" alt="도시는 바뀌어도 나라는 있다">
 									</figure>
-									<h4>도시는 바뀌어도 나라는 있다</h4>
-									<strong>임정의 여정, 상하이에서 충칭까지</strong>
-									<p>1919년 4월, 대한민국임시정부는 중국 상하이에 첫 발을 내디뎠다. 망명이라는 이름의 독립운동은 그저 피신이나 은신이 아니었다.</p>
+									<div class="txt_wrap">
+										<h4>도시는 바뀌어도 나라는 있다</h4>
+										<strong>임정의 여정, 상하이에서 충칭까지</strong>
+										<p>1919년 4월, 대한민국임시정부는 중국 상하이에 첫 발을 내디뎠다. 망명이라는 이름의 독립운동은 그저 피신이나 은신이 아니었다.</p>
+									</div>
 								</a>
 							</div>
 							<div class="swiper-slide">
@@ -546,9 +623,11 @@
 									<figure class="img">
 										<img src="./resources/images/temp/curation_02.png" alt="망명정부의 법과 질서">
 									</figure>
-									<h4>망명정부의 법과 질서</h4>
-									<strong>임시헌장과 그 너머</strong>
-									<p>헌법 초안, 회의록, 포고문 속에서 국가는 존재했다. 망명 중에도 자치와 통치를 멈추지 않았던 기록을 찾아 떠난다</p>
+									<div class="txt_wrap">
+										<h4>망명정부의 법과 질서</h4>
+										<strong>임시헌장과 그 너머</strong>
+										<p>헌법 초안, 회의록, 포고문 속에서 국가는 존재했다. 망명 중에도 자치와 통치를 멈추지 않았던 기록을 찾아 떠난다</p>
+									</div>
 								</a>
 							</div>
 							<div class="swiper-slide">
@@ -556,9 +635,11 @@
 									<figure class="img">
 										<img src="./resources/images/temp/curation_03.png" alt="">
 									</figure>
-									<h4>독립은 공짜가 아니었다</h4>
-									<strong>후원과 모금의 기록들</strong>
-									<p>외교만으로는 부족했다. 임시정부는 스스로 군을 조직했고, 그들의 총은 해방을 향해 조준되어 있었다</p>
+									<div class="txt_wrap">
+										<h4>독립은 공짜가 아니었다</h4>
+										<strong>후원과 모금의 기록들</strong>
+										<p>외교만으로는 부족했다. 임시정부는 스스로 군을 조직했고, 그들의 총은 해방을 향해 조준되어 있었다</p>
+									</div>
 								</a>
 							</div>
 							<div class="swiper-slide">
@@ -566,9 +647,11 @@
 									<figure class="img">
 										<img src="./resources/images/temp/curation_04.png" alt="">
 									</figure>
-									<h4>총을 든 임정</h4>
-									<strong>한국광복군의 탄생과 작전 보고</strong>
-									<p>의연금, 애국공채, 교포의 헌금까지. 모든 투쟁에는 자금이 있었고, 모든 자금엔 이름 없는 손이 있었다의연금, 애국공채, 교포의 헌금까지. 모든 투쟁에는 자금이 있었고, 모든 자금엔 이름 없는 손이 있었다</p>
+									<div class="txt_wrap">
+										<h4>총을 든 임정</h4>
+										<strong>한국광복군의 탄생과 작전 보고</strong>
+										<p>의연금, 애국공채, 교포의 헌금까지. 모든 투쟁에는 자금이 있었고, 모든 자금엔 이름 없는 손이 있었다의연금, 애국공채, 교포의 헌금까지. 모든 투쟁에는 자금이 있었고, 모든 자금엔 이름 없는 손이 있었다</p>
+									</div>
 								</a>
 							</div>
 							<div class="swiper-slide">
@@ -576,9 +659,11 @@
 									<figure class="img">
 										<img src="./resources/images/temp/curation_01.png" alt="도시는 바뀌어도 나라는 있다">
 									</figure>
-									<h4>도시는 바뀌어도 나라는 있다</h4>
-									<strong>임정의 여정, 상하이에서 충칭까지</strong>
-									<p>1919년 4월, 대한민국임시정부는 중국 상하이에 첫 발을 내디뎠다. 망명이라는 이름의 독립운동은 그저 피신이나 은신이 아니었다.</p>
+									<div class="txt_wrap">
+										<h4>도시는 바뀌어도 나라는 있다</h4>
+										<strong>임정의 여정, 상하이에서 충칭까지</strong>
+										<p>1919년 4월, 대한민국임시정부는 중국 상하이에 첫 발을 내디뎠다. 망명이라는 이름의 독립운동은 그저 피신이나 은신이 아니었다.</p>
+									</div>
 								</a>
 							</div>
 							<div class="swiper-slide">
@@ -586,9 +671,11 @@
 									<figure class="img">
 										<img src="./resources/images/temp/curation_02.png" alt="망명정부의 법과 질서">
 									</figure>
-									<h4>망명정부의 법과 질서</h4>
-									<strong>임시헌장과 그 너머</strong>
-									<p>헌법 초안, 회의록, 포고문 속에서 국가는 존재했다. 망명 중에도 자치와 통치를 멈추지 않았던 기록을 찾아 떠난다</p>
+									<div class="txt_wrap">
+										<h4>망명정부의 법과 질서</h4>
+										<strong>임시헌장과 그 너머</strong>
+										<p>헌법 초안, 회의록, 포고문 속에서 국가는 존재했다. 망명 중에도 자치와 통치를 멈추지 않았던 기록을 찾아 떠난다</p>
+									</div>
 								</a>
 							</div>
 							<div class="swiper-slide">
@@ -596,9 +683,11 @@
 									<figure class="img">
 										<img src="./resources/images/temp/curation_03.png" alt="">
 									</figure>
-									<h4>독립은 공짜가 아니었다</h4>
-									<strong>후원과 모금의 기록들</strong>
-									<p>외교만으로는 부족했다. 임시정부는 스스로 군을 조직했고, 그들의 총은 해방을 향해 조준되어 있었다</p>
+									<div class="txt_wrap">
+										<h4>독립은 공짜가 아니었다</h4>
+										<strong>후원과 모금의 기록들</strong>
+										<p>외교만으로는 부족했다. 임시정부는 스스로 군을 조직했고, 그들의 총은 해방을 향해 조준되어 있었다</p>
+									</div>
 								</a>
 							</div>
 							<div class="swiper-slide">
@@ -606,9 +695,11 @@
 									<figure class="img">
 										<img src="./resources/images/temp/curation_04.png" alt="">
 									</figure>
-									<h4>총을 든 임정</h4>
-									<strong>한국광복군의 탄생과 작전 보고</strong>
-									<p>의연금, 애국공채, 교포의 헌금까지. 모든 투쟁에는 자금이 있었고, 모든 자금엔 이름 없는 손이 있었다의연금, 애국공채, 교포의 헌금까지. 모든 투쟁에는 자금이 있었고, 모든 자금엔 이름 없는 손이 있었다</p>
+									<div class="txt_wrap">
+										<h4>총을 든 임정</h4>
+										<strong>한국광복군의 탄생과 작전 보고</strong>
+										<p>의연금, 애국공채, 교포의 헌금까지. 모든 투쟁에는 자금이 있었고, 모든 자금엔 이름 없는 손이 있었다의연금, 애국공채, 교포의 헌금까지. 모든 투쟁에는 자금이 있었고, 모든 자금엔 이름 없는 손이 있었다</p>
+									</div>
 								</a>
 							</div>
 						</div>
@@ -642,6 +733,27 @@
 						<a href="#" class="more" title="더보기"></a>
 					</div>
 					<div class="map">
+						<div class="dragscroll">
+							<div class="drag_in">
+								<a href="#" class="tooltip1">
+									<strong>Korean <br/>Commission <br/>Publications</strong>
+									<span>프랑스 파리</span>
+								</a>
+								<a href="#" class="tooltip2">
+									<strong>독립신문 상해 국한문판<br/>독립신문 상해 중문판</strong>
+									<span>중국 상해</span>
+								</a>
+								<a href="#" class="tooltip3 btm_tooltip">
+									<strong>독립신문 충칭판</strong>
+									<span>중국 충칭</span>
+								</a>
+								<a href="#" class="tooltip4">
+									<strong>신한민보</strong>
+									<span>미국 샌프란시스코</span>
+								</a>
+								<img src="./resources/images/map.png" alt="지역별보기">
+							</div>
+						</div>
 						<p class="desc">임시정부 관련 신문·잡지를 세계 주요 발행지에 표시해, 지역별로 흐름과 확산 과정을 한눈에 살펴볼 수 있습니다</p>
 					</div>
 				</div>
