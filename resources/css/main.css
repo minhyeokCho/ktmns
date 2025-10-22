@@ -32,8 +32,7 @@
 .main_datepicker .ui-datepicker-calendar tbody td .ui-state-default {font-size: 15px; line-height: 3rem;}
 .main_datepicker .ui-datepicker td {padding: 3px 4px;}
 .main_datepicker .ui-datepicker-calendar tbody td .ui-state-default.ui-state-active,
-.main_datepicker .ui-datepicker-calendar tbody td .ui-state-default:hover  {background-color: #3a3d72; color: #fff; line-height: 3.4rem;}
-
+.main_datepicker .ui-datepicker-calendar tbody td .ui-state-default:hover  {background-color: #3a3d72; color: #fff; }
 
 /* 섹션: 메인 view */
 .sec_view {padding-top: 6rem; padding-bottom: 6rem; display: flex; gap: 6.5rem;}
