@@ -186,6 +186,7 @@
 				</ul>
 		</div>
 	</footer>
+	<button class="go_top"></button>
 </div>
 <!--S 마크업 끝-->	
 <!--/////////S 모달팝업 영역 시작/////////-->
@@ -267,6 +268,23 @@
 		  evt.currentTarget.className += " active";
 		}
 		document.getElementById("defaultOpen").click();
+	</script>
+	<script>
+		$(window).scroll(function(){
+			var scrollTop = $(window).scrollTop();
+			if(scrollTop > 0){
+				$('.go_top').addClass('active')
+			}else{
+				$('.go_top').removeClass('active')
+			}
+		});
+
+		$('.go_top').on('click', function() {
+			$('html, body').animate({
+				scrollTop: 0
+			}, 500);
+			return false;
+		});
 	</script>
 <!--E 스크립트 끝-->
 	

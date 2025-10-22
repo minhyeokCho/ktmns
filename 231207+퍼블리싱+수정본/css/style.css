@@ -2766,7 +2766,7 @@ z-index: 1;
 	position: fixed;
 	right: 20px;
 	bottom: 20px;
-	z-index: 1;
+	z-index: 99;
 	background:#EDF0F3 url(../images/icon_top.svg) no-repeat center;
 	transition: .5s;
 }
@@ -4185,6 +4185,9 @@ z-index: 1;
 		width:100%;
 		margin-left: 0;
 	}
+	.sub_pr .search_form input {
+		padding-left: 0;
+	}
 	.sub_pr .search_group {
 		padding: 34px 0;
 	}
@@ -4213,6 +4216,7 @@ z-index: 1;
 	.sub_pr .pr_list li a .txt_wrap strong {
 		font-size: 18px;
 		margin-top: 12px;
+		line-height: 1.2;
 	}
 	.sub_pr .pr_list li a .txt_wrap p {
 		font-size: 14px;
@@ -4291,6 +4295,11 @@ z-index: 1;
 		font-size: 14px;
 		font-weight: 400;
 		color: #6B7684;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		display: -webkit-box;
+		-webkit-line-clamp:1;
+		-webkit-box-orient: vertical;
 	}
 	.go_top {
 		width: 44px;

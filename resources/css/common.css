@@ -41,7 +41,7 @@ body {font-size:1.6rem;}
 	height:0;
 	width:0;
 }
-:focus {outline: 0.2rem solid rgba(0, 0, 0, 0.3);outline-offset: .2rem;border-radius: .5rem;}
+/*:focus {outline: 0.2rem solid rgba(0, 0, 0, 0.3);outline-offset: .2rem;border-radius: .5rem;}*/
 
 body.dim {overflow:hidden;}
 body.dim:before {background-color:rgba(0, 0, 0, 0.8); content:""; position:fixed; left:0; top:0; height:100vh; width:100%; z-index:9990;}
@@ -122,7 +122,7 @@ header nav ul li .sub_menu a ~ a {border-top :1px dotted rgba(255, 255, 255, .52
 
 /* 검색 도움말 팝업 */
 .help_layer {display: none; background-color: #fff; border-radius: 8px; box-shadow:5px 8.66px 5px rgba(0,0,0,0.09); border: 1px solid #9e9ea3; max-height: 90vh; max-width: 680px; width: calc(100% - 80px); position: fixed; left: 50%; top: 50%; transform: translate(-50%, -50%); z-index: 9999;}
-.help_layer .layer_wrap { padding:5rem 4.5rem;}
+.help_layer .layer_wrap { padding:5rem 4.2rem;}
 .help_layer .btn_close {position: absolute; right: 2rem; top: 2rem; background: url(../images/icons/icon_close_layer.svg) no-repeat 0 0; width: 1.8rem; height: 1.8rem; background-size: 100% auto;}
 .help_layer h2 {font-size: 1.8rem; font-weight: 700; padding-bottom: 1.8rem; margin-bottom: 3rem; border-bottom: 1px solid #b2b2b2;}
 .help_layer .content {max-height: calc(90vh - 18rem); overflow-y: auto;}
@@ -232,6 +232,7 @@ footer {border-top:1px solid #a7a7aa;}
 
 	.f_menu_wrap .f_menu {width: 50%;}
 	.f_menu_wrap .f_menu button {width:100%;}
+	.f_menu_wrap .f_menu button ~ button {border-right: none;}
 	.f_content {flex-direction: column; align-items: flex-start;}
 	.f_content .f_r {margin: 3rem 0 0 0;}
 	.f_content .f_r .f_link {justify-content: flex-start;}
@@ -243,7 +244,7 @@ footer {border-top:1px solid #a7a7aa;}
 	.search_layer {height: 155px;}
 	.search_layer .search {width: 100%; height: 50px; margin: 0 10px;}
 	.search_layer .search .select_search {display: none;}
-	.search_layer .search input[type="text"] {padding-left: 0; font-size: 15px;}
+	.search_layer .search input[type="text"] {padding-left: 0; font-size: 15px; width: 100%;}
 	.search_layer .btn_detail {display: none;}
 
 	.menu_layer {height: 407px;}

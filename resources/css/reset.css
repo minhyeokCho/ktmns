@@ -24,19 +24,22 @@ table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
-time, mark, audio, video, input, textarea {margin: 0;padding: 0;border: 0;font: inherit;vertical-align: baseline;font-family: 'Pretendard GOV','맑은고딕','나눔고딕', '돋움', sans-serif;}
+time, mark, audio, video, input, textarea, button {margin: 0;padding: 0;border: 0;font: inherit;vertical-align: baseline;font-family: 'Pretendard GOV','맑은고딕','나눔고딕', '돋움', sans-serif;}
 input:focus {outline:none;}
 
 
-.scroll_area::-webkit-scrollbar {
+.scroll_area::-webkit-scrollbar,
+.nice-select .list::-webkit-scrollbar {
     width: 10px;
     height: 10px;
 }
-.scroll_area::-webkit-scrollbar-track {
+.scroll_area::-webkit-scrollbar-track,
+.nice-select .list::-webkit-scrollbar-track {
     background: transparent;
     border-radius: 5px;
 }
-.scroll_area::-webkit-scrollbar-thumb {
+.scroll_area::-webkit-scrollbar-thumb,
+.nice-select .list::-webkit-scrollbar-thumb {
     background: #d0d0d0; 
     border-radius: 5px;
     border: 3px solid #fff;
@@ -45,7 +48,7 @@ input:focus {outline:none;}
 .dragscroll::-webkit-scrollbar {
     height: 0;
 }
-
+.dragscroll::-webkit-scrollbar-thumb {background-color: transparent;}
 .view_detail .contents::-webkit-scrollbar  {width: 4px;}
 .tree_list::-webkit-scrollbar  {width: 4px;}
 .view_detail .contents::-webkit-scrollbar-thumb {background-color: #424a75;}

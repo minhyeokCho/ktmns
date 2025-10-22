@@ -20,7 +20,7 @@
 .ui-datepicker-calendar tbody td .ui-state-default {height: 38px; width: 38px; line-height: 34px; border-radius: 50%; font-weight: 600; color: #222; text-align: center; border: none; background-color: transparent; transition: .2s;}
 .ui-datepicker-calendar tbody td .ui-state-default.ui-state-active,
 .ui-datepicker-calendar tbody td .ui-state-default:hover {background-color: #475def; color: #fff; font-weight: 800;}
-.ui-datepicker-calendar tbody td.link-day .ui-state-default {border: 2px solid #dadaf2; background-color: transparent; line-height: 24px; color: #222; font-weight: 600;}
+.ui-datepicker-calendar tbody td.link-day .ui-state-default {border: 2px solid #dadaf2; background-color: transparent; line-height: 3rem; color: #222; font-weight: 600;}
 .ui-datepicker-day-select-wrap {display: none;}
 /* selectBox */
 .select01.nice-select {border-radius: 2px; border: 1px solid #d5d5d5; min-width: 7rem; height: 3.3rem; line-height: 3.1rem; padding-left: 1rem; padding-right: 3rem; font-size: 1.3rem;}
@@ -28,13 +28,14 @@
 .nice-select .list {min-width: 7rem; border: 1px solid #cccccd; border-radius: 2px; filter: drop-shadow(2.5px 4.33px 2.5px rgba(0,0,0,0.09)); background-color: #ffffff; max-height: 250px; overflow-y: auto;}
 .nice-select .option {padding: 0 1.2rem; min-height: 3.2rem; line-height: 3.2rem; font-size: 1.4rem; color: #000; font-weight: 500;}
 .nice-select::after {display: none;}
-.nice-select::before {display: block; content: ''; background: url(../images/icons/arrow_select.svg) no-repeat 0 0; width: 7px; height: 5px; position: absolute; right: 1.5rem; top: calc(50% - 2.5px); transition: .3s; background-size: 100% auto;}
+.nice-select::before {display: block; content: ''; background: url(../images/icons/arrow_select.svg) no-repeat 0 0; width: 7px; height: 5px; position: absolute; right: 1rem; top: calc(50% - 2.5px); transition: .3s; background-size: 100% auto;}
 .nice-select.open::before {transform: rotate(180deg);}
 
 /* selectBox Search */
 .select_search {border:none; height: 100%; width: 8.4rem; font-size: 1.5rem; font-weight: 500; border-radius: 2.7rem; line-height: 5.5rem;}
 .select_search:focus {outline: none;}
-.select_search.nice-select .list {border-radius: .8rem; top: calc(100% - 1.5rem);}
+.select_search.nice-select .list {top: calc(100% - 1.5rem);}
+.nice-select .list {border-radius: .8rem; }
 
 /* 페이징 */
 .paging_wrap {display: flex; align-items: center; justify-content: center; margin-top: 4.5rem;}
@@ -78,6 +79,7 @@
 .sub_title .contL .tit {margin-top: 2rem; display: flex; align-items: flex-end; padding-right: 2rem;}
 .sub_title .contL .tit h2 {font-size: 3.8rem; font-weight: 800; color: #222;}
 .sub_title .contL .tit p {margin-left: 2.4rem; font-size: 1.8rem; color: #222; font-weight: 500;}
+.sub_title .contL .tit strong {font-size: 2.4rem; font-weight:800; margin-left: 2rem;}
 .sub_title .contR {margin-left: auto;}
 .sub_title .contR .sub_btn {display: flex; gap:.4rem; align-items: center;}
 .sub_title .contR .sub_btn a {display: flex; align-items: center; font-size: 1.3rem; min-width: 4.3rem; height: 4.3rem; border-radius: .8rem; border: 1px solid rgba(0,0,0,0.36);}
@@ -89,8 +91,8 @@
 .sub_title .contR .sub_btn .btn_print {background: url(../images/icons/icon_print.svg) no-repeat center; background-size: 2.3rem auto;}
 .sub_title .contR .sub_btn .btn_bg {background-color: #3a3d72; border:none; color: #fff; text-align: center;}
 .sub_title .contR .sub_btn .btn_bg span {display: block; padding-left: 4.2rem; padding-right: 1.4rem;}
-.sub_title .contR .sub_btn .btn_curation span {background: url(../images/icons/icon_curation.svg) no-repeat left 1.2rem center; background-size: 2rem auto;}
-.sub_title .contR .sub_btn .btn_error span {background: url(../images/icons/icon_error.svg) no-repeat left 1.2rem center; background-size: 2rem auto;}
+.sub_title .contR .sub_btn .btn_curation span {background: url(../images/icons/icon_curation.svg) no-repeat left 1.2rem center; background-size: 2rem auto; word-break: keep-all;}
+.sub_title .contR .sub_btn .btn_error span {background: url(../images/icons/icon_error.svg) no-repeat left 1.2rem center; background-size: 2rem auto; word-break: keep-all;}
 .sub_title .contR .sub_btn .bar {width: 1px; height: 3.4rem; margin:0 6px; background-color: rgba(0,0,0,0.2);}
 
 /* 검색 필터 */
@@ -350,7 +352,7 @@
 .view_slide_wrap .view_cont .swiper-slide figcaption {position: absolute; right: 0.8rem; bottom: 0.8rem; padding: 0.8rem; border-radius: 0.8rem; background-color: #3a3d72; z-index: 1; color: #fff; font-size: 1.3rem; font-weight: 500;}
 .view_slide {height: 100%;}
 .view_slide .img {height: 100%;}
-.view_slide .img img {width: auto; margin: 0 auto;}
+.view_slide .img img {width: auto; margin: 0 auto; max-width: 50%;}
 .view_cont .swiper_ctr {width: 11rem; position: absolute; left: 50%; transform: translateX(-50%); bottom: .8rem; background-color: rgba(0,0,0,0.63); border-radius: .8rem; display: flex; align-items: center; justify-content: center; height: 3.4rem; z-index: 1;}
 .view_cont .btn_slide {background: url(../images/icons/arrow_slide.svg) no-repeat center; width: 1.7rem; height: 1.7rem; background-size: auto 100%;}
 .view_cont .btn_slide:focus {outline: none;}
@@ -366,7 +368,7 @@
 .btn_ui li.img_ui_05 button {background-image: url(../images/icons/icon_img_05.svg);}
 .btn_ui li.img_ui_06 button {background-image: url(../images/icons/icon_img_06.svg);}
 .btn_ui li.img_ui_07 button {background-image: url(../images/icons/icon_img_07.svg);}
-.btn_view_wrap {position: absolute; right: 0; top: -2.4rem; display: flex; z-index: 1;}
+.btn_view_wrap {position: absolute; right: 0; top: -2.6rem; display: flex; z-index: 1;}
 .btn_view_wrap button {width: 10rem; height: 8.6rem; font-size: 1.4rem; font-weight: 800; color: #fff; background-color: #3a3d72;}
 .btn_view_wrap button ~ button {border-left: 1px solid #696c94;}
 .btn_view_wrap button span {display: block; padding-top: 3rem; background-position: top center; background-repeat: no-repeat;}
@@ -396,6 +398,10 @@
 .img_content .view_slide_wrap {width: 100%; margin-left: auto; transition: .5s;}
 .img_content .view_slide_wrap.active {width: calc(100% - 300px);}
 @media only screen and (max-width: 1559px) {
+		.sub_title .contL .tit {flex-direction: column; align-items: flex-start;}
+	.sub_title .contL .tit p {margin: 10px 0 0 0;}
+	.sub_title .contL .tit strong {margin: 10px 0 0 0;}
+	
 	/* 신문잡지별보기_목록. */
 	.view_list {gap: 6rem;}
 	.ui-datepicker {width: 436px; padding: 40px;}
@@ -403,7 +409,7 @@
 	.ui-datepicker td {padding: 3px 9px;}
 	.ui-datepicker .nice-select .current {font-size: 21px;}
 	.view_list .date_desc {font-size: 19px; height: 62px;}
-
+	.ui-datepicker-calendar tbody td.link-day .ui-state-default {line-height: 2.2rem;}
 	/* 유형별보기 목록 */
 	.catg_box ul {max-width: 1137px;}
 	.catg_box li button {width: 112px; height: 112px;}
@@ -450,8 +456,7 @@
 }
 @media only screen and (max-width: 1023px) { /* 테블릿 */
 	#container {padding-top: 64px;}
-	.sub_title .contL .tit {flex-direction: column; align-items: flex-start;}
-	.sub_title .contL .tit p {margin: 10px 0 0 0;}
+	.sub_title {margin-bottom: 30px;}
 
 	/* 검색결과 */
 	.filter {width: 320px; height: calc(100vh - 68px); overflow-y: auto; padding: 50px 20px 0; position: fixed; left: -320px; top:68px; transition: .5s; z-index: 10; box-shadow:4px 6.928px 4px rgba(0,0,0,0.12);}
@@ -462,6 +467,7 @@
 	.filter .box .item .list_wrap .btn_all {margin-top: 6px;}
 	.filter .box .btn_filter_close,
 	.res_wrap .search_filter li.filter_li {display: block;}
+	.res_wrap .search_filter {padding-left: 0;}
 	.res_wrap .title_wrap {align-items: flex-start; justify-content: flex-start; flex-direction: column; gap:15px}
 
 	/* 신문잡지별목록 */
@@ -486,6 +492,9 @@
 	.curation_item:first-child{margin-top: 0;}
 
 	.btn_view_a  {display: none;}
+
+	.view_list .paging_wrap {justify-content: center;}
+	.ui-datepicker-calendar tbody td.link-day .ui-state-default {line-height: 2.6rem;}
 }
 @media only screen and (max-width: 767px) { /* 모바일 */
 	#container {padding-top: 60px;}
@@ -500,6 +509,7 @@
 	.paging_wrap .paging {margin-left: 18px;}
 	.paging_wrap .paging .pc_paging {display: none;}
 	.paging_wrap .paging .mo_paging {display: block;}
+	.filter {top: 60px; height: calc(100vh - 60px);}
 	.filter .box .item .list_wrap .dept01 {height: 130px;}
 	.ui-datepicker {padding: 20px 0;}
 	.ui-datepicker-day-select-wrap {display: block;}

@@ -32,9 +32,6 @@ function initViewHeights() {
 		var headerH = $('header').outerHeight() || 0;
 		var titleH  = $('.view_title').outerHeight() || 0;
 		var targetH = window.innerHeight - (headerH + titleH + 60);
-		console.log(window.innerHeight);
-		console.log(headerH);
-		console.log(titleH);
 		
 		if (targetH < 200) targetH = 200; 
 
@@ -153,13 +150,11 @@ function initOnePageToggle() {
 
 function handleSelectViewBig() {
 	function applyMode(mode) {
-		console.log(4);
 
 		var $viewDetail = $('.view_detail')
 		if(!$viewDetail.length) return
 
 		if (mode === 'img') {
-			console.log(5);
 			$viewDetail.addClass('img_content').removeClass('text_content');
 		} else {
 			$viewDetail.addClass('text_content').removeClass('img_content');

@@ -17,7 +17,7 @@
 .sec_search .search_date .btn_main_help {margin: -10px 0 0 12px; width: 2rem; height: 2rem; border-radius: 50%; border:1px solid #5682ff; background:#fff url(../images/icons/icon_help_blue.svg) no-repeat center; background-size: .4rem auto;}
 
 .sec_search .search {margin-top: 2rem; width: 56.4rem; height: 6.6rem; padding-left: 2rem; border-radius: 3.3rem; background-color: #ffffff; display: flex; align-items: center;}
-.sec_search .search .head_search.select_search {line-height: 6.6rem;}
+.sec_search .search .head_search.select_search {line-height: 6.6rem !important;}
 .sec_search .search .bar {display: block; width: 1px; height: 2rem; background-color: #ccc;}
 .sec_search .search input[type="text"] {width: 41rem; border:none; height: 100%; padding: 0 2rem; font-size: 16px; font-weight: 500;}
 .sec_search .search .btn_search {width: 5rem; height: 100%; background: url(../images/icons/icon_search.svg) no-repeat left center; background-size: 2.3rem auto;}
@@ -32,7 +32,7 @@
 .main_datepicker .ui-datepicker-calendar tbody td .ui-state-default {font-size: 15px; line-height: 3rem;}
 .main_datepicker .ui-datepicker td {padding: 3px 4px;}
 .main_datepicker .ui-datepicker-calendar tbody td .ui-state-default.ui-state-active,
-.main_datepicker .ui-datepicker-calendar tbody td .ui-state-default:hover  {background-color: #3a3d72; color: #fff;}
+.main_datepicker .ui-datepicker-calendar tbody td .ui-state-default:hover  {background-color: #3a3d72; color: #fff; line-height: 3.4rem;}
 
 
 /* 섹션: 메인 view */
@@ -118,7 +118,7 @@
 .sec_dt .catg_wrap ul .catg_02 a::after {background-image: url(../images/icons/catg_02.svg); background-size: 2.7rem auto;}
 .sec_dt .catg_wrap ul .catg_03 a::after {background-image: url(../images/icons/catg_03.svg); background-size: 3.2rem auto;}
 .sec_dt .catg_wrap ul .catg_04 a::after {background-image: url(../images/icons/catg_04.svg); background-size: 3.2rem auto;}
-.sec_dt .catg_wrap ul .catg_05 a::after {background-image: url(../images/icons/catg_05.svg); background-size: 4rem auto;}
+.sec_dt .catg_wrap ul .catg_05 a::after {background-image: url(../images/icons/catg_05.svg); background-size: 3.1rem auto;}
 .sec_dt .catg_wrap ul .catg_06 a::after {background-image: url(../images/icons/catg_06.svg); background-size: 4rem auto;}
 .sec_dt .catg_wrap ul .catg_07 a::after {background-image: url(../images/icons/catg_07.svg); background-size: 3.2rem auto;}
 .sec_dt .catg_wrap ul .catg_08 a::after {background-image: url(../images/icons/catg_08.svg); background-size: 3rem auto;}
@@ -137,18 +137,19 @@
 .sec_dt .map_wrap {position: relative; width: 50%; background: url(../images/main/bg_main_map.png) no-repeat center; background-size: cover;}
 .sec_dt .map_wrap .tit_area h3 {color: #3d3950;}
 .sec_dt .map_wrap .tit_area .more {border: 1px solid #d0d0d8; background-color: #fffefe;}
-.sec_dt .map_wrap .map .dragscroll {width: 100%; overflow-y: auto; cursor: grab; margin-top: -60px; position: relative;}
+.sec_dt .map_wrap .map .dragscroll {width: 100%; overflow-y: auto; cursor: grab; margin-top: -30px; position: relative;}
 .sec_dt .map_wrap .map .dragscroll .drag_in {width: 856px; position: relative; margin: 0 auto;}
 .sec_dt .map_wrap .map .dragscroll img {display: block; user-select: none;}
-.sec_dt .map_wrap .map .dragscroll a {position: absolute; padding: 1.3rem 1.2rem; border: 1px solid #d2d2d2; box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.08); background-color: #ffffff;  border-radius: 1.2rem; transition: .3s;}
+.sec_dt .map_wrap .map .dragscroll a {position: absolute; padding: 0.8rem 1.6rem; border: 1px solid #d2d2d2; box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.08); background-color: #ffffff;  border-radius: 2rem; transition: .3s;}
 .sec_dt .map_wrap .map .dragscroll a::before {content: ''; position: absolute; bottom: -.7rem; left: calc(50% - 0.55rem); width: 1.1rem; height: 1.1rem; background: #fff; border: 1px solid #d2d2d2;  border-top-left-radius: 0.2rem; border-bottom-right-radius: 0.2rem;  border-width: 0 0 1px 1px; transform: rotate(-45deg); transition: .3s;}
 .sec_dt .map_wrap .map .dragscroll a:hover {background-color: #3a3d72; border-color: #3a3d72; color: #fff;}
 .sec_dt .map_wrap .map .dragscroll a:hover::before {background-color: #3a3d72;}
 .sec_dt .map_wrap .map .dragscroll a::after {display: block; content: ''; position: absolute; left: calc(50% - .7rem); bottom: -2.4rem; border-radius: 50%; background-color: #d45f00; width: 1.4rem; height: 1.4rem;}
 .sec_dt .map_wrap .map .dragscroll a.btm_tooltip::after {top: -2.4rem; bottom: inherit; } 
 .sec_dt .map_wrap .map .dragscroll a.btm_tooltip::before {top: -0.7rem; bottom: inherit; transform: rotate(45deg); border-width:1px 0 0 1px;}
-.sec_dt .map_wrap .map .dragscroll a strong {font-size: 1.4rem; font-weight: 700; display: block; text-align: center;}
-.sec_dt .map_wrap .map .dragscroll a span {margin-top: 5px; display: block; font-size: 1.1rem; font-weight: 700; text-align: center;}
+.sec_dt .map_wrap .map .dragscroll a strong {font-size: 1.4rem; font-weight: 700; display: block; text-align: center; line-height: 1.1;}
+.sec_dt .map_wrap .map .dragscroll a span {margin-top: 3px; display: block; font-size: 1.1rem; font-weight: 700; text-align: center; color: rgba(0, 0, 0, 0.63); transition: .3s;}
+.sec_dt .map_wrap .map .dragscroll a:hover span {color: #fff;}
 .sec_dt .map_wrap .map .dragscroll a.tooltip1 {left:5%; top: 24%;}
 .sec_dt .map_wrap .map .dragscroll a.tooltip2 {left: 31%; top: 34%;}
 .sec_dt .map_wrap .map .dragscroll a.tooltip3 {left: 27%; top: 58%;}
@@ -233,7 +234,7 @@
 	.sec_cur {padding: 60px 0;}
 	.sec_cur .tit_area h3 {font-size: 24px;}
 
-	.curation_slide  {height: 380px;}
+	.curation_slide  {height: 370px;}
 	.curation_slide .swiper-slide a {display: flex; align-items: center; gap: 15px;}
 	.curation_slide .swiper-slide a .txt_wrap {flex:1;}
 	.sec_cur .curation_slide .swiper-slide {padding: 5px 10px 5px 5px; border-radius: 14px;}
