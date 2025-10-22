@@ -1,0 +1,206 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>법무법인 더보상</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body class="scroll">
+<!--S 마크업 시작-->
+<div class="wrap sub_wrap">
+	<header>
+		<div class="left">
+			<a href="main.html" class="logo"></a>
+		</div>
+		<ul class="menu">
+				<li>
+					<a href="company.html">회사소개</a>
+				</li>
+				<li>
+					<a href="member.html">구성원소개</a>
+				</li>
+				<li>
+					<a href="list.html">업무사례</a>
+				</li>
+				<li>
+					<a href="reserve.html" class="active">법률상담예약</a>
+				</li>
+				<li>
+					<a href="map.html">오시는길</a>
+				</li>
+			</ul>
+		<div class="right">
+			<a href="tel:02-3464-1568" class="m_none tel_number">02-3464-1568</a>
+			<button class="mobile_menu_btn pc_none" onclick="mdShow('mdHamburger')"></button>
+		</div>
+	</header>
+	<div class="content_wrap sub_reserve">
+		<section>
+			<div class="cover">
+				<img src="images/img_reserve_ct.png">
+			</div>
+			<div class="content_area sub_half box_width">
+				<div class="sc_tit">
+					<span>법률상담예약</span>
+					<p>산재 전문 법무법인<br/><em class="main">더보상</em>에 문의하세요</p>
+					<div class="info_group">
+						<p>
+							<i></i>
+							모든 상담은 철저히 비공개로 진행됩니다.
+						</p>
+					</div>
+				</div>
+				<div class="form_group">
+					<div>
+						<div class="input_group half"> <!--텍스트 넘칠 시, error 클레스 추가-->
+							<div class="text_group">
+								<label>이름</label>
+								<input type="text" placeholder="이름을 작성해주세요">
+							</div>
+							<div class="text_group">
+								<label>이름</label>
+								<input type="text" placeholder="이름을 작성해주세요">
+							</div>
+						</div>
+						<p class="input_group">
+							<label>메모</label>
+							<textarea placeholder="요청사항을 입력해주세요"></textarea>
+						</p>
+						<div>
+							<div class="checkbox_group">
+							  <input type="checkbox" id="naver">
+							  <label for="naver"><span>(필수)</span>개인정보 취금방침에 동의합니다.</label>
+							</div>
+						</div>
+					</div>
+					<div class="btn_group center">
+						<button class="fill_main">상담 예약<i></i></button>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+	<footer data-section-name="footer">
+		<div class="footer_area">
+			<h2 class="logo"><img src="images/logo_vertical_white.svg"></h2>
+			<div class="info_group">
+				<div class="url_rink">
+					<a href="#">개인정보 처리방침</a>
+					<a href="#">면책공고</a>
+					<a href="#">이메일무단수집거부</a>
+				</div>
+				<div class="detail">
+					<p class="half">
+						<span><bold>대표 변호사 :</bold> 유정은</span>
+						<span><bold>사업자번호 :</bold> 254-87-02187</span>
+					</p>
+					<p class="half">
+						<span><bold>주소  :</bold> 서울시 서초구 마방로2길 82 태성빌딩 4층</span>
+						<span><bold>전화번호 :</bold> 02-3463-1568</span>
+					</p>
+					<p>
+						<span class="only">copyright(c) 법무법인 더보상 All Rights Reserved</span>
+					</p>
+				</div>
+			</div>
+				<ul class="float_btn_group">
+					<li class="call">
+						<a href="tel:02-3464-1568">
+							<i></i>
+							<p>전화상담<span>02-3464-1568</span></p>
+						</a>
+					</li>
+					<li class="mail">
+						<a href="#">
+							<i></i>
+							<p>메일 상담</p>
+						</a>
+					</li>
+					<li class="kakao">
+						<a href="#">
+							<i></i>
+							<p>카카오톡 상담</p>
+						</a>
+					</li>
+					<li class="blog">
+						<a href="#">
+							<i></i>
+							<p>블로그</p>
+						</a>
+					</li>
+				</ul>
+		</div>
+	</footer>
+</div>
+<!--S 마크업 끝-->	
+<!--/////////S 모달팝업 영역 시작/////////-->
+<!--햄버거 팝업-->
+<div class="modal" id="mdHamburger">
+  <div class="modal_container">
+    <div class="modal_box">
+		<div class="modal_content">
+			<div class="md_header">
+				<a href="#" class="logo"></a>
+				<button class="close_btn" onclick="mdHide('mdHamburger')">close</button>
+			</div>
+			<ul class="menu">
+				<li>
+					<a href="company.html">회사소개</a>
+				</li>
+				<li>
+					<a href="member.html">구성원소개</a>
+				</li>
+				<li>
+					<a href="list.html">업무사례</a>
+				</li>
+				<li>
+					<a href="reserve.html">법률상담예약</a>
+				</li>
+				<li>
+					<a href="map.html">오시는길</a>
+				</li>
+			</ul>
+		</div>
+    </div>
+  </div>
+</div>
+<!--E 모달팝업 영역 끝-->
+<!--/////////S 스크립트 시작/////////-->
+	<!--다중 모달팝업-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" type="text/javascript"></script>
+    <script>
+        function mdShow(mdName) {
+        var $layer = $("#" + mdName);
+        $layer.addClass("show");
+        document.body.style.overflow = 'hidden';
+    }
+
+    function mdHide(mdName) {
+        $("#" + mdName).removeClass("show");
+        document.body.style.overflow = 'initial';
+    }
+    // 팝업 바깥요소 클릭 시 팝업 닫도록 설정.
+    $(".modal_container").on("click", function(event) {
+        // 클릭한 요소가 .m_content 또는 그 하위 요소인 경우는 팝업 안 닫도록.
+        if (!$(event.target).closest(".modal_box").length) {
+            // 팝업을 닫습니다.
+            $(this).closest(".modal").removeClass("show");
+			 document.body.style.overflow = 'initial';
+        }
+    });
+    </script>
+	<!--AOS 스크립트-->
+	<script type="text/javascript">
+		AOS.init({
+			easing: 'ease-out-back',
+			duration: 1000
+		});
+	</script>
+<!--E 스크립트 끝-->
+	
+</body>
+</html>

@@ -1,0 +1,288 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>법무법인 더보상</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<!-- AOS 라이브러리 불러오기-->
+	<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"> 
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> 
+</head>
+
+<body class="scroll">
+<!--S 마크업 시작-->
+<div class="wrap sub_wrap">
+	<header>
+		<div class="left">
+			<a href="main.html" class="logo"></a>
+		</div>
+		<ul class="menu">
+				<li>
+					<a href="company.html" class="active">회사소개</a>
+				</li>
+				<li>
+					<a href="member.html">구성원소개</a>
+				</li>
+				<li>
+					<a href="list.html">업무사례</a>
+				</li>
+				<li>
+					<a href="reserve.html">법률상담예약</a>
+				</li>
+				<li>
+					<a href="map.html">오시는길</a>
+				</li>
+			</ul>
+		<div class="right">
+			<a href="tel:02-3464-1568" class="m_none tel_number">02-3464-1568</a>
+			<button class="mobile_menu_btn pc_none" onclick="mdShow('mdHamburger')"></button>
+		</div>
+	</header>
+	<div class="content_wrap sub_company">
+		<section>
+			<div class="content_area">
+				<div class="sc_tit box_width">
+					<span>회사소개</span>
+					<p>산재 전문가로 구성된<br/><em class="main">법무법인 더보상</em></p>
+				</div>
+				<div class="tab_group fullunder_tab">
+					<div class="box_width">
+						<button class="tablinks active" onclick="openPage(event, 'company')" id="defaultOpen">법인소개</button>
+						<button class="tablinks" onclick="openPage(event, 'owner')">대표변호사 인사말</button>
+						<button class="tablinks" onclick="openPage(event, 'inquiry')">취재 문의</button>
+					</div>
+				</div>
+				<section class="tabpage" id="company">
+					<div class="img_group">
+						<div class="img_box box_width">
+							<img src="images/img_company_people.png" class="m_none">
+							<img src="images/img_company_people_mobile.png" class="pc_tab_none">
+						</div>
+					</div>
+					<div class="txt_group box_width">
+						<div class="sub_tit">
+							<p>오직 산재만 하자고<br/>다짐했습니다</p>
+						</div>
+						<div class="detail_txt_group">
+							<p>본인이 산재 신청을 할 수 있다는 사실조차 <br class="m_none"/>모르고 있는 많은 분들을 보며, 오직 산재만 하자고 다짐했습니다.</p>
+							<p>산재 특화 로펌 <bold>법무법인 더 보상</bold>. 오직 산재만을 고민합니다. <br class="m_none"/>
+대한변호사협회가 인증한 산재 전문 변호사가 이끄는 산재 전문 로펌 <bold>법무법인 더 보상</bold>.</p>
+							<p>20,000건 이상의 사건을 다루면서 가진 저희만의 압도적인 노하우를 믿어보시고 두드려주세요. <br class="m_none"/>
+<bold>법무법인 더 보상은 여러분들께 보상을 더 드릴 준비가 되어있습니다.</bold></p>
+						</div>
+					</div>
+				</section>
+				<section class="tabpage" id="owner">
+					<div class="box_width">
+						<div class="txt_group">
+							<div class="sub_tit">
+								<p>안녕하세요<br/>법무법인 더보상 대표변호사 <br class="pc_tab_none"/>유정은 입니다</p>
+							</div>
+							<div class="dear_txt_group">
+								<p>보통 사람들은 “산업재해는 자주 일어나지 않는 것"이라 생각합니다. <br class="m_none"/>
+								아니 적어도 “산업재해는 나에게는 일어나지 않을 것”이라 생각합니다.</p>
+
+								<p>그런데<br class="m_none"/>
+								어쩌다 아니, 결국 나에게 산업재해가 발생하였다면,<br class="m_none"/>
+								그 한 번의 산업재해는 결국 우리의 삶을 쥐고 흔드는 중대한 일이 될 것입니다.</p>
+
+								<p>법무법인 더보상은 여러분의 그 한 번을 진심으로 대하겠습니다.<br class="m_none"/>
+								법무법인 더보상은 여러분의 그 한 번을 성공으로 완수하겠습니다.<br class="m_none"/>
+								법무법인 더보상은 여러분이 제대로 더 보상받을 수 있도록 하겠습니다.</p>
+
+								<p>수많은 의뢰인분들이 저희를 믿고 맡겨주신 결과 저희는 현재 2만 건 이상의 성공경험이 있습니다.</p>
+
+								<p>저희의 실력에 대한 의심은 접어두시고, 저희가 진심으로 일할 변호사인지 알아봐주십시오.<br class="m_none"/>
+								법무법인 더보상을 알아봐주시고 찾아주실 때까지 노력하겠습니다.</p>
+							</div>
+							<div class="sign_group">
+								<p>법무법인 더보상 대표변호사</p>
+								<span class="sign">
+									<img src="images/sign.svg">
+								</span>
+							</div>
+						</div>
+						<div class="img_group">
+							<img src="images/img_owner.png">
+						</div>
+					</div>
+				</section>
+				<section class="tabpage box_width" id="inquiry">
+					<div class="sub_tit center">
+						<p>취재 문의</p>
+					</div>
+					<div class="form_group">
+						<div>
+							<div class="input_group tripel"> <!--텍스트 넘칠 시, error 클레스 추가-->
+								<div class="text_group">
+									<label>소속</label>
+									<input type="text" placeholder="소속을 작성해주세요">
+								</div>
+								<div class="text_group">
+									<label>이름</label>
+									<input type="text" placeholder="이름을 작성해주세요">
+								</div>
+								<div class="text_group">
+									<label>전화번호</label>
+									<input type="text" placeholder="전화번호를 작성해주세요">
+								</div>
+							</div>
+							<p class="input_group">
+								<label>문의 내용</label>
+								<textarea placeholder="내용을 입력해주세요"></textarea>
+							</p>
+							<div>
+								<div class="checkbox_group">
+								  <input type="checkbox" id="naver">
+								  <label for="naver"><span>(필수)</span>개인정보 취금방침에 동의합니다.</label>
+								</div>
+							</div>
+						</div>
+						<div class="btn_group center">
+							<button class="fill_main">취재문의 신청하기<i></i></button>
+						</div>
+					</div>
+				</section>
+			</div>
+		</section>
+	</div>
+	<footer>
+		<div class="footer_area">
+			<h2 class="logo"><img src="images/logo_vertical_white.svg"></h2>
+			<div class="info_group">
+				<div class="url_rink">
+					<a href="#">개인정보 처리방침</a>
+					<a href="#">면책공고</a>
+					<a href="#">이메일무단수집거부</a>
+				</div>
+				<div class="detail">
+					<p class="half">
+						<span><bold>대표 변호사 :</bold> 유정은</span>
+						<span><bold>사업자번호 :</bold> 254-87-02187</span>
+					</p>
+					<p class="half">
+						<span><bold>주소  :</bold> 서울시 서초구 마방로2길 82 태성빌딩 4층</span>
+						<span><bold>전화번호 :</bold> 02-3463-1568</span>
+					</p>
+					<p>
+						<span class="only">copyright(c) 법무법인 더보상 All Rights Reserved</span>
+					</p>
+				</div>
+			</div>
+				<ul class="float_btn_group">
+					<li class="call">
+						<a href="tel:02-3464-1568">
+							<i></i>
+							<p>전화상담<span>02-3464-1568</span></p>
+						</a>
+					</li>
+					<li class="mail">
+						<a href="#">
+							<i></i>
+							<p>메일 상담</p>
+						</a>
+					</li>
+					<li class="kakao">
+						<a href="#">
+							<i></i>
+							<p>카카오톡 상담</p>
+						</a>
+					</li>
+					<li class="blog">
+						<a href="#">
+							<i></i>
+							<p>블로그</p>
+						</a>
+					</li>
+				</ul>
+		</div>
+	</footer>
+</div>
+<!--S 마크업 끝-->	
+<!--/////////S 모달팝업 영역 시작/////////-->
+<!--햄버거 팝업-->
+<div class="modal" id="mdHamburger">
+  <div class="modal_container">
+    <div class="modal_box">
+		<div class="modal_content">
+			<div class="md_header">
+				<a href="#" class="logo"></a>
+				<button class="close_btn" onclick="mdHide('mdHamburger')">close</button>
+			</div>
+			<ul class="menu">
+				<li>
+					<a href="company.html">회사소개</a>
+				</li>
+				<li>
+					<a href="member.html">구성원소개</a>
+				</li>
+				<li>
+					<a href="list.html">업무사례</a>
+				</li>
+				<li>
+					<a href="reserve.html">법률상담예약</a>
+				</li>
+				<li>
+					<a href="map.html">오시는길</a>
+				</li>
+			</ul>
+		</div>
+    </div>
+  </div>
+</div>
+<!--E 모달팝업 영역 끝-->
+<!--/////////S 스크립트 시작/////////-->
+	<!--다중 모달팝업-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" type="text/javascript"></script>
+    <script>
+        function mdShow(mdName) {
+        var $layer = $("#" + mdName);
+        $layer.addClass("show");
+        document.body.style.overflow = 'hidden';
+    }
+
+    function mdHide(mdName) {
+        $("#" + mdName).removeClass("show");
+        document.body.style.overflow = 'initial';
+    }
+    // 팝업 바깥요소 클릭 시 팝업 닫도록 설정.
+    $(".modal_container").on("click", function(event) {
+        // 클릭한 요소가 .m_content 또는 그 하위 요소인 경우는 팝업 안 닫도록.
+        if (!$(event.target).closest(".modal_box").length) {
+            // 팝업을 닫습니다.
+            $(this).closest(".modal").removeClass("show");
+			 document.body.style.overflow = 'initial';
+        }
+    });
+    </script>
+	<!--AOS 스크립트-->
+	<script type="text/javascript">
+		AOS.init({
+			easing: 'ease-out-back',
+			duration: 1000
+		});
+	</script>
+	<!--탭 기능-->
+	<script>
+		function openPage(evt, pageName) {
+		  var i, tabpage, tablinks;
+		  tabpage = document.getElementsByClassName("tabpage");
+		  for (i = 0; i < tabpage.length; i++) {
+			tabpage[i].style.display = "none";
+		  }
+		  tablinks = document.getElementsByClassName("tablinks");
+		  for (i = 0; i < tablinks.length; i++) {
+			tablinks[i].className = tablinks[i].className.replace(" active", "");
+		  }
+		  document.getElementById(pageName).style.display = "flex";
+		  evt.currentTarget.className += " active";
+		}
+		document.getElementById("defaultOpen").click();
+	</script>
+<!--E 스크립트 끝-->
+	
+</body>
+</html>

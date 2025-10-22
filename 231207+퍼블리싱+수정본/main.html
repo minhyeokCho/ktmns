@@ -1,0 +1,626 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>법무법인 더보상</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<!-- AOS 라이브러리 불러오기-->
+	<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<!--애니메이션 라이브러리-->
+	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+
+<body class="scroll">
+<!--S 마크업 시작-->
+<div class="wrap" id="main">
+	<header>
+		<div class="left">
+			<a href="main.html" class="logo"></a>
+		</div>
+		<ul class="menu">
+				<li>
+					<a href="company.html">회사소개</a>
+				</li>
+				<li>
+					<a href="member.html">구성원소개</a>
+				</li>
+				<li>
+					<a href="list.html">업무사례</a>
+				</li>
+				<li>
+					<a href="reserve.html">법률상담예약</a>
+				</li>
+				<li>
+					<a href="map.html">오시는길</a>
+				</li>
+			</ul>
+		<div class="right">
+			<a href="tel:02-3464-1568" class="m_none tel_number">02-3464-1568</a>
+			<button class="mobile_menu_btn pc_none" onclick="mdShow('mdHamburger')"></button>
+		</div>
+	</header>
+	<div class="content_wrap">
+		<section class="panel home" data-section-name="메인">
+			<p class="animate__animated animate__fadeInDown"><span>성공 결과</span>로 말하는<br/>산재 전문 <br class="pc_tab_none"/> 법무법인 더보상</p>
+		</section>
+		<section class="panel panel1" data-section-name="성공건수">
+			<div class="content_group">
+				<div class="txt_group animate__animated" >
+					<p><i class="icon_marks"></i>의뢰인의 사건 성공을 위해서</p>
+					<p>근로복지공단 <br class="pc_tab_none"/>지침변경도 이끌어내는</p>
+					<p>산재분야를 이끄는 선도주자</p>
+					<p >법무법인 더보상의 발자취<i class="icon_marks"></i></p>
+				</div>
+				<div class="counter_group m_any_pc_none" data-aos="fade-up">
+					<div class="txt-box">
+						<div class="count-box">
+							<span class="main_count">2029</span>
+							<span>건</span>
+						</div>
+						<p class="label">성공사례</p>
+					</div>
+					<div class="txt-box">
+						<div class="count-box">
+							<span class="main_count">1888</span>
+							<span>건</span>
+						</div>
+						<p class="label">산재 성공사례</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="panel panel2" data-section-name="히스토리">
+			<div class="content_group box_width">
+				<div class="tit_group white">
+					<p class="sc_tit small animate__animated">
+						업계 최초 <span>’성공’</span><br />
+						선도적인 대법원 <span>’승소’</span><br />
+						근로복지공단 <span>’지침 변경’</span><br />
+						오직 법무법인 더보상만이 <br class="pc_tab_none"/>걸어온 길입니다
+					</p>
+				</div>
+				<div class="data_list">
+					<a href="#">
+						<img src="images/main_history_data_img01.png">
+					</a>
+					<a href="#">
+						<img src="images/main_history_data_img02.png">
+					</a>
+					<a href="#">
+						<img src="images/main_history_data_img03.png">
+					</a>
+					<a href="#">
+						<img src="images/main_history_data_img01.png">
+					</a>
+				</div>
+			</div>
+			<div class="bg"></div>
+		</section>
+		<section class="panel panel3" data-section-name="전문가">
+			<div class="content_group ">
+				<div class="tit_group al_center box_width">
+					<p class="sc_tit animate__animated"><span>대한 변협 공인 산재 전문 변호사</span>로<br />이루어진 변호사단</p>
+					<span class="sub_tit">산재 분야 전문성으로 성공을 이끌어 내는 <br class="pc_tab_none"/>맞춤 법률 서비스</span>
+				</div>
+				<div class="member_group">
+					<div>
+						<ul>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+						</ul>
+					</div>
+					<div>
+						<ul>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="panel panel4" data-section-name="원팀체제">
+			<div class="content_group box_width">
+				<div class="tit_group">
+					<p class="sc_tit"><span>산재 전문 변호사</span>와 <br class="pc_tab_none"/><span>산재 전문 노무사</span>의<br/>사건별 ONE TEAM 체제</p>
+					<span class="sub_tit">산재 전문 특화 로펌의 산재 전문가들이 제공하는 <br class="pc_tab_none"/>고객 맞춤형 법률 솔루션</span>
+				</div>
+				<div class="img_group">
+					<img src="images/main_oneteam_img.png">
+				</div>
+			</div>
+		</section>
+		<section class="panel panel5" data-section-name="성공사례">
+			<div class="content_group box_width">
+				<div class="tit_group al_center">
+					<p class="sc_tit animate__animated"><span>법무법인 더보상</span>은 <br class="pc_tab_none"/><span>결과</span>로 말하겠습니다</p>
+					<span class="sub_tit">법무법인 더보상의 성공사례를 확인해보세요</span>
+				</div>
+				<div class="content_box">
+					<div class="search_group">
+						<div class="search_form">
+							<input type="text" placeholder="검색어를 입력해주세요" name="search">
+							<button type="submit"><i class="icon-search"></i></button>
+						</div>
+						<div class="tag_group">
+							<a href="#">#진폐</a>
+							<a href="#">#만성폐쇄성폐질환</a>
+							<a href="#">#소음성난청</a>
+							<a href="#">#근골격계</a>
+							<a href="#">#뇌심혈관</a>
+							<a href="#">#직업성암</a>
+							<a href="#">#업무상사고</a>
+							<a href="#">#정신질환</a>
+							<a href="#">#민사손해배상</a>
+							<a href="#">#형사손해배상</a>
+							<a href="#">#중대재해처벌법</a>
+						</div>
+					</div>
+					<div class="list_group">
+						<div class="item_box">
+							<a href="#" class="item">
+								<div class="top_group">
+									<span class="label">행정소송</span>
+									<span class="tag">승소</span>
+								</div>
+								<div class="detail_group">
+									<p class="tit">간암 / 유족급여 및 장의비 부지급 처분 취소 소송 승소</p>
+									<p class="txt">망인께서는 2008년경 20대 중반에 공기업에 기술직군으로 입사하여 약 8년간 엔지니어로만 근무를 하셨습니다. 2016년 4월경</p>
+									<span class="date">2023.05.05</span>
+								</div>
+							</a>
+							<a href="#" class="item">
+								<div class="top_group">
+									<span class="label">손해배상</span>
+									<span class="tag">승소</span>
+								</div>
+								<div class="detail_group">
+									<p class="tit">사업주 대리 / 손해배상(산) 원고패 판결</p>
+									<p class="txt">망인께서는 2008년경 20대 중반에 공기업에 기술직군으로 입사하여 약 8년간 엔지니어로만 근무를 하셨습니다. 2016년 4월경</p>
+									<span class="date">2023.05.05</span>
+								</div>
+							</a>
+							<a href="#" class="item">
+								<div class="top_group">
+									<span class="label">행정소송</span>
+									<span class="tag">승소</span>
+								</div>
+								<div class="detail_group">
+									<p class="tit">간암 / 유족급여 및 장의비 부지급 처분 취소 소송 승소</p>
+									<p class="txt">망인께서는 2008년경 20대 중반에 공기업에 기술직군으로 입사하여 약 8년간 엔지니어로만 근무를 하셨습니다. 2016년 4월경</p>
+									<span class="date">2023.05.05</span>
+								</div>
+							</a>
+							<a href="#" class="item">
+								<div class="top_group">
+									<span class="label">행정소송</span>
+									<span class="tag">승소</span>
+								</div>
+								<div class="detail_group">
+									<p class="tit">간암 / 유족급여 및 장의비 부지급 처분 취소 소송 승소</p>
+									<p class="txt">망인께서는 2008년경 20대 중반에 공기업에 기술직군으로 입사하여 약 8년간 엔지니어로만 근무를 하셨습니다. 2016년 4월경</p>
+									<span class="date">2023.05.05</span>
+								</div>
+							</a>
+						</div>
+						<div class="btn_group center">
+							<button class="fill_main">승소 사례 더보기<i></i></button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="panel panel6" data-section-name="스토리">
+			<div class="content_group box_width">
+				<div class="tit_group al_center">
+					<p class="sc_tit animate__animated"><span>법무법인 더보상 블로그</span></p>
+					<span class="sub_tit">
+						산재에 대한 궁금증, 소송 진행에 대한 궁금증 등<br/>
+						<em class="green">산재 전문가인 더보상 변호사와 노무사가 <br class="pc_tab_none"/>직접 작성하는 블로그</em>에서 확인해보세요
+					</span>
+					<div class="btn_group center">
+						<button class="fill_naver"><i class="naver_logo"></i> 블로그 방문<i></i></button>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="panel panel7" data-section-name="법률상담">
+			<div class="content_group box_width">
+				<div class="reserve_area">
+					<div class="smalltit_group">
+						<p class="tit">법률상담 예약</p>
+						<span>온라인 상담을 남겨주세요. <br class="pc_tab_none"/>전문가가 연락드려 상담드립니다.</span>
+					</div>
+					<div class="form">
+						<div class="input_group"> <!--텍스트 넘칠 시, error 클레스 추가-->
+							<div class="text_group">
+								<label>이름</label>
+								<input type="text" placeholder="이름을 작성해주세요">
+							</div>
+						</div>
+						<div class="input_group"> <!--텍스트 넘칠 시, error 클레스 추가-->
+							<div class="text_group">
+								<label>전화번호</label>
+								<input type="number" placeholder="전화번호를 작성해주세요">
+							</div>
+						</div>
+						<p class="input_group">
+							<label>메모</label>
+							<textarea placeholder="요청사항을 입력해주세요"></textarea>
+						</p>
+						<div>
+							<div class="checkbox_group">
+							  <input type="checkbox" id="naver">
+							  <label for="naver"><span>(필수)</span>개인정보 취금방침에 동의합니다.</label>
+							</div>
+						</div>
+						<div class="btn_group center">
+							<button class="fill_main">상담 신청하기<i></i></button>
+						</div>
+					</div>
+				</div>
+				<div class="map_area">
+					<div class="smalltit_group">
+						<p class="tit">오시는 길</p>
+						<span>항상 친절하게 마중하겠습니다.</span>
+					</div>
+					<div class="map_info_group">
+						<div class="img"></div>
+						<ul>
+							<li>
+								<div class="label">
+									<img src="images/icon_20_fill_place.svg">
+									<span>주소</span>
+								</div>
+								<p class="value">서울시 서초구 마방로2길 82 태성빌딩 4층</p>
+							</li>
+							<li>
+								<div class="label">
+									<img src="images/icon_20_fill_call.svg">
+									<span>전화</span>
+								</div>
+								<p class="value">02-3463-1568</p>
+							</li>
+							<li>
+								<div class="label">
+									<img src="images/icon_20_fill_tram.svg">
+									<span>찾아오시는 길</span>
+								</div>
+								<p class="value"><span class="label_subway">신분당</span>양재시민의숲역 3번출구</p>
+							</li>
+							<li>
+								<div class="label">
+									<img src="images/icon_20_fill_mail.svg">
+									<span>이메일</span>
+								</div>
+								<p class="value">thebslaw@thebosang.kr</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+	<footer data-section-name="footer">
+		<div class="footer_area">
+			<h2 class="logo"><img src="images/logo_vertical_white.svg"></h2>
+			<div class="info_group">
+				<div class="url_rink">
+					<a href="#">개인정보 처리방침</a>
+					<a href="#">면책공고</a>
+					<a href="#">이메일무단수집거부</a>
+				</div>
+				<div class="detail">
+					<p class="half">
+						<span><bold>대표 변호사 :</bold> 유정은</span>
+						<span><bold>사업자번호 :</bold> 254-87-02187</span>
+					</p>
+					<p class="half">
+						<span><bold>주소  :</bold> 서울시 서초구 마방로2길 82 태성빌딩 4층</span>
+						<span><bold>전화번호 :</bold> 02-3463-1568</span>
+					</p>
+					<p>
+						<span class="only">copyright(c) 법무법인 더보상 All Rights Reserved</span>
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<ul class="float_btn_group">
+		<li class="call">
+			<a href="tel:02-3464-1568">
+				<i></i>
+				<p>전화상담<span>02-3464-1568</span></p>
+			</a>
+		</li>
+		<li class="mail">
+			<a href="#">
+				<i></i>
+				<p>메일 상담</p>
+			</a>
+		</li>
+		<li class="kakao">
+			<a href="#">
+				<i></i>
+				<p>카카오톡 상담</p>
+			</a>
+		</li>
+		<li class="blog">
+			<a href="#">
+				<i></i>
+				<p>블로그</p>
+			</a>
+		</li>
+	</ul>
+</div>
+<!--S 마크업 끝-->	
+<!--/////////S 모달팝업 영역 시작/////////-->
+<!--햄버거 팝업-->
+<div class="modal" id="mdHamburger">
+  <div class="modal_container">
+    <div class="modal_box">
+		<div class="modal_content">
+			<div class="md_header">
+				<a href="#" class="logo"></a>
+				<button class="close_btn" onclick="mdHide('mdHamburger')">close</button>
+			</div>
+			<ul class="menu">
+				<li>
+					<a href="company.html">회사소개</a>
+				</li>
+				<li>
+					<a href="member.html">구성원소개</a>
+				</li>
+				<li>
+					<a href="list.html">업무사례</a>
+				</li>
+				<li>
+					<a href="reserve.html">법률상담예약</a>
+				</li>
+				<li>
+					<a href="map.html">오시는길</a>
+				</li>
+			</ul>
+		</div>
+    </div>
+  </div>
+</div>
+<!--E 모달팝업 영역 끝-->
+<!--/////////S 스크립트 시작/////////-->
+	<!--다중 모달팝업-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" type="text/javascript"></script>
+    <script>
+        function mdShow(mdName) {
+        var $layer = $("#" + mdName);
+        $layer.addClass("show");
+        document.body.style.overflow = 'hidden';
+    }
+
+    function mdHide(mdName) {
+        $("#" + mdName).removeClass("show");
+        document.body.style.overflow = 'initial';
+    }
+    // 팝업 바깥요소 클릭 시 팝업 닫도록 설정.
+    $(".modal_container").on("click", function(event) {
+        // 클릭한 요소가 .m_content 또는 그 하위 요소인 경우는 팝업 안 닫도록.
+        if (!$(event.target).closest(".modal_box").length) {
+            // 팝업을 닫습니다.
+            $(this).closest(".modal").removeClass("show");
+			 document.body.style.overflow = 'initial';
+        }
+    });
+    </script>
+	<!--스크롤리파이-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.19/jquery.scrollify.min.js"></script>
+	
+	<script>
+	var animationStarted = false;
+	function startCounterAnimation() {
+		$('.main_count').each(function () {
+			var $counter = $(this);
+			var targetValue = parseInt($counter.text());
+			$counter.prop('Counter', 0).animate({
+				Counter: targetValue
+			}, {
+				duration: 1000,
+				easing: 'swing',
+				step: function (now) {
+					$counter.text(Math.ceil(now));
+				}
+			});
+		});
+		animationStarted = true; // 애니메이션 실행 표시
+	}
+		
+	$(window).scroll(function () {
+		if(animationStarted) return; // 이미 애니메이션이 실행되었으면 더 이상 진행하지 않음
+		var scroll = $(window).scrollTop();
+		var windowHeight = $(window).height();
+		var elementOffset = $(".counter_group").offset().top;
+		var panelDate = $(".panel2 .data_list").offset().top;
+		
+		if (scroll + windowHeight >= elementOffset && $(window).width() <= 1320) {
+			startCounterAnimation();
+		}
+		
+		if (scroll + windowHeight >= panelDate && $(window).width() <= 1320) {
+			$(".panel2 .data_list").addClass("on");
+		}
+		
+	});
+
+		
+		$(function () {
+			// 가로 너비가 1320px 이상인 경우에만 Scrollify 초기화
+			if ($(window).width() >= 1320) {
+				$.scrollify({
+					section: ".panel",
+					scrollbars:false,
+					scrollSpeed: 700,
+					interstitialSection: 'footer', /*원페이지스크롤을 구현하지 않을 페이지 , 별도 섹션으로 볼 페이지*/
+					before: function (i, panels) {
+						var ref = panels[i].attr("data-section-name");
+						$(".pagination .active").removeClass("active");
+						$(".pagination").find("a[href=\"#" + ref + "\"]").addClass("active");
+
+						// 도달하면 클래스를 header에 추가
+						if (ref === "성공건수" || ref === "히스토리" || ref === "법률상담") {
+							$("header").addClass("white");
+						} else {
+							$("header").removeClass("white");
+						}
+						
+						if (ref === "메인") {
+							$(".home > p").addClass("animate__fadeInDown");
+						} else {
+							$(".home > p").removeClass("animate__fadeInDown");
+						}
+						
+						if (ref === "성공건수") {
+							// panel1이 화면에 나타나면 counter 애니메이션 시작
+							startCounterAnimation();
+							$(".panel1 .txt_group").addClass("animate__fadeIn");
+						}else {
+							$(".panel1 .txt_group").removeClass("animate__fadeIn");
+						}
+						
+						
+						if (ref === "히스토리") {
+							$(".panel2 .sc_tit").addClass("animate__fadeInLeft");
+							$(".panel2 .data_list").addClass("on");
+						} else {
+							$(".panel2 .sc_tit").removeClass("animate__fadeInLeft");
+							$(".panel2 .data_list").removeClass("on");
+						}
+						
+						if (ref === "전문가") {
+							$(".panel3 .sc_tit").addClass("animate__zoomIn");
+						} else {
+							$(".panel3 .sc_tit").removeClass("animate__zoomIn");
+						}
+						
+					
+						 
+						if (ref === "성공사례") {
+							$(".panel5 .sc_tit").addClass("animate__pulse");
+						} else {
+							$(".panel5 .sc_tit").removeClass("animate__pulse");
+						}
+						
+						if (ref === "스토리") {
+							$(".panel6 .sc_tit").addClass("animate__slideInUp");
+						} else {
+							$(".panel6 .sc_tit").removeClass("animate__slideInUp");
+						}
+						
+						if ( ref === 'footer' ) {
+							$("header").addClass("footer_white");
+						}else {
+							$("header").removeClass("footer_white");
+						}
+						
+					},
+				
+					afterRender: function () {
+						var pagination = "<ul class=\"pagination\">";
+						var activeClass = "";
+						$(".panel").each(function (i) {
+							activeClass = "";
+							if (i === 0) {
+								activeClass = "active";
+							}
+							pagination += "<li><a class=\"" + activeClass + "\" href=\"#" + $(this).attr("data-section-name") + "\"><span class=\"hover-text\">" + $(this).attr("data-section-name").charAt(0).toUpperCase() + $(this).attr("data-section-name").slice(1) + "</span></a></li>";
+						});
+
+						pagination += "</ul>";
+
+						$(".home").append(pagination);
+
+						$(".pagination a").on("click", $.scrollify.move);
+					}
+				});
+				
+				
+			}
+		});
+		
+	</script>
+	<!--모바일 화면 스크롤 이벤트 핸들러-->
+	<script>
+		function isElementInViewport(elem) {
+    var rect = elem.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+}
+
+// 스크롤 이벤트 핸들러
+$(window).scroll(function() {
+    var data_list = document.querySelector('.panel2 .data_list');
+	var panel4 = document.querySelector('.panel4');
+    
+    if (isElementInViewport(data_list)) {
+        $(data_list).addClass('on');
+    }else {
+		$(data_list).removeClass('on');
+	}
+	
+	 if (isElementInViewport(panel4)) {
+        $(panel4).addClass('on');
+    }
+});
+		
+		
+		//모바일 헤더
+		$(function(){
+  //변수 선언
+  var $header = $('header');
+  var $window = $(window);
+  var pageOffsetTop = 50;
+  
+  //반응형 리사이즈시 top값을 다시 계산
+  $window.resize(function(){
+    pageOffsetTop = $page.offset().top;
+  });
+  
+  //스크롤 감지 시
+  $window.on('scroll', function(){
+    var scrolled = $window.scrollTop() >= pageOffsetTop;
+    $header.toggleClass('down', scrolled); //스크롤 감지 시, header에 class="down" 추가
+  });
+});
+
+	</script>
+	<!--AOS 스크립트/모바일에서만 실행-->
+	<script type="text/javascript">
+		if ($(window).width() >= 1320) {
+			$(".m_any_pc_none").css("opacity", "1");
+			$(".m_any_pc_none").css("transform", "translate(0) scale(1)");
+		}
+		
+		AOS.init({
+			duration: 800, // 애니메이션 지속 시간 설정
+			once: true // 한 번만 실행 여부
+		});
+		
+	</script>
+
+<!--E 스크립트 끝-->
+	
+</body>
+</html>

@@ -1,0 +1,353 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>법무법인 더보상</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<!-- AOS 라이브러리 불러오기-->
+	<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"> 
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> 
+</head>
+
+<body class="scroll">
+<!--S 마크업 시작-->
+<div class="wrap sub_wrap">
+	<header>
+		<div class="left">
+			<a href="main.html" class="logo"></a>
+		</div>
+		<ul class="menu">
+				<li>
+					<a href="company.html">회사소개</a>
+				</li>
+				<li>
+					<a href="member.html">구성원소개</a>
+				</li>
+				<li>
+					<a href="list.html" class="active">업무사례</a>
+				</li>
+				<li>
+					<a href="reserve.html">법률상담예약</a>
+				</li>
+				<li>
+					<a href="map.html">오시는길</a>
+				</li>
+			</ul>
+		<div class="right">
+			<a href="tel:02-3464-1568" class="m_none tel_number">02-3464-1568</a>
+			<button class="mobile_menu_btn pc_none" onclick="mdShow('mdHamburger')"></button>
+		</div>
+	</header>
+	<div class="content_wrap sub_businesslist">
+		<section>
+			<div class="content_area">
+				<div class="sc_tit box_width">
+					<span>업무사례</span>
+					<p>법무법인 더보상은<br/>의뢰인의 권리를 찾아드립니다</p>
+				</div>
+				<div class="type_tabmenu_group">
+					<ul class="box_width">
+						<li>
+							<a href="" class="active"> <!--선택 시, active-->
+								<div class="type_img">
+									<img src="images/img_list_type01.svg">
+								</div>
+								<span class="label">진폐증</span>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<div class="type_img">
+									<img src="images/img_list_type02.svg">
+								</div>
+								<span class="label">만성폐쇄성폐질환</span>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<div class="type_img">
+									<img src="images/img_list_type03.svg">
+								</div>
+								<span class="label">소음성 난청</span>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<div class="type_img">
+									<img src="images/img_list_type04.svg">
+								</div>
+								<span class="label">근골격계</span>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<div class="type_img">
+									<img src="images/img_list_type05.svg">
+								</div>
+								<span class="label">뇌심혈관</span>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<div class="type_img">
+									<img src="images/img_list_type06.svg">
+								</div>
+								<span class="label">직업성암</span>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<div class="type_img">
+									<img src="images/img_list_type07.svg">
+								</div>
+								<span class="label">업무상 사고</span>
+							</a>
+						</li><li>
+							<a href="">
+								<div class="type_img">
+									<img src="images/img_list_type08.svg">
+								</div>
+								<span class="label">정신질환</span>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<div class="type_img">
+									<img src="images/img_list_type09.svg">
+								</div>
+								<span class="label">민사손해배상</span>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<div class="type_img">
+									<img src="images/img_list_type10.svg">
+								</div>
+								<span class="label">형사손해배상</span>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<div class="type_img">
+									<img src="images/img_list_type11.svg">
+								</div>
+								<span class="label">중대재해처벌법</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="case_group box_width">
+					<a href="detail.html" class="civil"> <!-- civil 민사 / criminal 형사 / administrative 행정-->
+						<span class="tag">민사</span>
+						<div class="tit">
+							<span>임대차 보증금</span>
+							<span class="conclusion">전액반환</span>
+						</div>
+						<ul class="check_group">
+							<li>임차권등기, 채무불이행자명부등재</li>
+							<li class="point">전세보증금 전액 반환</li>
+						</ul>
+					</a>
+					<a href="detail.html" class="administrative">
+						<span class="tag">행정</span>
+						<div class="tit">
+							<span>임대차 보증금</span>
+							<span class="conclusion">전액반환</span>
+						</div>
+						<ul class="check_group">
+							<li>임차권등기, 채무불이행자명부등재</li>
+							<li class="point">전세보증금 전액 반환</li>
+						</ul>
+					</a>
+					<a href="detail.html" class="criminal">
+						<span class="tag">형사</span>
+						<div class="tit">
+							<span>임대차 보증금</span>
+							<span class="conclusion">전액반환</span>
+						</div>
+						<ul class="check_group">
+							<li>임차권등기, 채무불이행자명부등재</li>
+							<li class="point">전세보증금 전액 반환</li>
+						</ul>
+					</a>
+					<a href="detail.html" class="criminal">
+						<span class="tag">형사</span>
+						<div class="tit">
+							<span>임대차 보증금</span>
+							<span class="conclusion">전액반환</span>
+						</div>
+						<ul class="check_group">
+							<li>임차권등기, 채무불이행자명부등재</li>
+							<li class="point">전세보증금 전액 반환</li>
+						</ul>
+					</a>
+					<a href="detail.html" class="criminal">
+						<span class="tag">형사</span>
+						<div class="tit">
+							<span>임대차 보증금</span>
+							<span class="conclusion">전액반환</span>
+						</div>
+						<ul class="check_group">
+							<li>임차권등기, 채무불이행자명부등재</li>
+							<li class="point">전세보증금 전액 반환</li>
+						</ul>
+					</a>
+					<a href="detail.html" class="civil">
+						<span class="tag">민사</span>
+						<div class="tit">
+							<span>임대차 보증금</span>
+							<span class="conclusion">전액반환</span>
+						</div>
+						<ul class="check_group">
+							<li>임차권등기, 채무불이행자명부등재</li>
+							<li class="point">전세보증금 전액 반환</li>
+						</ul>
+					</a>
+					<a href="detail.html" class="administrative">
+						<span class="tag">행정</span>
+						<div class="tit">
+							<span>임대차 보증금</span>
+							<span class="conclusion">전액반환</span>
+						</div>
+						<ul class="check_group">
+							<li>임차권등기, 채무불이행자명부등재</li>
+							<li class="point">전세보증금 전액 반환</li>
+						</ul>
+					</a>
+					<a href="detail.html" class="administrative">
+						<span class="tag">행정</span>
+						<div class="tit">
+							<span>임대차 보증금</span>
+							<span class="conclusion">전액반환</span>
+						</div>
+						<ul class="check_group">
+							<li>임차권등기, 채무불이행자명부등재</li>
+							<li class="point">전세보증금 전액 반환</li>
+						</ul>
+					</a>
+				</div>
+			</div>
+		</section>
+	</div>
+	<footer>
+		<div class="footer_area">
+			<h2 class="logo"><img src="images/logo_vertical_white.svg"></h2>
+			<div class="info_group">
+				<div class="url_rink">
+					<a href="#">개인정보 처리방침</a>
+					<a href="#">면책공고</a>
+					<a href="#">이메일무단수집거부</a>
+				</div>
+				<div class="detail">
+					<p class="half">
+						<span><bold>대표 변호사 :</bold> 유정은</span>
+						<span><bold>사업자번호 :</bold> 254-87-02187</span>
+					</p>
+					<p class="half">
+						<span><bold>주소  :</bold> 서울시 서초구 마방로2길 82 태성빌딩 4층</span>
+						<span><bold>전화번호 :</bold> 02-3463-1568</span>
+					</p>
+					<p>
+						<span class="only">copyright(c) 법무법인 더보상 All Rights Reserved</span>
+					</p>
+				</div>
+			</div>
+				<ul class="float_btn_group">
+					<li class="call">
+						<a href="tel:02-3464-1568">
+							<i></i>
+							<p>전화상담<span>02-3464-1568</span></p>
+						</a>
+					</li>
+					<li class="mail">
+						<a href="#">
+							<i></i>
+							<p>메일 상담</p>
+						</a>
+					</li>
+					<li class="kakao">
+						<a href="#">
+							<i></i>
+							<p>카카오톡 상담</p>
+						</a>
+					</li>
+					<li class="blog">
+						<a href="#">
+							<i></i>
+							<p>블로그</p>
+						</a>
+					</li>
+				</ul>
+		</div>
+	</footer>
+</div>
+<!--S 마크업 끝-->	
+<!--/////////S 모달팝업 영역 시작/////////-->
+<!--햄버거 팝업-->
+<div class="modal" id="mdHamburger">
+  <div class="modal_container">
+    <div class="modal_box">
+		<div class="modal_content">
+			<div class="md_header">
+				<a href="#" class="logo"></a>
+				<button class="close_btn" onclick="mdHide('mdHamburger')">close</button>
+			</div>
+			<ul class="menu">
+				<li>
+					<a href="company.html">회사소개</a>
+				</li>
+				<li>
+					<a href="member.html">구성원소개</a>
+				</li>
+				<li>
+					<a href="list.html">업무사례</a>
+				</li>
+				<li>
+					<a href="reserve.html">법률상담예약</a>
+				</li>
+				<li>
+					<a href="map.html">오시는길</a>
+				</li>
+			</ul>
+		</div>
+    </div>
+  </div>
+</div>
+<!--/////////S 스크립트 시작/////////-->
+	<!--다중 모달팝업-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" type="text/javascript"></script>
+    <script>
+        function mdShow(mdName) {
+        var $layer = $("#" + mdName);
+        $layer.addClass("show");
+        document.body.style.overflow = 'hidden';
+    }
+
+    function mdHide(mdName) {
+        $("#" + mdName).removeClass("show");
+        document.body.style.overflow = 'initial';
+    }
+    // 팝업 바깥요소 클릭 시 팝업 닫도록 설정.
+    $(".modal_container").on("click", function(event) {
+        // 클릭한 요소가 .m_content 또는 그 하위 요소인 경우는 팝업 안 닫도록.
+        if (!$(event.target).closest(".modal_box").length) {
+            // 팝업을 닫습니다.
+            $(this).closest(".modal").removeClass("show");
+			 document.body.style.overflow = 'initial';
+        }
+    });
+    </script>
+	<!--AOS 스크립트-->
+	<script type="text/javascript">
+		AOS.init({
+			easing: 'ease-out-back',
+			duration: 1000
+		});
+	</script>
+<!--E 스크립트 끝-->
+	
+</body>
+</html>

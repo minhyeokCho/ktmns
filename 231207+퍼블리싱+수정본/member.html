@@ -1,0 +1,329 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>법무법인 더보상</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<!-- AOS 라이브러리 불러오기-->
+	<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"> 
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> 
+</head>
+
+<body class="scroll">
+<!--S 마크업 시작-->
+<div class="wrap sub_wrap">
+	<header>
+		<div class="left">
+			<a href="main.html" class="logo"></a>
+		</div>
+		<ul class="menu">
+				<li>
+					<a href="company.html">회사소개</a>
+				</li>
+				<li>
+					<a href="member.html" class="active">구성원소개</a>
+				</li>
+				<li>
+					<a href="list.html">업무사례</a>
+				</li>
+				<li>
+					<a href="reserve.html">법률상담예약</a>
+				</li>
+				<li>
+					<a href="map.html">오시는길</a>
+				</li>
+			</ul>
+		<div class="right">
+			<a href="tel:02-3464-1568" class="m_none tel_number">02-3464-1568</a>
+			<button class="mobile_menu_btn pc_none" onclick="mdShow('mdHamburger')"></button>
+		</div>
+	</header>
+	<div class="content_wrap sub_member">
+		<section>
+			<div class="content_area box_width">
+				<div class="sc_tit">
+					<span>구성원 소개</span>
+					<p>법무법인 더보상의 <br class="pc_tab_none"/><em class="main">법률 전문가를 소개합니다</em></p>
+				</div>
+				<div class="member_list_area">
+					<div class="main_member">
+						<h3 class="tit">대표 변호사</h3>
+						<ul>
+							<li class="jungeun">
+								<a href="#" onclick="mdShow('mdMemberJungeun')">
+									<div class="img"></div>
+									<div class="txt_group">
+										<span>대표 변호사</span>
+										<p>유정은</p>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="team_member">
+						<h3 class="tit">소속 변호사</h3>
+						<ul>
+							<li class="hyejin">
+								<a href="#">
+									<div class="img"></div>
+									<div class="txt_group">
+										<span>수석 변호사</span>
+										<p>안혜진</p>
+									</div>
+								</a>
+							</li>
+							<li class="hyeonggeon">
+								<a href="#">
+									<div class="img"></div>
+									<div class="txt_group">
+										<span>소속 변호사</span>
+										<p>이형건</p>
+									</div>
+								</a>
+							</li>
+							<li class="yongtae">
+								<a href="#">
+									<div class="img"></div>
+									<div class="txt_group">
+										<span>소속 변호사</span>
+										<p>김용태</p>
+									</div>
+								</a>
+							</li>
+							<li class="jaewon">
+								<a href="#">
+									<div class="img"></div>
+									<div class="txt_group">
+										<span>소속 변호사</span>
+										<p>이재원</p>
+									</div>
+								</a>
+							</li>
+							<li class="hyogeon">
+								<a href="#">
+									<div class="img"></div>
+									<div class="txt_group">
+										<span>소속 변호사</span>
+										<p>이효건</p>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="team_member">
+						<h3 class="tit">소속 노무사</h3>
+						<ul>
+							<li class="jungeun">
+								<a href="#">
+									<div class="img"></div>
+									<div class="txt_group">
+										<span>수석 노무사</span>
+										<p>김선명</p>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+	<footer>
+		<div class="footer_area">
+			<h2 class="logo"><img src="images/logo_vertical_white.svg"></h2>
+			<div class="info_group">
+				<div class="url_rink">
+					<a href="#">개인정보 처리방침</a>
+					<a href="#">면책공고</a>
+					<a href="#">이메일무단수집거부</a>
+				</div>
+				<div class="detail">
+					<p class="half">
+						<span><bold>대표 변호사 :</bold> 유정은</span>
+						<span><bold>사업자번호 :</bold> 254-87-02187</span>
+					</p>
+					<p class="half">
+						<span><bold>주소  :</bold> 서울시 서초구 마방로2길 82 태성빌딩 4층</span>
+						<span><bold>전화번호 :</bold> 02-3463-1568</span>
+					</p>
+					<p>
+						<span class="only">copyright(c) 법무법인 더보상 All Rights Reserved</span>
+					</p>
+				</div>
+			</div>
+				<ul class="float_btn_group">
+					<li class="call">
+						<a href="tel:02-3464-1568">
+							<i></i>
+							<p>전화상담<span>02-3464-1568</span></p>
+						</a>
+					</li>
+					<li class="mail">
+						<a href="#">
+							<i></i>
+							<p>메일 상담</p>
+						</a>
+					</li>
+					<li class="kakao">
+						<a href="#">
+							<i></i>
+							<p>카카오톡 상담</p>
+						</a>
+					</li>
+					<li class="blog">
+						<a href="#">
+							<i></i>
+							<p>블로그</p>
+						</a>
+					</li>
+				</ul>
+		</div>
+	</footer>
+</div>
+<!--S 마크업 끝-->	
+<!--/////////S 모달팝업 영역 시작/////////-->
+<!--햄버거 팝업-->
+<div class="modal" id="mdHamburger">
+  <div class="modal_container">
+    <div class="modal_box">
+		<div class="modal_content">
+			<div class="md_header">
+				<a href="#" class="logo"></a>
+				<button class="close_btn" onclick="mdHide('mdHamburger')">close</button>
+			</div>
+			<ul class="menu">
+				<li>
+					<a href="company.html">회사소개</a>
+				</li>
+				<li>
+					<a href="member.html">구성원소개</a>
+				</li>
+				<li>
+					<a href="list.html">업무사례</a>
+				</li>
+				<li>
+					<a href="reserve.html">법률상담예약</a>
+				</li>
+				<li>
+					<a href="map.html">오시는길</a>
+				</li>
+			</ul>
+		</div>
+    </div>
+  </div>
+</div>
+<!--맴버 디테일 팝업-->
+<div class="modal member_popup" id="mdMemberJungeun">
+  <div class="modal_container">
+    <div class="modal_box">
+		<div class="modal_content">
+			<div class="profile_img_box">
+			</div>
+			<div class="member_info_group">
+				<div class="name_group">
+					<p>유정은<span>대표 변호사</span></p>
+					<button class="close_btn" onclick="mdHide('mdMemberJungeun')">close</button>
+				</div>
+				<div class="half">
+					<div class="contact_group">
+						<div class="tit">연락처</div>
+						<ul>
+							<li>
+								<span class="label">Phone</span>
+								<p class="value">010-2400-1004</p>
+							</li>
+							<li>
+								<span class="label">Fax</span>
+								<p class="value">02-939-0000</p>
+							</li>
+							<li>
+								<span class="label">E-mail</span>
+								<p class="value">youjungeun1004@naver.com</p>
+							</li>
+						</ul>
+					</div>
+					<div class="profile_group scroll-custom">
+						<div class="tit">프로필</div>
+						<ul>
+							<li>
+								<span class="label">학력</span>
+								<p class="value">서라벌 고등학교</p>
+								<p class="value">동국대학교 법과대학 법학과</p>
+								<p class="value">동국대학교 일반대학원 법학석사(지적재산권법)</p>
+								<p class="value">동국대학교 법학전문대학원</p>
+							</li>
+							<li>
+								<span class="label">경력</span>
+								<p class="value">대한변협 형사전문</p>
+								<p class="value">대한변협 가사전문</p>
+								<p class="value">기획재정부 사무사 자격</p>
+							</li>
+							<li>
+								<span class="label">주요 활동</span>
+								<p class="value">한국가정법률상담소 백인변호사단</p>
+								<p class="value">노무법인 의연 협력변호사</p>
+								<p class="value">노원구 지방세 선정 대리인</p>
+								<p class="value">학교법인 민정학원 고문변호사</p>
+							</li>
+							<li>
+								<span class="label">주요 실적</span>
+								<p class="value">주요 실적 내용을 넣어주세요</p>
+								<p class="value">주요 실적 내용을 넣어주세요</p>
+								<p class="value">주요 실적 내용을 넣어주세요</p>
+							</li>
+							<li>
+								<span class="label">연관 콘텐츠</span>
+								<p class="value">연관 콘텐츠 내용을 넣어주세요</p>
+								<p class="value">연관 콘텐츠 내용을 넣어주세요</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="btn_group">
+					<button class="fill_naver">더보상 <i class="naver_logo"></i> 블로그 보기<i></i></button>
+					<button class="fill_main">법률 상담 예약<i></i></button>
+				</div>
+			</div>
+		</div>
+    </div>
+  </div>
+</div>
+<!--E 모달팝업 영역 끝-->
+<!--/////////S 스크립트 시작/////////-->
+	<!--다중 모달팝업-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" type="text/javascript"></script>
+    <script>
+        function mdShow(mdName) {
+        var $layer = $("#" + mdName);
+        $layer.addClass("show");
+        document.body.style.overflow = 'hidden';
+    }
+
+    function mdHide(mdName) {
+        $("#" + mdName).removeClass("show");
+        document.body.style.overflow = 'initial';
+    }
+    // 팝업 바깥요소 클릭 시 팝업 닫도록 설정.
+    $(".modal_container").on("click", function(event) {
+        // 클릭한 요소가 .m_content 또는 그 하위 요소인 경우는 팝업 안 닫도록.
+        if (!$(event.target).closest(".modal_box").length) {
+            // 팝업을 닫습니다.
+            $(this).closest(".modal").removeClass("show");
+			 document.body.style.overflow = 'initial';
+        }
+    });
+    </script>
+	<!--AOS 스크립트-->
+	<script type="text/javascript">
+		AOS.init({
+			easing: 'ease-out-back',
+			duration: 1000
+		});
+	</script>
+<!--E 스크립트 끝-->
+	
+</body>
+</html>
