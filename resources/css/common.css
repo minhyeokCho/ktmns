@@ -31,8 +31,12 @@ body {font-size:1.6rem;}
 @media only screen and (max-width: 767px) {
     html {font-size:50%;}
 }
-.skip-link {position: fixed;width: 14rem;top: -4rem;left: 1rem;background: #fff;padding: 1rem 2rem;color: #383873;font-weight: 500;font-size: 1.4rem;text-align: center;transition: top 0.3s;z-index: 100;}
-.skip-link:focus {top: 1rem;}
+/* 접근성 : 건너뛰기 */
+#accessibility{position:absolute;left:0;top:0;z-index:130}
+#accessibility li{float:left}
+#accessibility a{position:absolute;width:1px;height:1px;top:-20px;overflow:hidden;text-align:center;font-size:1.6rem;}
+#accessibility a:focus, #accessibility a:active{position:absolute;top:0;width:20rem;height:auto;padding:5px;background-color:#fff;border:solid 1px #0079c6;color:#0079c6;z-index:2}
+
 .blind {
 	overflow:hidden;
 	font-size:0;

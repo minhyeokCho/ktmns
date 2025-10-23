@@ -18,11 +18,17 @@
 	<script src="./resources/js/ui.js"></script>
 </head>
 <body style="overflow: hidden;">
+<div id="accessibility">
+	<ul>
+		<li><a href="#header">주메뉴 바로가기</a></li>
+		<li><a href="#container">본문 바로가기</a></li>
+		<li><a href="#footer">푸터 바로가기</a></li>
+	</ul>
+</div>
 <div class="wrapper">
-	<a href="#container" class="skip-link">본문으로</a>
 
 	<!-- 사이트 헤더 영역-->
-	<header>
+	<header id="header">
 		<div class="head_top">
 			<h1>
 				<a href="#">
@@ -471,14 +477,14 @@
 							<p class="tot">전체 25건</p>
 							<ul class="dept01">
 								<li>
-									<a href="#">1919년</a>
+									<a href="#" class="active">1919년</a>
 									<ul class="dept02">
 										<li><a href="#">7월</a></li>
 										<li>
-											<a href="#">8월</a>
+											<a href="#" class="active">8월</a>
 											<ul class="dept03">
 												<li>
-													<a href="#">11일</a>
+													<a href="#" class="active">11일</a>
 													<ul class="dept04">
 														<li><a href="#"><span>創刊辭 - 창간사</span></a></li>
 														<li><a href="#"><span>臨時議政院의 開會 - 임시의정원의 개회</span></a></li>
@@ -517,65 +523,67 @@
 							<button class="btn_print"><span class="blind">프린트</span></button>
 						</div>
 						<div class="contents">
-							<ul class="meta">
-								<li>
-									<span>발행일</span>
-									<span>1919년 12월 21일</span>
-								</li>
-								<li>
-									<span>발행호</span>
-									<span>제 1호 2면 1단</span>
-								</li>
-								<li>
-									<span>발행주체</span>
-									<span>대한민국임시정부</span>
-								</li>
-								<li>
-									<span>발행지역</span>
-									<span>중국 상해</span>
-								</li>
-								<li>
-									<span>발행언어</span>
-									<span>국한문</span>
-								</li>
-								<li>
-									<span>유형</span>
-									<span>기타</span>
-								</li>
-							</ul>
-							<h2>時務感言(一)</h2>
-							<h3>一. 現局의 解決</h3>
-							<p class="desc">今後 吾族의 進行 如何는 곳 死活의 關한 問題라 當局한 諸氏의 圓滿한 思慮를 要하거니와 在野한 余도 責任所在에 論치 아니할 수 업도다 强한 鐵筆을 들어 隨意隨想하야 記코져 하노라 今日이란 今日은 我의 平生에 最大의 繁忙을 주는 때라 그러나 余의 能力이 밋지 못함으로 繁忙에 比例하야</p>
-							<table>
-								<colgroup>
-									<col>
-									<col>
-								</colgroup>
-								<thead>
-									<tr>
-										<th>헤더1</th>
-										<th>헤더2</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>내용1</td>
-										<td>내용1</td>
-									</tr>
-									<tr>
-										<td>내용2</td>
-										<td>내용2</td>
-									</tr>
-								</tbody>
-								<caption>테이블 캡션이 들어갑니다</caption>
-							</table>
-							<figure class="img">
-								<img src="./resources/images/temp/article_02.png" alt="이미지">
-							</figure>
-							<figcaption>
-								이미지 캡션이 들어갑니다
-								<button class="btn_plus"></button>
-							</figcaption>
+							<div class="cont_x">
+								<ul class="meta">
+									<li>
+										<span>발행일</span>
+										<span>1919년 12월 21일</span>
+									</li>
+									<li>
+										<span>발행호</span>
+										<span>제 1호 2면 1단</span>
+									</li>
+									<li>
+										<span>발행주체</span>
+										<span>대한민국임시정부</span>
+									</li>
+									<li>
+										<span>발행지역</span>
+										<span>중국 상해</span>
+									</li>
+									<li>
+										<span>발행언어</span>
+										<span>국한문</span>
+									</li>
+									<li>
+										<span>유형</span>
+										<span>기타</span>
+									</li>
+								</ul>
+								<h2>時務感言(一)</h2>
+								<h3>一. 現局의 解決</h3>
+								<p class="desc">今後 吾族의 進行 如何는 곳 死活의 關한 問題라 當局한 諸氏의 圓滿한 思慮를 要하거니와 在野한 余도 責任所在에 論치 아니할 수 업도다 强한 鐵筆을 들어 隨意隨想하야 記코져 하노라 今日이란 今日은 我의 平生에 最大의 繁忙을 주는 때라 그러나 余의 能力이 밋지 못함으로 繁忙에 比例하야</p>
+								<table>
+									<colgroup>
+										<col>
+										<col>
+									</colgroup>
+									<thead>
+										<tr>
+											<th>헤더1</th>
+											<th>헤더2</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>내용1</td>
+											<td>내용1</td>
+										</tr>
+										<tr>
+											<td>내용2</td>
+											<td>내용2</td>
+										</tr>
+									</tbody>
+									<caption>테이블 캡션이 들어갑니다</caption>
+								</table>
+								<figure class="img">
+									<img src="./resources/images/temp/article_02.png" alt="이미지">
+								</figure>
+								<figcaption>
+									이미지 캡션이 들어갑니다
+									<button class="btn_plus"></button>
+								</figcaption>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -604,7 +612,15 @@
 								</div>
 								<div class="swiper-slide">
 									<figure class="img">
-										<img src="./resources/images/temp/his_01.png" alt="독립신문 상해 국한문판">
+										<img src="./resources/images/temp/article_01.png" alt="독립신문 상해 국한문판">
+									</figure>
+									<figcaption>
+										이미지 제공 : <span>대한민국역사박물관</span>
+									</figcaption>
+								</div>
+								<div class="swiper-slide">
+									<figure class="img">
+										<img src="./resources/images/temp/article_02.png" alt="독립신문 상해 국한문판">
 									</figure>
 									<figcaption>
 										이미지 제공 : <span>대한민국역사박물관</span>

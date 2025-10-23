@@ -88,6 +88,20 @@ function initTree() {
 			$nextUl.stop(true, true).slideDown(180);
 		}
 	});
+
+	let resizeTimer;
+	$(window).on('resize', function() {
+		clearTimeout(resizeTimer); 
+		resizeTimer = setTimeout(function() {
+			if ($(window).width() <= 1259) {
+				if ($('.tree_wrap').hasClass('active')) {
+					$('.tree_wrap').removeClass('active');
+					syncTreeButtonText();
+				}
+			}
+		}, 0);
+	});
+	$(window).trigger('resize');
 }
 
 function initWideNarrow() {
@@ -582,22 +596,53 @@ function datepicker() {
 		dayNamesMin: ['일','월','화','수','목','금','토'],
 		showMonthAfterYear: true,
 		showOtherMonths: true,
-		yearRange: 'c-99:c+99'
+		// yearRange: 'c-99:c+99' // 이 옵션은 이제 필요 없어! 지워주자!
 	});
 
 	$( "#datepicker" ).datepicker({
 		changeMonth: true,
 		changeYear: true,
-		onChangeMonthYear: function() {
+		// month, year, inst는 현재 표시된 달, 년도, datepicker 인스턴스 정보야
+		onChangeMonthYear: function(year, month, inst) {
 			setTimeout(function() {
+				// --- 여기에 커스텀 년도 설정 로직 추가 ---
+				// 네가 원하는 년도들을 배열에 넣어줘! (예시로 2020년부터 2025년까지)
+				const desiredYears = [2020, 2021, 2022, 2023, 2024, 2025]; 
+				
+				// Datepicker의 년도 select 박스를 찾자
+				const $yearSelect = inst.dpDiv.find('.ui-datepicker-year');
+				
+				// 현재 선택되어 있는 년도를 기억해둬야 해
+				const currentSelectedYear = $yearSelect.val(); 
+
+				// 기존의 모든 년도 옵션들을 제거해
+				$yearSelect.empty(); 
+
+				// 이제 네가 원하는 년도들을 다시 추가할 거야
+				desiredYears.forEach(y => {
+					const option = $('<option></option>')
+						.attr('value', y) // 값은 년도
+						.text(y + '년');   // 보여지는 텍스트는 '년' 붙여서
+
+					// 만약 현재 선택된 년도가 우리가 추가할 년도와 같으면 선택 상태로 만들어줘
+					if (y == currentSelectedYear) {
+						option.attr('selected', 'selected'); 
+					}
+					$yearSelect.append(option); // select 박스에 옵션 추가
+				});
+				// --- 커스텀 년도 설정 로직 끝 ---
+
+				// 기존에 있던 다른 함수들도 잊지 말고 호출!
 				addYearSuffix();
 				applyNiceSelectToDatepicker();
-			}, 10);
+				removeAnchorFromNormalDays();
+			}, 10); // setTimeout으로 비동기 처리해서 datepicker 렌더링 후 실행되도록
 		},
 		onSelect: function(dateText, inst) {
 			setTimeout(function() {
 				addYearSuffix();
 				applyNiceSelectToDatepicker();
+				removeAnchorFromNormalDays();
 			}, 0);
 		},
 		beforeShowDay: function(date) {
@@ -611,14 +656,14 @@ function datepicker() {
 		}
 	});
 
-	$(document).off('click.dpLink').on('click.dpLink', '#datepicker .ui-datepicker-calendar .link-day', function(e) {
+	$(document).off('click.dpLink').on('click.dpLink', '#datepicker .ui-datepicker-calendar td.link-day, #datepicker .ui-datepicker-calendar td.link-day a', function(e) {
 		e.preventDefault();
 		e.stopPropagation();
 
 		const $dayCell = $(this).closest('td');
 		const clickedYear = $dayCell.data('year');
 		const clickedMonth = $dayCell.data('month') + 1;
-		const clickedDay = parseInt($(this).text(), 10);
+		const clickedDay = parseInt($dayCell.find('a, span').first().text().trim(), 10);
 
 		const formattedClickedMonth = String(clickedMonth).padStart(2, '0');
 		const formattedClickedDay = String(clickedDay).padStart(2, '0');
@@ -632,18 +677,31 @@ function datepicker() {
 	});
 
 	setTimeout(function() {
+		// 최초 로드 시에도 한 번 실행해서 년도 select 박스를 설정
+		const inst = $('#datepicker').data('datepicker');
+		if (inst) { // Datepicker 인스턴스가 존재할 때만 실행
+		    // 인스턴스에서 직접 currentYear와 currentMonth를 가져와서 전달
+		    inst.settings.onChangeMonthYear.call(inst.input[0], inst.currentYear, inst.currentMonth + 1, inst);
+		}
 		addYearSuffix();
 		applyNiceSelectToDatepicker();
+		removeAnchorFromNormalDays();
 	}, 0);
 
 	let dpResizeTimer;
 	$(window).off('resize.dp').on('resize.dp', function () {
-	clearTimeout(dpResizeTimer);
-	dpResizeTimer = setTimeout(function () {
-		$('#datepicker').datepicker('refresh');
-		addYearSuffix();
-		applyNiceSelectToDatepicker();
-	}, 10);
+		clearTimeout(dpResizeTimer);
+		dpResizeTimer = setTimeout(function () {
+			$('#datepicker').datepicker('refresh');
+			// 리사이즈 후에도 년도 설정을 다시 적용
+			const inst = $('#datepicker').data('datepicker');
+			if (inst) {
+			    inst.settings.onChangeMonthYear.call(inst.input[0], inst.currentYear, inst.currentMonth + 1, inst);
+			}
+			addYearSuffix();
+			applyNiceSelectToDatepicker();
+			removeAnchorFromNormalDays();
+		}, 10);
 	});
 }
 

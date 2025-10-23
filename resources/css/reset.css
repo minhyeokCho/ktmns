@@ -49,8 +49,8 @@ input:focus {outline:none;}
     height: 0;
 }
 .dragscroll::-webkit-scrollbar-thumb {background-color: transparent;}
-.view_detail .contents::-webkit-scrollbar  {width: 4px;}
-.tree_list::-webkit-scrollbar  {width: 4px;}
+.view_detail .contents::-webkit-scrollbar  {width: 4px; height: 4px;}
+.tree_list::-webkit-scrollbar  {width: 4px; height: 4px;}
 .view_detail .contents::-webkit-scrollbar-thumb {background-color: #424a75;}
 .tree_list::-webkit-scrollbar-thumb {background-color: #424a75;}
 

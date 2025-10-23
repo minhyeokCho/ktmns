@@ -17,11 +17,15 @@
 .ui-datepicker table {margin: 20px 0 0 0; font-size: 15px;}
 .ui-datepicker table th {border-bottom: 2px solid #eff0f4; padding: 15px 0; font-size: 14px; color: #222;}
 .ui-datepicker td {padding: 10px 12px;}
-.ui-datepicker-calendar tbody td .ui-state-default {height: 38px; width: 38px; line-height: 34px; border-radius: 50%; font-weight: 600; color: #222; text-align: center; border: none; background-color: transparent; transition: .2s;}
-.ui-datepicker-calendar tbody td .ui-state-default.ui-state-active,
-.ui-datepicker-calendar tbody td .ui-state-default:hover {background-color: #475def; color: #fff; font-weight: 800;}
-.ui-datepicker-calendar tbody td.link-day .ui-state-default {border: 2px solid #dadaf2; background-color: transparent; line-height: 3rem; color: #222; font-weight: 600;}
+.ui-datepicker-calendar tbody td .ui-state-default {height: 38px; width: 38px; border: 2px solid transparent; display: flex; align-items: center; justify-content: center; border-radius: 50%; font-weight: 600; color: #222; text-align: center; background-color: transparent; transition: .2s;}
+.ui-datepicker-calendar tbody td.link-day .ui-state-default {border-color: #dadaf2;}
+.ui-datepicker-calendar tbody td.link-day .ui-state-default:hover {border-color: #475def; background-color: #475def; color: #fff; font-weight: 800;}
 .ui-datepicker-day-select-wrap {display: none;}
+
+.view_list .ui-datepicker-calendar tbody td .ui-state-default.ui-state-active {border-color: #475def; background-color: #475def; color: #fff; font-weight: 800;}
+
+.ui-state-disabled, .ui-widget-content .ui-state-disabled {opacity: 1;}
+.ui-state-disabled, .ui-widget-content .ui-datepicker-other-month.ui-state-disabled {opacity: .35;}
 /* selectBox */
 .select01.nice-select {border-radius: 2px; border: 1px solid #d5d5d5; min-width: 7rem; height: 3.3rem; line-height: 3.1rem; padding-left: 1rem; padding-right: 3rem; font-size: 1.3rem;}
 .select02.nice-select {border-radius: .8rem; border: 1px solid rgba(188,188,188,0.72); min-width: 7.5rem; height: 4.2rem; line-height: 4rem; padding-left: 1rem; padding-right: 3.5rem; font-size: 1.5rem; font-weight: 700;}
@@ -76,8 +80,8 @@
 .sub_title .contL .breadcrumb ul {display: flex; align-items: center; margin: 0 1.2rem;}
 .sub_title .contL .breadcrumb li ~ li {margin-left: 1rem; padding-left: 1.4rem; background: url(../images/icons/arrow_bread.svg) no-repeat left center; background-size: .6rem auto;}
 .sub_title .contL .breadcrumb li a {font-size: 1.4rem; color: #222;}
-.sub_title .contL .tit {margin-top: 2rem; display: flex; align-items: flex-end; padding-right: 2rem;}
-.sub_title .contL .tit h2 {font-size: 3.8rem; font-weight: 800; color: #222;}
+.sub_title .contL .tit {margin-top: 2rem; display: flex; align-items: flex-end; padding-right: 5px;}
+.sub_title .contL .tit h2 {font-size: 3.8rem; font-weight: 800; color: #222; letter-spacing: -0.5px;}
 .sub_title .contL .tit p {margin-left: 2.4rem; font-size: 1.8rem; color: #222; font-weight: 500;}
 .sub_title .contL .tit strong {font-size: 2.4rem; font-weight:800; margin-left: 2rem;}
 .sub_title .contR {margin-left: auto;}
@@ -145,15 +149,18 @@
 .res_wrap .res_list li a {display: block; padding: 2.4rem 5px; border-bottom: 1px solid #c9c9c9; transition: .3s;}
 .res_wrap .res_list li a:hover {background-color: #f7f8fc;}
 .res_wrap .res_list .list_title {display: flex; flex-wrap: wrap;}
-.res_wrap .res_list .list_title p {font-size: 2.1rem; font-weight: 700;}
-.res_wrap .res_list .list_title strong {margin-left: 2.4rem; position: relative; box-shadow: inset 0 24px 0 #e1e1e1;}
-.res_wrap .res_list .list_title strong::before {position: absolute; left: -1rem; top: .5rem; width: 1px; height: 1.6rem; background-color: #ababab; display: block; content: '';}
+.res_wrap .res_list .list_title p {font-size: 2.1rem; font-weight: 700; }
+.res_wrap .res_list .list_title strong {margin-left: 2.2rem; position: relative}
+.res_wrap .res_list .list_title strong em {background-color: #e1e1e1;}
+.res_wrap .res_list .list_title strong::before {position: absolute; left: -1.2rem; top: .5rem; width: 1px; height: 1.6rem; background-color: #ababab; display: block; content: '';}
+
 .res_wrap .res_list .info {display: flex; margin-top: 2rem; gap:1rem 3rem; flex-wrap:wrap;}
 .res_wrap .res_list .info dl {display: flex; font-size: 1.4rem;}
 .res_wrap .res_list .info dt {color: #555;}
 .res_wrap .res_list .info dd {margin-left: 0.8rem; padding-left: 0.8rem; position: relative; color: #000;}
 .res_wrap .res_list .info dd::after {display: block; content: ''; width: 1px; height: 12px; background-color: #bdbdbd; position: absolute; left: 0; top: 2px;}
-.res_wrap .res_list .desc {margin-top: 1.3rem; color: #393939; line-height: 2.4rem;}
+.res_wrap .res_list .desc {margin-top: 1.3rem; color: #393939; line-height: 2.4rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis;}
+.res_wrap .res_list .desc em {background-color: #e1e1e1;}
 
 /* 신문잡지별보기_목록 */
 .view_list {display: flex; gap: 13rem;}
@@ -325,7 +332,8 @@
 .tree_list ul.dept04 li a:hover::after {opacity: 1;}
 .tree_list ul.dept04 li a::before {display: none;}
 .view_head .btn_print {margin-left: auto; background: url(../images/icons/icon_print.svg) no-repeat center; background-size: 2.3rem auto; width: 4rem; height: 4rem;}
-.view_detail .contents {padding: 3.2rem; overflow-y: auto;}
+.view_detail .contents {padding: 3.2rem; overflow-y: auto; }
+.view_detail .contents .cont_x {width: 100%; min-width: 500px; overflow-x: auto;}
 .view_detail .contents ul.meta {display: flex; flex-wrap: wrap; gap:0 .6rem; margin-bottom: 3rem; padding-bottom: 3rem; border-bottom: 1px solid #bbbbbb;;}
 .view_detail .contents ul.meta li {padding-left: 0.8rem; position: relative; width:calc(50% - .3rem); display: flex;}
 .view_detail .contents ul.meta li::before {display: block; content: ''; background-color: #0033cc; width: 3px; height: 3px; position: absolute; left: 0; top: 1rem;}
@@ -351,8 +359,8 @@
 .view_slide_wrap .view_cont {position: relative;}
 .view_slide_wrap .view_cont .swiper-slide figcaption {position: absolute; right: 0.8rem; bottom: 0.8rem; padding: 0.8rem; border-radius: 0.8rem; background-color: #3a3d72; z-index: 1; color: #fff; font-size: 1.3rem; font-weight: 500;}
 .view_slide {height: 100%;}
-.view_slide .img {height: 100%;}
-.view_slide .img img {width: auto; margin: 0 auto; max-width: 50%;}
+.view_slide .img {height: 100%; width: 100%; display: flex; align-items: center; justify-content: center;}
+.view_slide .img img {margin: 0 auto; object-fit: contain; width: auto; height: auto; max-width: 100%; max-height: 100%;}
 .view_cont .swiper_ctr {width: 11rem; position: absolute; left: 50%; transform: translateX(-50%); bottom: .8rem; background-color: rgba(0,0,0,0.63); border-radius: .8rem; display: flex; align-items: center; justify-content: center; height: 3.4rem; z-index: 1;}
 .view_cont .btn_slide {background: url(../images/icons/arrow_slide.svg) no-repeat center; width: 1.7rem; height: 1.7rem; background-size: auto 100%;}
 .view_cont .btn_slide:focus {outline: none;}
@@ -397,19 +405,21 @@
 .img_content .view_info .view_cont {display: none;}
 .img_content .view_slide_wrap {width: 100%; margin-left: auto; transition: .5s;}
 .img_content .view_slide_wrap.active {width: calc(100% - 300px);}
+
+.h_pop header .head_top {padding: 1.2rem 1.6rem;}
+.h_pop header .head_top h1 figure.img img.pc {width: 34.8rem;}
+.h_pop .sub_title {padding: 1.5rem 0;}
 @media only screen and (max-width: 1559px) {
-		.sub_title .contL .tit {flex-direction: column; align-items: flex-start;}
-	.sub_title .contL .tit p {margin: 10px 0 0 0;}
-	.sub_title .contL .tit strong {margin: 10px 0 0 0;}
-	
+	.sub_title .contL .tit h2 {font-size: 3.4rem;}
+	.sub_title .contL .tit p {font-size: 1.7rem; margin-left: 1.6rem;}
+	.sub_title .contL .tit strong {font-size: 2rem; margin-left: 1.5rem;}
 	/* 신문잡지별보기_목록. */
 	.view_list {gap: 6rem;}
 	.ui-datepicker {width: 436px; padding: 40px;}
-	.ui-datepicker-calendar tbody td .ui-state-default {font-size: 14px; width: 32px; height: 32px; line-height: 28px; margin: 0 auto;}
+	.ui-datepicker-calendar tbody td .ui-state-default {font-size: 14px; width: 32px; height: 32px; margin: 0 auto;}
 	.ui-datepicker td {padding: 3px 9px;}
 	.ui-datepicker .nice-select .current {font-size: 21px;}
 	.view_list .date_desc {font-size: 19px; height: 62px;}
-	.ui-datepicker-calendar tbody td.link-day .ui-state-default {line-height: 2.2rem;}
 	/* 유형별보기 목록 */
 	.catg_box ul {max-width: 1137px;}
 	.catg_box li button {width: 112px; height: 112px;}
@@ -494,7 +504,10 @@
 	.btn_view_a  {display: none;}
 
 	.view_list .paging_wrap {justify-content: center;}
-	.ui-datepicker-calendar tbody td.link-day .ui-state-default {line-height: 2.6rem;}
+
+	.sub_title .contL .tit {flex-direction: column; align-items: flex-start;}
+	.sub_title .contL .tit p {margin: 10px 0 0 0;}
+	.sub_title .contL .tit strong {margin: 10px 0 0 0;}
 }
 @media only screen and (max-width: 767px) { /* 모바일 */
 	#container {padding-top: 60px;}

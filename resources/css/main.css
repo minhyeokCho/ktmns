@@ -29,10 +29,9 @@
 .main_datepicker .ui-datepicker .nice-select {color: #3a3d72;}
 .main_datepicker .ui-datepicker table {margin-top: 5px;}
 .main_datepicker .ui-datepicker table th {font-size: 1.2rem;}
-.main_datepicker .ui-datepicker-calendar tbody td .ui-state-default {font-size: 15px; line-height: 3rem;}
+.main_datepicker .ui-datepicker-calendar tbody td .ui-state-default {font-size: 15px;}
 .main_datepicker .ui-datepicker td {padding: 3px 4px;}
-.main_datepicker .ui-datepicker-calendar tbody td .ui-state-default.ui-state-active,
-.main_datepicker .ui-datepicker-calendar tbody td .ui-state-default:hover  {background-color: #3a3d72; color: #fff; }
+.ui-datepicker-calendar tbody td.link-day .ui-state-default:hover {background-color: #3a3d72; border-color: #3a3d72; color: #fff; }
 
 /* 섹션: 메인 view */
 .sec_view {padding-top: 6rem; padding-bottom: 6rem; display: flex; gap: 6.5rem;}
