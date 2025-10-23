@@ -32,7 +32,7 @@ body {font-size:1.6rem;}
     html {font-size:50%;}
 }
 /* 접근성 : 건너뛰기 */
-#accessibility{position:absolute;left:0;top:0;z-index:130}
+#accessibility{position:absolute;left:0;top:0;z-index:9999}
 #accessibility li{float:left}
 #accessibility a{position:absolute;width:1px;height:1px;top:-20px;overflow:hidden;text-align:center;font-size:1.6rem;}
 #accessibility a:focus, #accessibility a:active{position:absolute;top:0;width:20rem;height:auto;padding:5px;background-color:#fff;border:solid 1px #0079c6;color:#0079c6;z-index:2}
